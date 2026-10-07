@@ -86,16 +86,16 @@
     heading: [{ g: 'Conteúdo', open: true, f: [{ t: 'rich', k: 'p.html', l: 'Texto', min: 1 }, { t: 'sel', k: 'p.tag', l: 'Nível (SEO)', o: [['h1', 'H1 (principal)'], ['h2', 'H2'], ['h3', 'H3'], ['h4', 'H4'], ['p', 'Parágrafo']] }] },
       { g: 'Estilo', open: true, f: [SIZE, { t: 'color', k: 'p.color', l: 'Cor' }, { t: 'sel', k: 'p.weight', l: 'Peso', o: [['', 'Padrão'], ['300', 'Leve'], ['500', 'Médio'], ['600', 'Semi-negrito'], ['700', 'Negrito'], ['800', 'Extra-negrito']] }, { t: 'sel', k: 'p.family', l: 'Fonte', o: [['', 'Título'], ['script', 'Cursiva (assinatura)']] }, { t: 'tog', k: 'p.italic', l: 'Itálico' }, { t: 'tog', k: 'p.upper', l: 'Maiúsculas' }, { t: 'num', k: 'p.lh', l: 'Altura da linha (ex.: 1.2)' }] }, ADV],
     text: [{ g: 'Conteúdo', open: true, f: [{ t: 'rich', k: 'p.html', l: 'Texto' }] }, { g: 'Estilo', open: false, f: [SIZE, { t: 'color', k: 'p.color', l: 'Cor' }, { t: 'num', k: 'p.lh', l: 'Altura da linha (ex.: 1.7)' }] }, ADV],
-    image: [{ g: 'Imagem', open: true, f: [{ t: 'img', k: 'p.src', l: 'Imagem' }, { t: 'txt', k: 'p.alt', l: 'Texto alternativo (SEO)' }, { t: 'txt', k: 'p.link', l: 'Link ao clicar (opcional)' }] },
+    image: [{ g: 'Imagem', open: true, f: [{ t: 'img', k: 'p.src', l: 'Imagem (pode ser outra no tablet/celular)', r: 1 }, { t: 'txt', k: 'p.alt', l: 'Texto alternativo (SEO)' }, { t: 'txt', k: 'p.link', l: 'Link ao clicar (opcional)' }] },
       { g: 'Tamanho e enquadramento', open: true, f: [
-        { t: 'tog', k: 'p.fill', l: 'Acompanhar a altura do texto ao lado (computador)' },
+        { t: 'tog', k: 'p.fill', l: 'Acompanhar a altura do texto ao lado', r: 1 },
         { t: 'txt', k: 'p.w', l: 'Largura (ex.: 100%, 420px)', r: 1 }, { t: 'txt', k: 'p.h', l: 'Altura (ex.: 480px)', r: 1 },
         { t: 'sel', k: 'p.ratio', l: 'Proporção', r: 1, o: [['', 'Original'], ['1/1', '1:1 quadrada'], ['4/5', '4:5 retrato'], ['3/4', '3:4 retrato'], ['2/3', '2:3 retrato'], ['4/3', '4:3 paisagem'], ['3/2', '3:2 paisagem'], ['16/9', '16:9 panorâmica'], ['21/9', '21:9 cinema']] },
         { t: 'txt', k: 'p.maxh', l: 'Altura máx. (ex.: 70svh, 560px) — mantém a proporção', r: 1 },
-        { t: 'sel', k: 'p.fit', l: 'Encaixe', o: [['', 'Preencher (corta)'], ['contain', 'Mostrar inteira'], ['fill', 'Esticar']] },
+        { t: 'sel', k: 'p.fit', l: 'Encaixe', r: 1, o: [['', 'Preencher (corta)'], ['contain', 'Mostrar inteira'], ['fill', 'Esticar']] },
         { t: 'focal', kx: 'p.objX', ky: 'p.objY', src: 'p.src', l: 'Ponto de foco — clique ou arraste na imagem', r: 1 },
         { t: 'range', k: 'p.zoom', l: 'Zoom (%)', min: 50, max: 300, def: 100, r: 1 }, { t: 'range', k: 'p.objX', l: 'Posição horizontal (%)', min: 0, max: 100, def: 50, r: 1 }, { t: 'range', k: 'p.objY', l: 'Posição vertical (%)', min: 0, max: 100, def: 50, r: 1 }] },
-      { g: 'Forma e estilo', open: true, f: [{ t: 'corners', k: 'p.radius', l: 'Forma — cantos arredondados' }, { t: 'tog', k: 'p.shadow', l: 'Sombra' }, { t: 'tog', k: 'p.hover', l: 'Zoom ao passar o mouse' }, { t: 'tog', k: 'p.invert', l: 'Tornar branca (logos escuras)' }] }, ADV],
+      { g: 'Forma e estilo', open: true, f: [{ t: 'corners', k: 'p.radius', l: 'Forma — cantos arredondados', r: 1 }, { t: 'tog', k: 'p.shadow', l: 'Sombra', r: 1 }, { t: 'tog', k: 'p.hover', l: 'Zoom ao passar o mouse' }, { t: 'tog', k: 'p.invert', l: 'Tornar branca (logos escuras)' }] }, ADV],
     button: [{ g: 'Botão', open: true, f: [{ t: 'txt', k: 'p.text', l: 'Texto' }, { t: 'txt', k: 'p.url', l: 'Link (https://…, #secao, tel:…)' }, { t: 'icon', k: 'p.icon', l: 'Ícone' }, { t: 'seg', k: 'p.iconPos', l: 'Posição do ícone', o: [['left', 'Esquerda'], ['right', 'Direita']] }, { t: 'tog', k: 'p.newtab', l: 'Abrir em nova aba' }] },
       { g: 'Estilo', open: true, f: [{ t: 'seg', k: 'p.variant', l: 'Tipo', o: [['solid', 'Cheio'], ['outline', 'Contorno'], ['ghost', 'Texto']] }, { t: 'color', k: 'p.bg', l: 'Cor de fundo' }, { t: 'color', k: 'p.color', l: 'Cor do texto' }, SIZE, { t: 'txt', k: 'p.radius', l: 'Arredondamento (ex.: 8px, 999px)' }, { t: 'tog', k: 'p.full', l: 'Largura total' }] }, ADV],
     iconbox: [{ g: 'Conteúdo', open: true, f: [{ t: 'img', k: 'p.img', l: 'Ícone em imagem/SVG (opcional)' }, { t: 'icon', k: 'p.icon', l: 'ou ícone Font Awesome' }, { t: 'txt', k: 'p.title', l: 'Título' }, { t: 'area', k: 'p.text', l: 'Descrição' }] },
@@ -398,6 +398,14 @@
     if (!f.r) { set(node, f.k, val); return; }
     var cur = get(node, f.k), o;
     if (cur && typeof cur === 'object' && !Array.isArray(cur)) o = cur; else o = (cur === undefined || cur === '') ? {} : { d: cur };
+    // Independência: antes de mudar este dispositivo, "congela" o valor efetivo dos outros,
+    // assim editar o desktop nunca altera o celular (e vice-versa).
+    var eff = {};
+    ['d', 't', 'm'].forEach(function (dv) {
+      var order = dv === 'd' ? ['d'] : dv === 't' ? ['t', 'd'] : ['m', 't', 'd'];
+      for (var i = 0; i < order.length; i++) { var x = o[order[i]]; if (x !== undefined && x !== '') { eff[dv] = x; break; } }
+    });
+    ['d', 't', 'm'].forEach(function (dv) { if (dv !== S.dev && eff[dv] !== undefined) o[dv] = eff[dv]; });
     if (val === '' || val === undefined) delete o[S.dev]; else o[S.dev] = val;
     set(node, f.k, Object.keys(o).length ? o : '');
   }
@@ -409,9 +417,16 @@
   function field(node, f) {
     var w = el('div', { class: 'f' + (f.t === 'num' ? ' h' : '') }), cur = rget(node, f), t = f.t;
     if (t === 'tog') {
-      var v0 = get(node, f.k); if (v0 === undefined && f.def) v0 = true;
-      var cb = el('input', { type: 'checkbox', onchange: function () { onField(node, f, cb.checked ? true : (f.def ? false : '')); } }); cb.checked = !!v0;
-      return el('div', { class: 'f h' }, el('label', { class: 'tog' }, cb, el('span', { text: f.l })));
+      var v0, onTog;
+      if (f.r) {
+        v0 = cur.v !== '' ? cur.v : cur.inh;
+        onTog = function (ck) { onField(node, f, ck); };
+      } else {
+        v0 = get(node, f.k); if (v0 === undefined && f.def) v0 = true;
+        onTog = function (ck) { onField(node, f, ck ? true : (f.def ? false : '')); };
+      }
+      var cb = el('input', { type: 'checkbox', onchange: function () { onTog(cb.checked); } }); cb.checked = !!v0;
+      return el('div', { class: 'f h' }, el('label', { class: 'tog' }, cb, el('span', { text: f.l }), f.r ? el('span', { class: 'dv', text: { d: 'PC', t: 'Tab', m: 'Cel' }[S.dev] }) : null));
     }
     w.appendChild(label(f));
     var inp;
@@ -428,7 +443,7 @@
       inp = el('textarea', { style: { fontFamily: 'ui-monospace,monospace', minHeight: '160px' }, spellcheck: 'false', oninput: function () { onField(node, f, inp.value); } }); inp.value = cur.v; w.appendChild(inp);
     } else if (t === 'sel') {
       inp = el('select', { onchange: function () { onField(node, f, inp.value); } }, f.o.map(function (o) { return el('option', { value: o[0], text: o[1] }); }));
-      var val = cur.v; if (f.r && val === '') val = ''; inp.value = String(val === true ? '' : val);
+      var val = cur.v; if (f.r && val === '') val = cur.inh; inp.value = String(val === true ? '' : val);
       if (inp.value !== String(val)) inp.value = '';
       w.appendChild(inp);
     } else if (t === 'seg') {
@@ -446,12 +461,12 @@
       w.appendChild(el('div', { class: 'row' }, pick, txt, el('button', { class: 'btn sm fix', text: '✕', title: 'Limpar', onclick: function () { txt.value = ''; onField(node, f, ''); renderPane(); } })));
       w.appendChild(swatches(txt, function (v) { txt.value = v; onField(node, f, v); pick.value = toHex(v); }));
     } else if (t === 'img') {
-      var th = el('div', { class: 'th' }); var u = cur.v;
+      var th = el('div', { class: 'th' }); var u = cur.v || cur.inh;
       function showTh(v) { th.style.backgroundImage = v ? 'url(' + BASE + '/' + v.replace(/^\//, '') + ')' : ''; th.innerHTML = v ? '' : '<i class="fa-regular fa-image"></i>'; if (/^https?:/.test(v || '')) th.style.backgroundImage = 'url(' + v + ')'; }
       showTh(u);
       w.appendChild(el('div', { class: 'img' }, th, el('div', { class: 'bt' },
         el('button', { class: 'btn sm', onclick: function () { openMedia(function (p) { onField(node, f, p); showTh(p); }); } }, el('i', { class: 'fa-solid fa-photo-film' }), ' Escolher / enviar'),
-        u ? el('button', { class: 'btn sm dng', text: 'Remover', onclick: function () { onField(node, f, ''); renderPane(); } }) : null)));
+        (cur.v || (!f.r && u)) ? el('button', { class: 'btn sm dng', text: f.r && S.dev !== 'd' ? 'Usar a do computador' : 'Remover', onclick: function () { onField(node, f, ''); renderPane(); } }) : null)));
     } else if (t === 'icon') {
       var dl = 'ic-' + uid('');
       inp = el('input', { type: 'text', list: dl, value: cur.v, placeholder: 'fa-brands fa-whatsapp (ou emoji)', oninput: function () { onField(node, f, inp.value); } });
@@ -470,7 +485,7 @@
       var sel = el('select', { onchange: function () { onField(node, f, sel.value ? Number(sel.value) : ''); } }, [el('option', { value: '', text: 'Herdar (' + inh + ')' })].concat(Array.apply(null, Array(12)).map(function (_, i) { return el('option', { value: String(i + 1), text: (i + 1) + ' de 12' + (i + 1 === 12 ? ' (toda a largura)' : i + 1 === 6 ? ' (metade)' : '') }); })));
       sel.value = String(sv); w.appendChild(sel);
     } else if (t === 'corners') {
-      w.appendChild(cornersField(node, f, cur.v));
+      w.appendChild(cornersField(node, f, cur.v !== '' ? cur.v : cur.inh));
     } else if (t === 'range') {
       var hasV = cur.v !== '' && cur.v !== undefined, shown = hasV ? cur.v : (cur.inh !== '' ? cur.inh : (f.def !== undefined ? f.def : f.min));
       var rg = el('input', { type: 'range', min: f.min, max: f.max, step: f.step || 1, value: shown });

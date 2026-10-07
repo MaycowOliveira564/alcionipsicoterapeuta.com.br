@@ -32,6 +32,12 @@ class Css
         $this->b[$dev][$sel][] = $decl;
     }
 
+    /** Regra aplicada só em tablets (640–1023px) */
+    public function tab(string $sel, string $decl): void
+    {
+        $this->b['tx'][$sel][] = $decl;
+    }
+
     /** Regra aplicada só em telas >=1024px */
     public function desk(string $sel, string $decl): void
     {
@@ -129,6 +135,22 @@ function img_tag(string $src, string $alt = '', string $cls = '', string $style 
     return '<img src="' . esc($url) . '" alt="' . esc($alt) . '"' . $dim . ($cls ? ' class="' . esc($cls) . '"' : '') . ($style ? ' style="' . esc($style) . '"' : '') . ($lazy ? ' loading="lazy" decoding="async"' : '') . '>';
 }
 
+/** Foto por dispositivo: string (igual em todos) ou {d,t,m}; usa <picture> quando há variações */
+function picture_tag($srcs, string $alt = ''): string
+{
+    $r = rv($srcs);
+    $d = trim((string)$r['d']);
+    if ($d === '') $d = trim((string)($r['t'] ?: $r['m']));
+    $base = img_tag($d, $alt);
+    if ($base === '' || (trim((string)$r['t']) === '' && trim((string)$r['m']) === '')) return $base;
+    $h = '<picture>';
+    foreach ([['m', '(max-width:639px)'], ['t', '(max-width:1023px)']] as [$k, $media]) {
+        $u = asset_url(trim((string)$r[$k]));
+        if ($u !== '') $h .= '<source media="' . $media . '" srcset="' . esc($u) . '">';
+    }
+    return $h . $base . '</picture>';
+}
+
 /** SVG local inline (herda a cor do texto via currentColor); '' se não for SVG local */
 function inline_svg(string $src): string
 {
@@ -209,18 +231,30 @@ function render_widget(array $w, Css $css, bool $editor): string
                 $css->raw($dev, $im, "height:auto;width:min(100%,calc(($mh) * {$m[1]} / {$m[2]}))");
             }
             $css->rule($im, 'border-radius', $p['radius'] ?? '', 'css_lenlist');
-            if (!empty($p['shadow'])) $css->raw('d', $im, 'box-shadow:0 22px 48px -18px rgba(0,0,0,.4)');
-            $fixed = !empty($p['ratio']) || !empty($p['h']);
-            $fit = in_array($p['fit'] ?? '', ['cover', 'contain', 'fill'], true) ? $p['fit'] : 'cover';
-            if ($fixed || !empty($p['zoom']) || ($p['fit'] ?? '') !== '') $css->raw('d', $ii, 'height:100%;object-fit:' . $fit);
-            if (!empty($p['invert'])) $css->raw('d', $ii, 'filter:brightness(0) invert(1)');
-            if (!empty($p['fill'])) {
-                $css->desk($sel, 'flex:1 1 auto;min-height:0;display:flex;flex-direction:column;max-width:none;margin-left:0;margin-right:0');
-                $css->desk($im, 'flex:1 1 auto;position:relative;height:auto;max-height:none;aspect-ratio:auto;width:100%;max-width:100%;min-height:min(62svh,560px);margin:0');
-                $css->desk("$im a", 'position:absolute;inset:0;display:block');
-                $css->desk($ii, 'position:absolute;inset:0;width:100%;height:100%;object-fit:' . $fit);
+            foreach (rv($p['shadow'] ?? '') as $dev => $on) {
+                if ($on === true || $on === 1 || $on === '1') $css->raw($dev, $im, 'box-shadow:0 22px 48px -18px rgba(0,0,0,.4)');
+                elseif ($on === false || $on === 0 || $on === '0') $css->raw($dev, $im, 'box-shadow:none');
             }
-            $tagImg = img_tag((string)($p['src'] ?? ''), (string)($p['alt'] ?? ''), '', '');
+            $fits = ['cover', 'contain', 'fill'];
+            $fitD = in_array(rv($p['fit'] ?? '')['d'] ?? '', $fits, true) ? rv($p['fit'])['d'] : 'cover';
+            $fixed = !empty($p['ratio']) || !empty($p['h']);
+            if ($fixed || !empty($p['zoom']) || !empty($p['fit'])) $css->raw('d', $ii, 'height:100%;object-fit:' . $fitD);
+            $css->rule($ii, 'object-fit', $p['fit'] ?? '', fn($v) => in_array($v, $fits, true) ? $v : '');
+            if (!empty($p['invert'])) $css->raw('d', $ii, 'filter:brightness(0) invert(1)');
+            // "acompanhar a altura do texto": independente por dispositivo (d >=1024, t 640–1023, m <=639)
+            foreach (rv($p['fill'] ?? '') as $dev => $on) {
+                if ($on !== true && $on !== 1 && $on !== '1') continue;
+                $put = function (string $sl, string $decl) use ($css, $dev) {
+                    if ($dev === 'd') $css->desk($sl, $decl); elseif ($dev === 't') $css->tab($sl, $decl); else $css->raw('m', $sl, $decl);
+                };
+                $fv = $eff($p['fit'] ?? '', $dev);
+                $fv = in_array($fv, $fits, true) ? $fv : 'cover';
+                $put($sel, 'flex:1 1 auto;min-height:0;display:flex;flex-direction:column;max-width:none;margin-left:0;margin-right:0');
+                $put($im, 'flex:1 1 auto;position:relative;height:auto;max-height:none;aspect-ratio:auto;width:100%;max-width:100%;min-height:min(62svh,560px);margin:0');
+                $put("$im a", 'position:absolute;inset:0;display:block');
+                $put($ii, 'position:absolute;inset:0;width:100%;height:100%;object-fit:' . $fv);
+            }
+            $tagImg = picture_tag($p['src'] ?? '', (string)($p['alt'] ?? ''));
             if ($tagImg === '' && $editor) $tagImg = '<div class="ph">Selecione uma imagem</div>';
             $link = safe_url($p['link'] ?? '');
             $inner = $link ? '<a href="' . esc($link) . '"' . (!empty($p['newtab']) ? ' target="_blank" rel="noopener"' : '') . '>' . $tagImg . '</a>' : $tagImg;
@@ -411,7 +445,7 @@ function render_section(array $sec, Css $css, bool $editor): string
         if (!empty($s['overlay'])) $bg .= '<div class="sec-ov"></div>';
     }
     foreach (($sec['columns'] ?? []) as $c) foreach (($c['widgets'] ?? []) as $w) {
-        if (($w['type'] ?? '') === 'image' && !empty($w['p']['fill'])) $css->desk("$sel .sec-row", 'align-items:stretch');
+        if (($w['type'] ?? '') === 'image' && !empty(rv($w['p']['fill'] ?? '')['d'])) $css->desk("$sel .sec-row", 'align-items:stretch');
     }
     $cols = '';
     foreach (($sec['columns'] ?? []) as $c) $cols .= render_column($c, $css, $editor);

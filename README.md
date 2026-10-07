@@ -32,6 +32,9 @@ Esqueceu a senha? `php tools/set-password.php USUARIO NOVASENHA`.
 Em *Editar → Imagem*: largura, altura e proporção da **moldura** (por dispositivo), encaixe, zoom, posição e **ponto de foco clicável**,
 e a **forma** (4 cantos individuais + formatos prontos: folha, arco, pílula, círculo). O painel pode ser recolhido (tecla `[`) e redimensionado.
 
+## Ajustes independentes por dispositivo
+Largura, altura, proporção, zoom, posição, ponto de foco, **forma dos cantos, sombra, encaixe, "acompanhar altura do texto" e até a própria foto** podem ser ajustados separadamente no computador, tablet e celular (alterne com os ícones no topo do editor). Ao editar um dispositivo, os outros ficam como estão.
+
 ## Site público
 Tipografia: Playfair Display (títulos) + Nunito Sans (texto), trocáveis em *Site → Fontes*. Menu escondido no topo (aparece ao rolar). Animações de entrada por elemento, **auto-scroll por seção** (desktop; liga/desliga em *Site*), pontos de navegação laterais,
 menu hambúrguer no celular, cabeçalho que ganha fundo ao rolar, parallax opcional, lightbox na galeria. Respeita `prefers-reduced-motion`.

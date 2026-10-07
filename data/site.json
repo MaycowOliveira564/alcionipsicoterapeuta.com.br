@@ -510,9 +510,17 @@
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 14,
+                                "objY": {
+                                    "d": 68
+                                },
                                 "anim": "fade-left",
-                                "delay": 0
+                                "delay": 0,
+                                "zoom": {
+                                    "d": 120
+                                },
+                                "objX": {
+                                    "d": 57
+                                }
                             }
                         },
                         {
@@ -588,11 +596,18 @@
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 35,
+                                "objY": {
+                                    "d": 64
+                                },
                                 "anim": "fade-right",
                                 "delay": 0,
                                 "fill": true,
-                                "objX": 50
+                                "objX": {
+                                    "d": 51
+                                },
+                                "zoom": {
+                                    "d": 128
+                                }
                             }
                         }
                     ]
@@ -1085,11 +1100,18 @@
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 35,
+                                "objY": {
+                                    "d": 53
+                                },
                                 "anim": "fade-right",
                                 "delay": 0,
                                 "fill": true,
-                                "objX": 45
+                                "objX": {
+                                    "d": 26
+                                },
+                                "zoom": {
+                                    "d": 121
+                                }
                             }
                         }
                     ]
