@@ -175,11 +175,7 @@
        "type": "heading",
        "p": {
         "tag": "h1",
-        "size": {
-         "d": "56px",
-         "t": "44px",
-         "m": "34px"
-        },
+        "size": "clamp(38px, 3.7vw, 68px)",
         "align": {
          "d": "right",
          "m": "center"
@@ -199,8 +195,8 @@
          "d": "right",
          "m": "center"
         },
-        "size": "17px",
-        "mt": "16",
+        "size": "clamp(18px, 1.45vw, 25px)",
+        "mt": "20",
         "anim": "fade-up",
         "delay": 300,
         "html": "<p><strong>Espaço terapêutico</strong> para <strong>mães atípicas</strong> e mulheres com <strong>feridas emocionais</strong>, que carregam culpas <strong>invisíveis</strong>, lutas <strong>solitárias</strong> e o desejo profundo de <strong>se reencontrar.</strong></p>"
@@ -211,8 +207,8 @@
        "type": "text",
        "p": {
         "align": "left",
-        "size": "16px",
-        "mt": "10",
+        "size": "clamp(18px, 1.45vw, 25px)",
+        "mt": "18",
         "anim": "fade-up",
         "delay": 450,
         "html": "<p>Você se sente:<br>🔸 Sobrecarregada emocionalmente<br>🔸 Invisível dentro da própria casa<br>🔸 Culpada por não dar conta de tudo<br>🔸 Vivendo o luto da maternidade idealizada</p><p><strong style=\"color:#8f4624\">Se você se identifica, este espaço é para você.</strong></p>"
@@ -227,12 +223,12 @@
         "icon": "fa-brands fa-whatsapp",
         "variant": "solid",
         "newtab": true,
-        "size": "15px",
+        "size": "clamp(15px, 1.1vw, 19px)",
         "align": {
          "d": "right",
          "m": "center"
         },
-        "mt": "18",
+        "mt": "26",
         "anim": "fade-up",
         "delay": 600
        }
@@ -245,8 +241,8 @@
          "d": "right",
          "m": "center"
         },
-        "size": "14px",
-        "mt": "14",
+        "size": "clamp(15px, 1.1vw, 20px)",
+        "mt": "16",
         "anim": "fade-up",
         "delay": 750,
         "html": "<p><strong>+26 anos de experiência</strong><br>Atendimentos no Brasil e no exterior!</p>"
@@ -1226,7 +1222,7 @@
        "type": "text",
        "p": {
         "align": "center",
-        "size": "18px",
+        "size": "clamp(18px, 1.5vw, 26px)",
         "mt": "14",
         "anim": "fade-up",
         "delay": 150,
@@ -1271,14 +1267,13 @@
          }
         ],
         "cols": {
-         "d": 4,
+         "d": 3,
          "t": 2,
          "m": 1
         },
-        "gap": "20",
+        "gap": "26",
         "radius": "10px",
         "lightbox": true,
-        "slider": true,
         "anim": "fade-up",
         "delay": 0
        }
@@ -1295,7 +1290,7 @@
        "type": "text",
        "p": {
         "align": "center",
-        "size": "19px",
+        "size": "clamp(20px, 1.75vw, 30px)",
         "anim": "fade-up",
         "delay": 0,
         "html": "<p>🌿 Pronta para ser <span style=\"color:#d48a67\"><strong>acolhida?</strong></span></p><p>Agende seu atendimento e permita-se <strong>reconstruir suas forças</strong> com apoio de quem entende suas dores, <strong>sem julgamentos</strong>.</p>"

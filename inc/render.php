@@ -402,8 +402,7 @@ function render_section(array $sec, Css $css, bool $editor): string
     foreach (($sec['columns'] ?? []) as $c) $cols .= render_column($c, $css, $editor);
     $anchor = preg_replace('/[^a-z0-9_-]/i', '', (string)($sec['anchor'] ?? ''));
     $snap = ($s['snap'] ?? true) === false ? ' data-nosnap' : '';
-    $mh = rv($s['minH'] ?? '')['d'] ?? '';
-    if ($mh !== '' && $mh !== 'screen') $snap .= ' data-nofit';
+    if (!empty($s['fit'])) $snap .= ' data-fit';
     return '<section' . ($anchor !== '' ? ' id="' . $anchor . '"' : '') . ' class="sec e-' . $id . '" data-sid="' . $id . '" data-label="' . esc($sec['label'] ?? '') . '"' . $snap . '>'
         . $bg . '<div class="sec-in"><div class="sec-row">' . $cols . '</div></div></section>';
 }

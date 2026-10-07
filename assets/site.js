@@ -101,7 +101,7 @@
   }
 
   /* ajusta cada seção à altura da tela (encolhe só texto) quando o conteúdo não cabe */
-  var fitSecs = secs.filter(function (s) { return !s.hasAttribute('data-nofit'); });
+  var fitSecs = secs.filter(function (s) { return s.hasAttribute('data-fit'); });
   function fit() {
     var vh = W.innerHeight;
     fitSecs.forEach(function (s) {
