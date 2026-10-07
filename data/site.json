@@ -576,22 +576,23 @@
                             "id": "w027",
                             "type": "image",
                             "p": {
-                                "src": "uploads/2025/07/Design-sem-nome.png",
+                                "src": "uploads/2025/07/MG_9993-Editar.jpg",
                                 "alt": "Alcioni em atendimento",
                                 "w": "100%",
                                 "radius": "28px",
                                 "shadow": true,
                                 "align": "center",
-                                "maxw": "460px",
                                 "ratio": "1/1",
                                 "maxh": {
                                     "d": "min(68svh,660px)",
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 0,
+                                "objY": 18,
                                 "anim": "fade-right",
-                                "delay": 0
+                                "delay": 0,
+                                "fill": true,
+                                "objX": 50
                             }
                         }
                     ]
@@ -1078,16 +1079,16 @@
                                 "radius": "28px",
                                 "shadow": true,
                                 "align": "center",
-                                "maxw": "440px",
                                 "ratio": "4/5",
                                 "maxh": {
                                     "d": "min(68svh,660px)",
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 18,
+                                "objY": 20,
                                 "anim": "fade-right",
-                                "delay": 0
+                                "delay": 0,
+                                "fill": true
                             }
                         }
                     ]

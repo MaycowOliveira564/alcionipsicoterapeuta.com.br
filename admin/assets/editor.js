@@ -88,6 +88,7 @@
     text: [{ g: 'Conteúdo', open: true, f: [{ t: 'rich', k: 'p.html', l: 'Texto' }] }, { g: 'Estilo', open: false, f: [SIZE, { t: 'color', k: 'p.color', l: 'Cor' }, { t: 'num', k: 'p.lh', l: 'Altura da linha (ex.: 1.7)' }] }, ADV],
     image: [{ g: 'Imagem', open: true, f: [{ t: 'img', k: 'p.src', l: 'Imagem' }, { t: 'txt', k: 'p.alt', l: 'Texto alternativo (SEO)' }, { t: 'txt', k: 'p.link', l: 'Link ao clicar (opcional)' }] },
       { g: 'Tamanho e enquadramento', open: true, f: [
+        { t: 'tog', k: 'p.fill', l: 'Acompanhar a altura do texto ao lado (computador)' },
         { t: 'txt', k: 'p.w', l: 'Largura (ex.: 100%, 420px)', r: 1 }, { t: 'txt', k: 'p.h', l: 'Altura (ex.: 480px)', r: 1 },
         { t: 'sel', k: 'p.ratio', l: 'Proporção', r: 1, o: [['', 'Original'], ['1/1', '1:1 quadrada'], ['4/5', '4:5 retrato'], ['3/4', '3:4 retrato'], ['2/3', '2:3 retrato'], ['4/3', '4:3 paisagem'], ['3/2', '3:2 paisagem'], ['16/9', '16:9 panorâmica'], ['21/9', '21:9 cinema']] },
         { t: 'txt', k: 'p.maxh', l: 'Altura máx. (ex.: 70svh, 560px) — mantém a proporção', r: 1 },

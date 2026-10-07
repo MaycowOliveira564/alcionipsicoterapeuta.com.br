@@ -32,6 +32,12 @@ class Css
         $this->b[$dev][$sel][] = $decl;
     }
 
+    /** Regra aplicada só em telas >=1024px */
+    public function desk(string $sel, string $decl): void
+    {
+        $this->b['dx'][$sel][] = $decl;
+    }
+
     /** Oculta só no dispositivo indicado (d >=1024, t 640-1023, m <=639) */
     public function hide(string $dev, string $sel): void
     {
@@ -208,6 +214,12 @@ function render_widget(array $w, Css $css, bool $editor): string
             $fit = in_array($p['fit'] ?? '', ['cover', 'contain', 'fill'], true) ? $p['fit'] : 'cover';
             if ($fixed || !empty($p['zoom']) || ($p['fit'] ?? '') !== '') $css->raw('d', $ii, 'height:100%;object-fit:' . $fit);
             if (!empty($p['invert'])) $css->raw('d', $ii, 'filter:brightness(0) invert(1)');
+            if (!empty($p['fill'])) {
+                $css->desk($sel, 'flex:1 1 auto;min-height:0;display:flex;flex-direction:column;max-width:none;margin-left:0;margin-right:0');
+                $css->desk($im, 'flex:1 1 auto;position:relative;height:auto;max-height:none;aspect-ratio:auto;width:100%;max-width:100%;min-height:min(62svh,560px);margin:0');
+                $css->desk("$im a", 'position:absolute;inset:0;display:block');
+                $css->desk($ii, 'position:absolute;inset:0;width:100%;height:100%;object-fit:' . $fit);
+            }
             $tagImg = img_tag((string)($p['src'] ?? ''), (string)($p['alt'] ?? ''), '', '');
             if ($tagImg === '' && $editor) $tagImg = '<div class="ph">Selecione uma imagem</div>';
             $link = safe_url($p['link'] ?? '');
@@ -397,6 +409,9 @@ function render_section(array $sec, Css $css, bool $editor): string
         if ($hasImg && !empty($s['fade'])) $bg .= fade_layer($s['fade']);
         $css->rule("$sel .sec-ov", 'background', $s['overlay'] ?? '', 'f_color');
         if (!empty($s['overlay'])) $bg .= '<div class="sec-ov"></div>';
+    }
+    foreach (($sec['columns'] ?? []) as $c) foreach (($c['widgets'] ?? []) as $w) {
+        if (($w['type'] ?? '') === 'image' && !empty($w['p']['fill'])) $css->desk("$sel .sec-row", 'align-items:stretch');
     }
     $cols = '';
     foreach (($sec['columns'] ?? []) as $c) $cols .= render_column($c, $css, $editor);
