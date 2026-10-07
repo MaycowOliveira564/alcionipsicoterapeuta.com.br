@@ -1,0 +1,17 @@
+Options -Indexes
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Bloqueia acesso direto a dados internos
+RewriteRule ^(data|inc|tools)(/|$) - [F,L]
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+<FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|avif|css|js|woff2)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json
+</IfModule>
