@@ -1,1462 +1,1466 @@
 {
- "settings": {
-  "title": "Alcioni Esteves | Psicoterapeuta",
-  "lang": "pt-BR",
-  "description": "Espaço terapêutico para mães atípicas e mulheres com feridas emocionais. Atendimento on-line com neurociências, psicoeducação e acolhimento. +26 anos de experiência.",
-  "ogImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
-  "favicon": "",
-  "themeColor": "#d48a67",
-  "autoscroll": "sections",
-  "colors": {
-   "primary": "#d48a67",
-   "dark": "#5f5e5c",
-   "cream": "#fffaf4",
-   "cream2": "#fcf6ef",
-   "text": "#5f5e5c",
-   "light": "#ffffff"
-  },
-  "fonts": {
-   "body": "Nunito Sans",
-   "heading": "Playfair Display",
-   "script": "Great Vibes"
-  },
-  "header": {
-   "enabled": true,
-   "logo": "uploads/2025/07/logo-alcioni.png",
-   "logoH": "48",
-   "logoOnScroll": false,
-   "hideAtTop": true,
-   "bg": "rgba(255,250,244,.78)",
-   "solidOnScroll": true,
-   "color": "#5f5e5c",
-   "solidBg": "rgba(255,250,244,.96)",
-   "solidColor": "#5f5e5c",
-   "menuMode": "auto",
-   "menu": [],
-   "btnText": "Agendar",
-   "btnUrl": "https://wa.me/5531986928599",
-   "btnIcon": "fa-brands fa-whatsapp"
-  }
- },
- "sections": [
-  {
-   "id": "s011",
-   "label": "Início",
-   "anchor": "inicio",
-   "menu": "Início",
-   "s": {
-    "bg": "#c7bec7",
-    "bgImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
-    "bgX": {
-     "d": 0
-    },
-    "bgY": {
-     "d": 50
-    },
-    "fade": {
-     "c": "#c7bec7",
-     "dir": "90deg",
-     "from": 36,
-     "to": 60
-    },
-    "bgHide": {
-     "t": true,
-     "m": true
-    },
-    "minH": {
-     "d": "screen"
-    },
-    "color": "#2b2a29",
-    "padX": {
-     "d": "64",
-     "t": "28",
-     "m": "22"
-    },
-    "maxw": {
-     "d": "1840px"
-    },
-    "padT": {
-     "d": "90",
-     "t": "90",
-     "m": "84"
-    },
-    "padB": {
-     "d": "70",
-     "t": "56",
-     "m": "48"
-    },
-    "contentV": "center",
-    "vAlign": "center",
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c003",
-     "s": {
-      "span": {
-       "d": 6,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w001",
-       "type": "spacer",
-       "p": {
-        "h": "0",
-        "hide": {
-         "t": true,
-         "m": true
+    "settings": {
+        "title": "Alcioni Esteves | Psicoterapeuta",
+        "lang": "pt-BR",
+        "description": "Espaço terapêutico para mães atípicas e mulheres com feridas emocionais. Atendimento on-line com neurociências, psicoeducação e acolhimento. +26 anos de experiência.",
+        "ogImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
+        "favicon": "",
+        "themeColor": "#d48a67",
+        "autoscroll": "sections",
+        "colors": {
+            "primary": "#d48a67",
+            "dark": "#5f5e5c",
+            "cream": "#fffaf4",
+            "cream2": "#fcf6ef",
+            "text": "#5f5e5c",
+            "light": "#ffffff"
+        },
+        "fonts": {
+            "body": "Nunito Sans",
+            "heading": "Playfair Display",
+            "script": "Great Vibes"
+        },
+        "header": {
+            "enabled": true,
+            "logo": "uploads/2025/07/logo-alcioni.png",
+            "logoH": "48",
+            "logoOnScroll": false,
+            "hideAtTop": true,
+            "bg": "rgba(255,250,244,.78)",
+            "solidOnScroll": true,
+            "color": "#5f5e5c",
+            "solidBg": "rgba(255,250,244,.96)",
+            "solidColor": "#5f5e5c",
+            "menuMode": "auto",
+            "menu": [],
+            "btnText": "Agendar",
+            "btnUrl": "https://wa.me/5531986928599",
+            "btnIcon": "fa-brands fa-whatsapp"
         }
-       }
-      },
-      {
-       "id": "w002",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
-        "alt": "Alcioni Esteves",
-        "w": "100%",
-        "ratio": "4/5",
-        "maxh": {
-         "d": "min(68svh,660px)",
-         "t": "min(48svh,520px)",
-         "m": "min(44svh,400px)"
+    },
+    "sections": [
+        {
+            "id": "s011",
+            "label": "Início",
+            "anchor": "inicio",
+            "menu": "Início",
+            "s": {
+                "bg": "#c7bec7",
+                "bgImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
+                "bgX": {
+                    "d": 0
+                },
+                "bgY": {
+                    "d": 50
+                },
+                "fade": {
+                    "c": "#c7bec7",
+                    "dir": "90deg",
+                    "from": 36,
+                    "to": 60
+                },
+                "bgHide": {
+                    "t": true,
+                    "m": true
+                },
+                "minH": {
+                    "d": "screen"
+                },
+                "color": "#2b2a29",
+                "padX": {
+                    "d": "64",
+                    "t": "28",
+                    "m": "22"
+                },
+                "maxw": {
+                    "d": "1840px"
+                },
+                "padT": {
+                    "d": "90",
+                    "t": "90",
+                    "m": "84"
+                },
+                "padB": {
+                    "t": "56",
+                    "m": "48",
+                    "d": "70"
+                },
+                "contentV": "center",
+                "vAlign": "center",
+                "snap": true,
+                "bgW": {
+                    "d": 136
+                },
+                "bgFit": "contain"
+            },
+            "columns": [
+                {
+                    "id": "c003",
+                    "s": {
+                        "span": {
+                            "d": 6,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w001",
+                            "type": "spacer",
+                            "p": {
+                                "h": "0",
+                                "hide": {
+                                    "t": true,
+                                    "m": true
+                                }
+                            }
+                        },
+                        {
+                            "id": "w002",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
+                                "alt": "Alcioni Esteves",
+                                "w": "100%",
+                                "ratio": "4/5",
+                                "maxh": {
+                                    "d": "min(68svh,660px)",
+                                    "t": "min(48svh,520px)",
+                                    "m": "min(44svh,400px)"
+                                },
+                                "objX": 22,
+                                "objY": 30,
+                                "zoom": 115,
+                                "radius": "28px",
+                                "shadow": true,
+                                "hide": {
+                                    "d": true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c010",
+                    "s": {
+                        "pad": "0px",
+                        "vAlign": "center",
+                        "anim": "fade-in",
+                        "delay": 0,
+                        "span": {
+                            "d": 6,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w004",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/logo-alcioni.png",
+                                "alt": "Alcioni Esteves — Psicoterapeuta",
+                                "w": {
+                                    "d": "600px",
+                                    "t": "420px",
+                                    "m": "270px"
+                                },
+                                "align": {
+                                    "d": "right",
+                                    "m": "center"
+                                },
+                                "mb": "10",
+                                "anim": "fade-down",
+                                "delay": 0
+                            }
+                        },
+                        {
+                            "id": "w005",
+                            "type": "heading",
+                            "p": {
+                                "tag": "h1",
+                                "size": "clamp(38px, 3.7vw, 68px)",
+                                "align": {
+                                    "d": "right",
+                                    "m": "center"
+                                },
+                                "color": "#1f1e1d",
+                                "mt": "22",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "Você cuida de <span style=\"color:#fffaf4\">tudo</span>, mas quem cuida de <span style=\"color:#fffaf4\">você</span>?"
+                            }
+                        },
+                        {
+                            "id": "w006",
+                            "type": "text",
+                            "p": {
+                                "align": {
+                                    "d": "right",
+                                    "m": "center"
+                                },
+                                "size": "clamp(18px, 1.45vw, 25px)",
+                                "mt": "20",
+                                "anim": "fade-up",
+                                "delay": 300,
+                                "html": "<p><strong>Espaço terapêutico</strong> para <strong>mães atípicas</strong> e mulheres com <strong>feridas emocionais</strong>, que carregam culpas <strong>invisíveis</strong>, lutas <strong>solitárias</strong> e o desejo profundo de <strong>se reencontrar.</strong></p>"
+                            }
+                        },
+                        {
+                            "id": "w007",
+                            "type": "text",
+                            "p": {
+                                "align": "left",
+                                "size": "clamp(18px, 1.45vw, 25px)",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 450,
+                                "html": "<p>Você se sente:<br>🔸 Sobrecarregada emocionalmente<br>🔸 Invisível dentro da própria casa<br>🔸 Culpada por não dar conta de tudo<br>🔸 Vivendo o luto da maternidade idealizada</p><p><strong style=\"color:#8f4624\">Se você se identifica, este espaço é para você.</strong></p>"
+                            }
+                        },
+                        {
+                            "id": "w008",
+                            "type": "button",
+                            "p": {
+                                "text": "AGENDE SUA SESSÃO",
+                                "url": "https://wa.me/5531986928599",
+                                "icon": "fa-brands fa-whatsapp",
+                                "variant": "solid",
+                                "newtab": true,
+                                "size": "clamp(15px, 1.1vw, 19px)",
+                                "align": {
+                                    "d": "right",
+                                    "m": "center"
+                                },
+                                "mt": "26",
+                                "anim": "fade-up",
+                                "delay": 600
+                            }
+                        },
+                        {
+                            "id": "w009",
+                            "type": "text",
+                            "p": {
+                                "align": {
+                                    "d": "right",
+                                    "m": "center"
+                                },
+                                "size": "clamp(15px, 1.1vw, 20px)",
+                                "mt": "16",
+                                "anim": "fade-up",
+                                "delay": 750,
+                                "html": "<p><strong>+26 anos de experiência</strong><br>Atendimentos no Brasil e no exterior!</p>"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
-        "objX": 22,
-        "objY": 30,
-        "zoom": 115,
-        "radius": "28px",
-        "shadow": true,
-        "hide": {
-         "d": true
+        {
+            "id": "s018",
+            "label": "Quem eu ajudo",
+            "anchor": "ajudo",
+            "menu": "Quem eu ajudo",
+            "s": {
+                "bg": "#FFFAF4",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "gap": {
+                    "d": "72",
+                    "t": "40",
+                    "m": "28"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c013",
+                    "s": {
+                        "vAlign": "center",
+                        "align": "center",
+                        "span": {
+                            "d": 5,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w012",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/A-sobrecarga-de-quem-cuida-o-dia-das-maes-atipicas_Imagem-destaque.jpg",
+                                "alt": "Mãe abraçando filho com peças de quebra-cabeça colorido (símbolo do autismo)",
+                                "ratio": "1/1",
+                                "maxh": {
+                                    "d": "min(68svh,660px)",
+                                    "t": "min(48svh,520px)",
+                                    "m": "min(44svh,400px)"
+                                },
+                                "radius": "28px",
+                                "align": "center",
+                                "maxw": "460px",
+                                "anim": "zoom-in",
+                                "delay": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c017",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 7,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w014",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "color": "#5f5e5c",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "Quem eu <span style=\"color:#d48a67\">ajudo</span>",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w015",
+                            "type": "text",
+                            "p": {
+                                "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "<p><strong>Mães Atípicas</strong></p><p>Cuidam de filhos com TEA, TDAH, síndromes ou deficiências. Vivem em modo de sobrevivência, sentem culpa constante e querem se reencontrar como mulheres, não só como cuidadoras.</p><p><strong>Mulheres com Feridas Emocionais</strong></p><p>Carregam traumas antigos, baixa autoestima e vínculos afetivos marcados por dor. Buscam um recomeço com base, afeto e acolhimento.</p>"
+                            }
+                        },
+                        {
+                            "id": "w016",
+                            "type": "text",
+                            "p": {
+                                "mt": "10",
+                                "size": "18px",
+                                "color": "#d48a67",
+                                "anim": "fade-up",
+                                "delay": 300,
+                                "html": "<p><strong>Você merece um espaço para si — sem julgamentos e sem culpa.</strong></p>"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s026",
+            "label": "Quem é Alcioni",
+            "anchor": "sobre",
+            "menu": "Quem sou",
+            "s": {
+                "bg": "#5F5E5C",
+                "color": "#fffaf4",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "gap": {
+                    "d": "72",
+                    "t": "40",
+                    "m": "28"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c022",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 7,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w019",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "color": "#fffaf4",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "Quem é <span style=\"color:#d48a67\">Alcioni Esteves?</span>",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w020",
+                            "type": "text",
+                            "p": {
+                                "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "<p>Sou Alcioni. Durante muito tempo, também me <strong>perdi de mim mesma</strong>. Não por falta de força, mas por excesso de <strong>sobrecarga</strong>, <strong>culpas invisíveis</strong> e um <strong>amor tão intenso</strong> que me fez esquecer de mim. Hoje, transformo essa vivência em missão: conduzir mulheres ao reencontro consigo mesmas, fortalecendo a <strong>autoestima</strong> e restaurando <strong>feridas emocionais</strong>.</p><p>Meu trabalho transforma dores em <strong>força</strong> e <strong>identidade</strong>, criando um espaço de acolhimento onde cada mulher pode dar novo sentido à sua história, mudar a forma de pensar, sentir e agir, e caminhar com mais <strong>leveza</strong>, <strong>direção</strong> e <strong>transformação</strong>.</p>"
+                            }
+                        },
+                        {
+                            "id": "w021",
+                            "type": "list",
+                            "p": {
+                                "icon": "fa-solid fa-diamond",
+                                "iconColor": "#d48a67",
+                                "size": "15px",
+                                "mt": "20",
+                                "cols": {
+                                    "d": 2,
+                                    "t": 2,
+                                    "m": 1
+                                },
+                                "items": [
+                                    {
+                                        "text": "Neurociências na Prática Clínica"
+                                    },
+                                    {
+                                        "text": "Psicóloga acadêmica"
+                                    },
+                                    {
+                                        "text": "Neuropsicopedagogia Clínica"
+                                    },
+                                    {
+                                        "text": "Psicanalista clínica"
+                                    },
+                                    {
+                                        "text": "Bacharel em Serviço Social"
+                                    },
+                                    {
+                                        "text": "Psicologia do Desenvolvimento Infantojuvenil"
+                                    },
+                                    {
+                                        "text": "Pedagogia"
+                                    },
+                                    {
+                                        "text": "Terapeuta de Feridas Emocionais"
+                                    },
+                                    {
+                                        "text": "Intervenção Psicossocial"
+                                    },
+                                    {
+                                        "text": "ABA | TEA | Inclusão | AEE"
+                                    },
+                                    {
+                                        "text": "Sexualidade Humana & Terapia para casais"
+                                    },
+                                    {
+                                        "text": "Método Terapêutico Sistêmico & Integrativo"
+                                    }
+                                ],
+                                "anim": "fade-up",
+                                "delay": 300
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c025",
+                    "s": {
+                        "vAlign": "center",
+                        "align": "center",
+                        "span": {
+                            "d": 5,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w023",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/08/MG_9984-Editar-3.jpg",
+                                "alt": "Alcioni Esteves",
+                                "w": "100%",
+                                "radius": "28px",
+                                "shadow": true,
+                                "align": "center",
+                                "maxw": "440px",
+                                "ratio": "4/5",
+                                "maxh": {
+                                    "d": "min(68svh,660px)",
+                                    "t": "min(48svh,520px)",
+                                    "m": "min(44svh,400px)"
+                                },
+                                "objY": 14,
+                                "anim": "fade-left",
+                                "delay": 0
+                            }
+                        },
+                        {
+                            "id": "w024",
+                            "type": "heading",
+                            "p": {
+                                "tag": "p",
+                                "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+                                "italic": true,
+                                "weight": "500",
+                                "align": "center",
+                                "mt": "22",
+                                "color": "#fffaf4",
+                                "anim": "fade-up",
+                                "delay": 200,
+                                "html": "Por trás da profissional, existe uma mulher que também sentiu na pele a força de cuidar sem se abandonar."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s034",
+            "label": "Como funciona",
+            "anchor": "como-funciona",
+            "menu": "Como funciona",
+            "s": {
+                "bg": "#FFFAF4",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "gap": {
+                    "d": "72",
+                    "t": "40",
+                    "m": "28"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c028",
+                    "s": {
+                        "vAlign": "center",
+                        "align": "center",
+                        "span": {
+                            "d": 5,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w027",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/Design-sem-nome.png",
+                                "alt": "Alcioni em atendimento",
+                                "w": "100%",
+                                "radius": "28px",
+                                "shadow": true,
+                                "align": "center",
+                                "maxw": "460px",
+                                "ratio": "1/1",
+                                "maxh": {
+                                    "d": "min(68svh,660px)",
+                                    "t": "min(48svh,520px)",
+                                    "m": "min(44svh,400px)"
+                                },
+                                "objY": 0,
+                                "anim": "fade-right",
+                                "delay": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c033",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 7,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w029",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "color": "#5f5e5c",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "Como funciona meu <span style=\"color:#d48a67\">trabalho</span>",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w030",
+                            "type": "text",
+                            "p": {
+                                "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "<p><strong>Restauração Emocional Integrativa</strong><br>Sessões terapêuticas com mapeamento das feridas, plano de cuidado e escuta profunda com base em <strong>neurociências</strong>, psicoeducação e intervenção psicossocial.</p><p><strong>Mentoria em Grupo “Mãe Presente, Mulher Inteira”</strong><br>Processo terapêutico coletivo, com acolhimento, identificação e fortalecimento da identidade emocional.</p><p><strong>Círculo de Cuidado Emocional</strong><br>Conteúdo exclusivo com lives, áudios, PDFs, grupo de apoio. Temas práticos para nutrir sua emoção. Assinatura por apenas R$29,90/mês.</p><p><strong>Infoprodutos</strong><br>E-books, minicursos, desafios e oficinas sobre autoestima, culpa, criança interior, <strong>neurociência</strong> emocional e maternidade consciente.</p>"
+                            }
+                        },
+                        {
+                            "id": "w031",
+                            "type": "text",
+                            "p": {
+                                "mt": "12",
+                                "align": "left",
+                                "anim": "fade-up",
+                                "delay": 250,
+                                "html": "<p><strong>Quer sentir esse apoio na prática?</strong><br>Agende sua sessão e descubra como posso ajudar sua família a encontrar força, informação e leveza.</p>"
+                            }
+                        },
+                        {
+                            "id": "w032",
+                            "type": "button",
+                            "p": {
+                                "text": "Quero conhecer os serviços",
+                                "url": "https://wa.me/5531986928599",
+                                "icon": "fa-regular fa-hand-point-right",
+                                "variant": "solid",
+                                "newtab": true,
+                                "size": "15px",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 350
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s051",
+            "label": "Serviços",
+            "anchor": "servicos",
+            "menu": "Serviços",
+            "s": {
+                "bg": "#5F5E5C",
+                "color": "#fffaf4",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "gap": {
+                    "d": "36",
+                    "t": "30",
+                    "m": "24"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c038",
+                    "s": {
+                        "span": {
+                            "d": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w035",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "align": "center",
+                                "color": "#fffaf4",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "Você não precisa mais <span style=\"color:#d48a67\">parecer forte</span> enquanto <span style=\"color:#d48a67\">desmorona por dentro</span>.",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w036",
+                            "type": "text",
+                            "p": {
+                                "align": "center",
+                                "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+                                "mt": "16",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "<p>Aqui você encontra <strong>apoio real, ciência aplicada</strong> e um <strong>cuidado</strong> de quem entende suas <strong>dores</strong>.</p>"
+                            }
+                        },
+                        {
+                            "id": "w037",
+                            "type": "spacer",
+                            "p": {
+                                "h": {
+                                    "d": "30",
+                                    "m": "16"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c040",
+                    "s": {
+                        "align": "center",
+                        "span": {
+                            "d": 2,
+                            "t": 4,
+                            "m": 6
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w039",
+                            "type": "iconbox",
+                            "p": {
+                                "img": "uploads/2025/08/mindset_9452679.svg",
+                                "title": "Neurociências na prática clínica",
+                                "iconBg": "#fffaf4",
+                                "iconColor": "#d48a67",
+                                "iconSize": "46px",
+                                "iconBox": "96px",
+                                "color": "#fffaf4",
+                                "size": "15px",
+                                "anim": "zoom-in",
+                                "delay": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c042",
+                    "s": {
+                        "align": "center",
+                        "span": {
+                            "d": 2,
+                            "t": 4,
+                            "m": 6
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w041",
+                            "type": "iconbox",
+                            "p": {
+                                "img": "uploads/2025/08/woman.svg",
+                                "title": "Terapia individual: restauração emocional e psicoeducação",
+                                "iconBg": "#fffaf4",
+                                "iconColor": "#d48a67",
+                                "iconSize": "46px",
+                                "iconBox": "96px",
+                                "color": "#fffaf4",
+                                "size": "15px",
+                                "anim": "zoom-in",
+                                "delay": 80
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c044",
+                    "s": {
+                        "align": "center",
+                        "span": {
+                            "d": 2,
+                            "t": 4,
+                            "m": 6
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w043",
+                            "type": "iconbox",
+                            "p": {
+                                "img": "uploads/2025/07/piece_4205637.svg",
+                                "title": "Acompanhamento de crianças e famílias com TEA (ABA)",
+                                "iconBg": "#fffaf4",
+                                "iconColor": "#d48a67",
+                                "iconSize": "46px",
+                                "iconBox": "96px",
+                                "color": "#fffaf4",
+                                "size": "15px",
+                                "anim": "zoom-in",
+                                "delay": 160
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c046",
+                    "s": {
+                        "align": "center",
+                        "span": {
+                            "d": 2,
+                            "t": 4,
+                            "m": 6
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w045",
+                            "type": "iconbox",
+                            "p": {
+                                "img": "uploads/2025/07/open-magazine.svg",
+                                "title": "Infoprodutos: E-books, minicursos e desafios",
+                                "iconBg": "#fffaf4",
+                                "iconColor": "#d48a67",
+                                "iconSize": "46px",
+                                "iconBox": "96px",
+                                "color": "#fffaf4",
+                                "size": "15px",
+                                "anim": "zoom-in",
+                                "delay": 240
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c048",
+                    "s": {
+                        "align": "center",
+                        "span": {
+                            "d": 2,
+                            "t": 4,
+                            "m": 6
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w047",
+                            "type": "iconbox",
+                            "p": {
+                                "img": "uploads/2025/07/hand-in-hand.svg",
+                                "title": "Terapia de Casais: vínculo, intimidade e harmonia",
+                                "iconBg": "#fffaf4",
+                                "iconColor": "#d48a67",
+                                "iconSize": "46px",
+                                "iconBox": "96px",
+                                "color": "#fffaf4",
+                                "size": "15px",
+                                "anim": "zoom-in",
+                                "delay": 320
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c050",
+                    "s": {
+                        "align": "center",
+                        "span": {
+                            "d": 2,
+                            "t": 4,
+                            "m": 6
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w049",
+                            "type": "iconbox",
+                            "p": {
+                                "img": "uploads/2025/07/community.svg",
+                                "title": "Intervenção Psicossocial: apoio e comunidade",
+                                "iconBg": "#fffaf4",
+                                "iconColor": "#d48a67",
+                                "iconSize": "46px",
+                                "iconBox": "96px",
+                                "color": "#fffaf4",
+                                "size": "15px",
+                                "anim": "zoom-in",
+                                "delay": 400
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s058",
+            "label": "Benefícios",
+            "anchor": "beneficios",
+            "menu": "",
+            "s": {
+                "bg": "#FCF6EF",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "gap": {
+                    "d": "72",
+                    "t": "40",
+                    "m": "28"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c055",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 6,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w052",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "color": "#5f5e5c",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "<span style=\"color:#d48a67\">Benefícios</span> da Terapia",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w053",
+                            "type": "list",
+                            "p": {
+                                "icon": "🔸",
+                                "size": "17px",
+                                "mt": "20",
+                                "items": [
+                                    {
+                                        "text": "Acolhimento profundo, sem julgamentos."
+                                    },
+                                    {
+                                        "text": "Psicoeducação prática para autismo e outras necessidades especiais."
+                                    },
+                                    {
+                                        "text": "Reconstrução da autoestima e do autocuidado."
+                                    },
+                                    {
+                                        "text": "Harmonia familiar através da intervenção sistêmica."
+                                    },
+                                    {
+                                        "text": "Apoio especializado para casais."
+                                    }
+                                ],
+                                "anim": "fade-up",
+                                "delay": 150
+                            }
+                        },
+                        {
+                            "id": "w054",
+                            "type": "text",
+                            "p": {
+                                "mt": "20",
+                                "anim": "fade-up",
+                                "delay": 300,
+                                "html": "<p><strong>Sinta-se compreendida, fortalecida e segura.</strong><br>Agende sua sessão e experimente o poder de um cuidado fundamentado em ciência, prática e empatia.</p>"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c057",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 6,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w056",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/Imagem-feita-pelo-firefly-1.jpg",
+                                "alt": "Alcioni com tablet em atendimento",
+                                "w": "100%",
+                                "radius": "28px",
+                                "shadow": true,
+                                "ratio": "4/3",
+                                "maxh": {
+                                    "d": "min(60svh,560px)",
+                                    "t": "min(46svh,480px)",
+                                    "m": "min(40svh,320px)"
+                                },
+                                "fit": "cover",
+                                "anim": "fade-left",
+                                "delay": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s067",
+            "label": "Atendimento On-line",
+            "anchor": "online",
+            "menu": "Atendimento On-line",
+            "s": {
+                "bg": "#5F5E5C",
+                "color": "#fffaf4",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "gap": {
+                    "d": "72",
+                    "t": "40",
+                    "m": "28"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c060",
+                    "s": {
+                        "vAlign": "center",
+                        "align": "center",
+                        "span": {
+                            "d": 5,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w059",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/Design-sem-nome-2.jpg",
+                                "alt": "Atendimento on-line",
+                                "w": "100%",
+                                "radius": "28px",
+                                "shadow": true,
+                                "align": "center",
+                                "maxw": "440px",
+                                "ratio": "4/5",
+                                "maxh": {
+                                    "d": "min(68svh,660px)",
+                                    "t": "min(48svh,520px)",
+                                    "m": "min(44svh,400px)"
+                                },
+                                "objY": 18,
+                                "anim": "fade-right",
+                                "delay": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c066",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 7,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w061",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "color": "#fffaf4",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "Atendimento <span style=\"color:#d48a67\">On-line</span>",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w062",
+                            "type": "text",
+                            "p": {
+                                "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+                                "mt": "16",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "<p>Entendo <strong>na pele</strong> a rotina intensa de famílias atípicas. Não falo apenas como <strong>profissional</strong>, mas como <strong>mãe</strong> que também enfrenta os mesmos <strong>desafios</strong>.</p><p>Meu atendimento on-line respeita o seu tempo e facilita sua vida, sem perder cuidado e proximidade:</p>"
+                            }
+                        },
+                        {
+                            "id": "w063",
+                            "type": "list",
+                            "p": {
+                                "icon": "👉",
+                                "size": "16px",
+                                "mt": "6",
+                                "items": [
+                                    {
+                                        "text": "Sessões seguras e personalizadas."
+                                    },
+                                    {
+                                        "text": "Psicoeducação e orientação individualizada."
+                                    },
+                                    {
+                                        "text": "Flexibilidade de horários com qualidade e acolhimento."
+                                    },
+                                    {
+                                        "text": "Apoio real sem precisar sair de casa."
+                                    }
+                                ],
+                                "anim": "fade-up",
+                                "delay": 250
+                            }
+                        },
+                        {
+                            "id": "w064",
+                            "type": "text",
+                            "p": {
+                                "mt": "16",
+                                "anim": "fade-up",
+                                "delay": 350,
+                                "html": "<p>Eu estendo minha mão porque sei o quanto é transformador ter alguém que entende de verdade.</p><p>💜 <strong>Você não está sozinha.</strong><br>Juntas, podemos restaurar sua <strong>autoestima</strong> e sua <strong>identidade emocional.</strong></p>"
+                            }
+                        },
+                        {
+                            "id": "w065",
+                            "type": "button",
+                            "p": {
+                                "text": "Agendar agora!",
+                                "url": "https://wa.me/5531986928599",
+                                "icon": "fa-regular fa-calendar-check",
+                                "variant": "solid",
+                                "newtab": true,
+                                "size": "15px",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 450
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s076",
+            "label": "Depoimentos",
+            "anchor": "depoimentos",
+            "menu": "Depoimentos",
+            "s": {
+                "bg": "#FCF6EF",
+                "padT": {
+                    "d": "88",
+                    "t": "84",
+                    "m": "76"
+                },
+                "padB": {
+                    "d": "72",
+                    "t": "72",
+                    "m": "60"
+                },
+                "snap": true
+            },
+            "columns": [
+                {
+                    "id": "c075",
+                    "s": {
+                        "span": {
+                            "d": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w068",
+                            "type": "heading",
+                            "p": {
+                                "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
+                                "align": "center",
+                                "color": "#5f5e5c",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "Histórias de <span style=\"color:#d48a67\">transformação!</span>",
+                                "tag": "h2"
+                            }
+                        },
+                        {
+                            "id": "w069",
+                            "type": "text",
+                            "p": {
+                                "align": "center",
+                                "size": "clamp(18px, 1.5vw, 26px)",
+                                "mt": "14",
+                                "anim": "fade-up",
+                                "delay": 150,
+                                "html": "<p>Mães e famílias relatam o <strong>impacto positivo</strong> da combinação entre <strong>conhecimento neurocientífico</strong> e <strong>suporte emocional.</strong></p>"
+                            }
+                        },
+                        {
+                            "id": "w070",
+                            "type": "spacer",
+                            "p": {
+                                "h": "10"
+                            }
+                        },
+                        {
+                            "id": "w071",
+                            "type": "gallery",
+                            "p": {
+                                "items": [
+                                    {
+                                        "src": "uploads/2025/07/1-1.jpg",
+                                        "alt": "Depoimento de Poliana Ramos"
+                                    },
+                                    {
+                                        "src": "uploads/2025/07/2-2.jpg",
+                                        "alt": "Depoimento de Mayara G."
+                                    },
+                                    {
+                                        "src": "uploads/2025/07/3-2.jpg",
+                                        "alt": "Depoimento de Adriana G."
+                                    },
+                                    {
+                                        "src": "uploads/2025/07/4-2.jpg",
+                                        "alt": "Depoimento de Laiane"
+                                    },
+                                    {
+                                        "src": "uploads/2025/07/7-2.jpg",
+                                        "alt": "Depoimento de Ana Paula L.R."
+                                    },
+                                    {
+                                        "src": "uploads/2025/07/6-2.jpg",
+                                        "alt": "Depoimento de Cléia G. F"
+                                    }
+                                ],
+                                "cols": {
+                                    "d": 3,
+                                    "t": 2,
+                                    "m": 1
+                                },
+                                "gap": "26",
+                                "radius": "10px",
+                                "lightbox": true,
+                                "anim": "fade-up",
+                                "delay": 0
+                            }
+                        },
+                        {
+                            "id": "w072",
+                            "type": "spacer",
+                            "p": {
+                                "h": "14"
+                            }
+                        },
+                        {
+                            "id": "w073",
+                            "type": "text",
+                            "p": {
+                                "align": "center",
+                                "size": "clamp(20px, 1.75vw, 30px)",
+                                "anim": "fade-up",
+                                "delay": 0,
+                                "html": "<p>🌿 Pronta para ser <span style=\"color:#d48a67\"><strong>acolhida?</strong></span></p><p>Agende seu atendimento e permita-se <strong>reconstruir suas forças</strong> com apoio de quem entende suas dores, <strong>sem julgamentos</strong>.</p>"
+                            }
+                        },
+                        {
+                            "id": "w074",
+                            "type": "button",
+                            "p": {
+                                "text": "Agendar agora!",
+                                "url": "https://wa.me/5531986928599",
+                                "icon": "fa-brands fa-whatsapp",
+                                "variant": "solid",
+                                "newtab": true,
+                                "size": "15px",
+                                "align": "center",
+                                "mt": "18",
+                                "anim": "fade-up",
+                                "delay": 150
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "s085",
+            "label": "Rodapé",
+            "anchor": "contato",
+            "menu": "Contato",
+            "s": {
+                "bg": "#4a4947",
+                "color": "#fffaf4",
+                "padT": "50",
+                "padB": "36",
+                "gap": "24",
+                "minH": {
+                    "d": "auto"
+                },
+                "snap": false
+            },
+            "columns": [
+                {
+                    "id": "c078",
+                    "s": {
+                        "align": {
+                            "d": "left",
+                            "m": "center"
+                        },
+                        "vAlign": "center",
+                        "span": {
+                            "d": 4,
+                            "t": 12,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w077",
+                            "type": "image",
+                            "p": {
+                                "src": "uploads/2025/07/logo-alcioni.png",
+                                "alt": "Alcioni Esteves",
+                                "w": "260px",
+                                "invert": true,
+                                "align": {
+                                    "d": "left",
+                                    "m": "center"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c080",
+                    "s": {
+                        "vAlign": "center",
+                        "span": {
+                            "d": 4,
+                            "t": 6,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w079",
+                            "type": "text",
+                            "p": {
+                                "size": "15px",
+                                "align": {
+                                    "d": "center"
+                                },
+                                "html": "<p><strong>Horário de Funcionamento</strong><br>Segunda a Sexta – 08h às 21h</p><p><strong>Responsável Técnico:</strong> Alcioni Esteves</p>"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c082",
+                    "s": {
+                        "align": {
+                            "d": "right",
+                            "m": "center"
+                        },
+                        "vAlign": "center",
+                        "span": {
+                            "d": 4,
+                            "t": 6,
+                            "m": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w081",
+                            "type": "social",
+                            "p": {
+                                "items": [
+                                    {
+                                        "icon": "fa-brands fa-instagram",
+                                        "url": "https://www.instagram.com/alcioni.neuropsi/",
+                                        "label": "Instagram"
+                                    },
+                                    {
+                                        "icon": "fa-brands fa-facebook-f",
+                                        "url": "https://www.facebook.com/alcioni.esteves",
+                                        "label": "Facebook"
+                                    },
+                                    {
+                                        "icon": "fa-brands fa-linkedin-in",
+                                        "url": "https://www.linkedin.com/in/alcioni-esteves-4abb8b29b",
+                                        "label": "LinkedIn"
+                                    },
+                                    {
+                                        "icon": "fa-brands fa-whatsapp",
+                                        "url": "https://wa.me/5531986928599",
+                                        "label": "WhatsApp"
+                                    }
+                                ],
+                                "bg": "#fffaf4",
+                                "color": "#5f5e5c",
+                                "size": "44"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "c084",
+                    "s": {
+                        "span": {
+                            "d": 12
+                        }
+                    },
+                    "widgets": [
+                        {
+                            "id": "w083",
+                            "type": "text",
+                            "p": {
+                                "size": "13px",
+                                "color": "#cfc9c2",
+                                "mt": "10",
+                                "html": "<p style=\"text-align:center\">© 2026 Alcioni Esteves · Psicoterapeuta. Todos os direitos reservados.</p>"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-       }
-      }
-     ]
-    },
-    {
-     "id": "c010",
-     "s": {
-      "pad": "0px",
-      "vAlign": "center",
-      "anim": "fade-in",
-      "delay": 0,
-      "span": {
-       "d": 6,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w004",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/logo-alcioni.png",
-        "alt": "Alcioni Esteves — Psicoterapeuta",
-        "w": {
-         "d": "600px",
-         "t": "420px",
-         "m": "270px"
-        },
-        "align": {
-         "d": "right",
-         "m": "center"
-        },
-        "mb": "10",
-        "anim": "fade-down",
-        "delay": 0
-       }
-      },
-      {
-       "id": "w005",
-       "type": "heading",
-       "p": {
-        "tag": "h1",
-        "size": "clamp(38px, 3.7vw, 68px)",
-        "align": {
-         "d": "right",
-         "m": "center"
-        },
-        "color": "#1f1e1d",
-        "mt": "22",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "Você cuida de <span style=\"color:#fffaf4\">tudo</span>, mas quem cuida de <span style=\"color:#fffaf4\">você</span>?"
-       }
-      },
-      {
-       "id": "w006",
-       "type": "text",
-       "p": {
-        "align": {
-         "d": "right",
-         "m": "center"
-        },
-        "size": "clamp(18px, 1.45vw, 25px)",
-        "mt": "20",
-        "anim": "fade-up",
-        "delay": 300,
-        "html": "<p><strong>Espaço terapêutico</strong> para <strong>mães atípicas</strong> e mulheres com <strong>feridas emocionais</strong>, que carregam culpas <strong>invisíveis</strong>, lutas <strong>solitárias</strong> e o desejo profundo de <strong>se reencontrar.</strong></p>"
-       }
-      },
-      {
-       "id": "w007",
-       "type": "text",
-       "p": {
-        "align": "left",
-        "size": "clamp(18px, 1.45vw, 25px)",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 450,
-        "html": "<p>Você se sente:<br>🔸 Sobrecarregada emocionalmente<br>🔸 Invisível dentro da própria casa<br>🔸 Culpada por não dar conta de tudo<br>🔸 Vivendo o luto da maternidade idealizada</p><p><strong style=\"color:#8f4624\">Se você se identifica, este espaço é para você.</strong></p>"
-       }
-      },
-      {
-       "id": "w008",
-       "type": "button",
-       "p": {
-        "text": "AGENDE SUA SESSÃO",
-        "url": "https://wa.me/5531986928599",
-        "icon": "fa-brands fa-whatsapp",
-        "variant": "solid",
-        "newtab": true,
-        "size": "clamp(15px, 1.1vw, 19px)",
-        "align": {
-         "d": "right",
-         "m": "center"
-        },
-        "mt": "26",
-        "anim": "fade-up",
-        "delay": 600
-       }
-      },
-      {
-       "id": "w009",
-       "type": "text",
-       "p": {
-        "align": {
-         "d": "right",
-         "m": "center"
-        },
-        "size": "clamp(15px, 1.1vw, 20px)",
-        "mt": "16",
-        "anim": "fade-up",
-        "delay": 750,
-        "html": "<p><strong>+26 anos de experiência</strong><br>Atendimentos no Brasil e no exterior!</p>"
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s018",
-   "label": "Quem eu ajudo",
-   "anchor": "ajudo",
-   "menu": "Quem eu ajudo",
-   "s": {
-    "bg": "#FFFAF4",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "gap": {
-     "d": "72",
-     "t": "40",
-     "m": "28"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c013",
-     "s": {
-      "vAlign": "center",
-      "align": "center",
-      "span": {
-       "d": 5,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w012",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/A-sobrecarga-de-quem-cuida-o-dia-das-maes-atipicas_Imagem-destaque.jpg",
-        "alt": "Mãe abraçando filho com peças de quebra-cabeça colorido (símbolo do autismo)",
-        "ratio": "1/1",
-        "maxh": {
-         "d": "min(68svh,660px)",
-         "t": "min(48svh,520px)",
-         "m": "min(44svh,400px)"
-        },
-        "radius": "28px",
-        "align": "center",
-        "maxw": "460px",
-        "anim": "zoom-in",
-        "delay": 0
-       }
-      }
-     ]
-    },
-    {
-     "id": "c017",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 7,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w014",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "color": "#5f5e5c",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "Quem eu <span style=\"color:#d48a67\">ajudo</span>",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w015",
-       "type": "text",
-       "p": {
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "<p><strong>Mães Atípicas</strong></p><p>Cuidam de filhos com TEA, TDAH, síndromes ou deficiências. Vivem em modo de sobrevivência, sentem culpa constante e querem se reencontrar como mulheres, não só como cuidadoras.</p><p><strong>Mulheres com Feridas Emocionais</strong></p><p>Carregam traumas antigos, baixa autoestima e vínculos afetivos marcados por dor. Buscam um recomeço com base, afeto e acolhimento.</p>"
-       }
-      },
-      {
-       "id": "w016",
-       "type": "text",
-       "p": {
-        "mt": "10",
-        "size": "18px",
-        "color": "#d48a67",
-        "anim": "fade-up",
-        "delay": 300,
-        "html": "<p><strong>Você merece um espaço para si — sem julgamentos e sem culpa.</strong></p>"
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s026",
-   "label": "Quem é Alcioni",
-   "anchor": "sobre",
-   "menu": "Quem sou",
-   "s": {
-    "bg": "#5F5E5C",
-    "color": "#fffaf4",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "gap": {
-     "d": "72",
-     "t": "40",
-     "m": "28"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c022",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 7,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w019",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "color": "#fffaf4",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "Quem é <span style=\"color:#d48a67\">Alcioni Esteves?</span>",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w020",
-       "type": "text",
-       "p": {
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "<p>Sou Alcioni. Durante muito tempo, também me <strong>perdi de mim mesma</strong>. Não por falta de força, mas por excesso de <strong>sobrecarga</strong>, <strong>culpas invisíveis</strong> e um <strong>amor tão intenso</strong> que me fez esquecer de mim. Hoje, transformo essa vivência em missão: conduzir mulheres ao reencontro consigo mesmas, fortalecendo a <strong>autoestima</strong> e restaurando <strong>feridas emocionais</strong>.</p><p>Meu trabalho transforma dores em <strong>força</strong> e <strong>identidade</strong>, criando um espaço de acolhimento onde cada mulher pode dar novo sentido à sua história, mudar a forma de pensar, sentir e agir, e caminhar com mais <strong>leveza</strong>, <strong>direção</strong> e <strong>transformação</strong>.</p>"
-       }
-      },
-      {
-       "id": "w021",
-       "type": "list",
-       "p": {
-        "icon": "fa-solid fa-diamond",
-        "iconColor": "#d48a67",
-        "size": "15px",
-        "mt": "20",
-        "cols": {
-         "d": 2,
-         "t": 2,
-         "m": 1
-        },
-        "items": [
-         {
-          "text": "Neurociências na Prática Clínica"
-         },
-         {
-          "text": "Psicóloga acadêmica"
-         },
-         {
-          "text": "Neuropsicopedagogia Clínica"
-         },
-         {
-          "text": "Psicanalista clínica"
-         },
-         {
-          "text": "Bacharel em Serviço Social"
-         },
-         {
-          "text": "Psicologia do Desenvolvimento Infantojuvenil"
-         },
-         {
-          "text": "Pedagogia"
-         },
-         {
-          "text": "Terapeuta de Feridas Emocionais"
-         },
-         {
-          "text": "Intervenção Psicossocial"
-         },
-         {
-          "text": "ABA | TEA | Inclusão | AEE"
-         },
-         {
-          "text": "Sexualidade Humana & Terapia para casais"
-         },
-         {
-          "text": "Método Terapêutico Sistêmico & Integrativo"
-         }
-        ],
-        "anim": "fade-up",
-        "delay": 300
-       }
-      }
-     ]
-    },
-    {
-     "id": "c025",
-     "s": {
-      "vAlign": "center",
-      "align": "center",
-      "span": {
-       "d": 5,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w023",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/08/MG_9984-Editar-3.jpg",
-        "alt": "Alcioni Esteves",
-        "w": "100%",
-        "radius": "28px",
-        "shadow": true,
-        "align": "center",
-        "maxw": "440px",
-        "ratio": "4/5",
-        "maxh": {
-         "d": "min(68svh,660px)",
-         "t": "min(48svh,520px)",
-         "m": "min(44svh,400px)"
-        },
-        "objY": 14,
-        "anim": "fade-left",
-        "delay": 0
-       }
-      },
-      {
-       "id": "w024",
-       "type": "heading",
-       "p": {
-        "tag": "p",
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
-        "italic": true,
-        "weight": "500",
-        "align": "center",
-        "mt": "22",
-        "color": "#fffaf4",
-        "anim": "fade-up",
-        "delay": 200,
-        "html": "Por trás da profissional, existe uma mulher que também sentiu na pele a força de cuidar sem se abandonar."
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s034",
-   "label": "Como funciona",
-   "anchor": "como-funciona",
-   "menu": "Como funciona",
-   "s": {
-    "bg": "#FFFAF4",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "gap": {
-     "d": "72",
-     "t": "40",
-     "m": "28"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c028",
-     "s": {
-      "vAlign": "center",
-      "align": "center",
-      "span": {
-       "d": 5,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w027",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/Design-sem-nome.png",
-        "alt": "Alcioni em atendimento",
-        "w": "100%",
-        "radius": "28px",
-        "shadow": true,
-        "align": "center",
-        "maxw": "460px",
-        "ratio": "1/1",
-        "maxh": {
-         "d": "min(68svh,660px)",
-         "t": "min(48svh,520px)",
-         "m": "min(44svh,400px)"
-        },
-        "objY": 0,
-        "anim": "fade-right",
-        "delay": 0
-       }
-      }
-     ]
-    },
-    {
-     "id": "c033",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 7,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w029",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "color": "#5f5e5c",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "Como funciona meu <span style=\"color:#d48a67\">trabalho</span>",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w030",
-       "type": "text",
-       "p": {
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "<p><strong>Restauração Emocional Integrativa</strong><br>Sessões terapêuticas com mapeamento das feridas, plano de cuidado e escuta profunda com base em <strong>neurociências</strong>, psicoeducação e intervenção psicossocial.</p><p><strong>Mentoria em Grupo “Mãe Presente, Mulher Inteira”</strong><br>Processo terapêutico coletivo, com acolhimento, identificação e fortalecimento da identidade emocional.</p><p><strong>Círculo de Cuidado Emocional</strong><br>Conteúdo exclusivo com lives, áudios, PDFs, grupo de apoio. Temas práticos para nutrir sua emoção. Assinatura por apenas R$29,90/mês.</p><p><strong>Infoprodutos</strong><br>E-books, minicursos, desafios e oficinas sobre autoestima, culpa, criança interior, <strong>neurociência</strong> emocional e maternidade consciente.</p>"
-       }
-      },
-      {
-       "id": "w031",
-       "type": "text",
-       "p": {
-        "mt": "12",
-        "align": "left",
-        "anim": "fade-up",
-        "delay": 250,
-        "html": "<p><strong>Quer sentir esse apoio na prática?</strong><br>Agende sua sessão e descubra como posso ajudar sua família a encontrar força, informação e leveza.</p>"
-       }
-      },
-      {
-       "id": "w032",
-       "type": "button",
-       "p": {
-        "text": "Quero conhecer os serviços",
-        "url": "https://wa.me/5531986928599",
-        "icon": "fa-regular fa-hand-point-right",
-        "variant": "solid",
-        "newtab": true,
-        "size": "15px",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 350
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s051",
-   "label": "Serviços",
-   "anchor": "servicos",
-   "menu": "Serviços",
-   "s": {
-    "bg": "#5F5E5C",
-    "color": "#fffaf4",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "gap": {
-     "d": "36",
-     "t": "30",
-     "m": "24"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c038",
-     "s": {
-      "span": {
-       "d": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w035",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "align": "center",
-        "color": "#fffaf4",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "Você não precisa mais <span style=\"color:#d48a67\">parecer forte</span> enquanto <span style=\"color:#d48a67\">desmorona por dentro</span>.",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w036",
-       "type": "text",
-       "p": {
-        "align": "center",
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
-        "mt": "16",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "<p>Aqui você encontra <strong>apoio real, ciência aplicada</strong> e um <strong>cuidado</strong> de quem entende suas <strong>dores</strong>.</p>"
-       }
-      },
-      {
-       "id": "w037",
-       "type": "spacer",
-       "p": {
-        "h": {
-         "d": "30",
-         "m": "16"
-        }
-       }
-      }
-     ]
-    },
-    {
-     "id": "c040",
-     "s": {
-      "align": "center",
-      "span": {
-       "d": 2,
-       "t": 4,
-       "m": 6
-      }
-     },
-     "widgets": [
-      {
-       "id": "w039",
-       "type": "iconbox",
-       "p": {
-        "img": "uploads/2025/08/mindset_9452679.svg",
-        "title": "Neurociências na prática clínica",
-        "iconBg": "#fffaf4",
-        "iconColor": "#d48a67",
-        "iconSize": "46px",
-        "iconBox": "96px",
-        "color": "#fffaf4",
-        "size": "15px",
-        "anim": "zoom-in",
-        "delay": 0
-       }
-      }
-     ]
-    },
-    {
-     "id": "c042",
-     "s": {
-      "align": "center",
-      "span": {
-       "d": 2,
-       "t": 4,
-       "m": 6
-      }
-     },
-     "widgets": [
-      {
-       "id": "w041",
-       "type": "iconbox",
-       "p": {
-        "img": "uploads/2025/08/woman.svg",
-        "title": "Terapia individual: restauração emocional e psicoeducação",
-        "iconBg": "#fffaf4",
-        "iconColor": "#d48a67",
-        "iconSize": "46px",
-        "iconBox": "96px",
-        "color": "#fffaf4",
-        "size": "15px",
-        "anim": "zoom-in",
-        "delay": 80
-       }
-      }
-     ]
-    },
-    {
-     "id": "c044",
-     "s": {
-      "align": "center",
-      "span": {
-       "d": 2,
-       "t": 4,
-       "m": 6
-      }
-     },
-     "widgets": [
-      {
-       "id": "w043",
-       "type": "iconbox",
-       "p": {
-        "img": "uploads/2025/07/piece_4205637.svg",
-        "title": "Acompanhamento de crianças e famílias com TEA (ABA)",
-        "iconBg": "#fffaf4",
-        "iconColor": "#d48a67",
-        "iconSize": "46px",
-        "iconBox": "96px",
-        "color": "#fffaf4",
-        "size": "15px",
-        "anim": "zoom-in",
-        "delay": 160
-       }
-      }
-     ]
-    },
-    {
-     "id": "c046",
-     "s": {
-      "align": "center",
-      "span": {
-       "d": 2,
-       "t": 4,
-       "m": 6
-      }
-     },
-     "widgets": [
-      {
-       "id": "w045",
-       "type": "iconbox",
-       "p": {
-        "img": "uploads/2025/07/open-magazine.svg",
-        "title": "Infoprodutos: E-books, minicursos e desafios",
-        "iconBg": "#fffaf4",
-        "iconColor": "#d48a67",
-        "iconSize": "46px",
-        "iconBox": "96px",
-        "color": "#fffaf4",
-        "size": "15px",
-        "anim": "zoom-in",
-        "delay": 240
-       }
-      }
-     ]
-    },
-    {
-     "id": "c048",
-     "s": {
-      "align": "center",
-      "span": {
-       "d": 2,
-       "t": 4,
-       "m": 6
-      }
-     },
-     "widgets": [
-      {
-       "id": "w047",
-       "type": "iconbox",
-       "p": {
-        "img": "uploads/2025/07/hand-in-hand.svg",
-        "title": "Terapia de Casais: vínculo, intimidade e harmonia",
-        "iconBg": "#fffaf4",
-        "iconColor": "#d48a67",
-        "iconSize": "46px",
-        "iconBox": "96px",
-        "color": "#fffaf4",
-        "size": "15px",
-        "anim": "zoom-in",
-        "delay": 320
-       }
-      }
-     ]
-    },
-    {
-     "id": "c050",
-     "s": {
-      "align": "center",
-      "span": {
-       "d": 2,
-       "t": 4,
-       "m": 6
-      }
-     },
-     "widgets": [
-      {
-       "id": "w049",
-       "type": "iconbox",
-       "p": {
-        "img": "uploads/2025/07/community.svg",
-        "title": "Intervenção Psicossocial: apoio e comunidade",
-        "iconBg": "#fffaf4",
-        "iconColor": "#d48a67",
-        "iconSize": "46px",
-        "iconBox": "96px",
-        "color": "#fffaf4",
-        "size": "15px",
-        "anim": "zoom-in",
-        "delay": 400
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s058",
-   "label": "Benefícios",
-   "anchor": "beneficios",
-   "menu": "",
-   "s": {
-    "bg": "#FCF6EF",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "gap": {
-     "d": "72",
-     "t": "40",
-     "m": "28"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c055",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 6,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w052",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "color": "#5f5e5c",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "<span style=\"color:#d48a67\">Benefícios</span> da Terapia",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w053",
-       "type": "list",
-       "p": {
-        "icon": "🔸",
-        "size": "17px",
-        "mt": "20",
-        "items": [
-         {
-          "text": "Acolhimento profundo, sem julgamentos."
-         },
-         {
-          "text": "Psicoeducação prática para autismo e outras necessidades especiais."
-         },
-         {
-          "text": "Reconstrução da autoestima e do autocuidado."
-         },
-         {
-          "text": "Harmonia familiar através da intervenção sistêmica."
-         },
-         {
-          "text": "Apoio especializado para casais."
-         }
-        ],
-        "anim": "fade-up",
-        "delay": 150
-       }
-      },
-      {
-       "id": "w054",
-       "type": "text",
-       "p": {
-        "mt": "20",
-        "anim": "fade-up",
-        "delay": 300,
-        "html": "<p><strong>Sinta-se compreendida, fortalecida e segura.</strong><br>Agende sua sessão e experimente o poder de um cuidado fundamentado em ciência, prática e empatia.</p>"
-       }
-      }
-     ]
-    },
-    {
-     "id": "c057",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 6,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w056",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/Imagem-feita-pelo-firefly-1.jpg",
-        "alt": "Alcioni com tablet em atendimento",
-        "w": "100%",
-        "radius": "28px",
-        "shadow": true,
-        "ratio": "4/3",
-        "maxh": {
-         "d": "min(60svh,560px)",
-         "t": "min(46svh,480px)",
-         "m": "min(40svh,320px)"
-        },
-        "fit": "cover",
-        "anim": "fade-left",
-        "delay": 0
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s067",
-   "label": "Atendimento On-line",
-   "anchor": "online",
-   "menu": "Atendimento On-line",
-   "s": {
-    "bg": "#5F5E5C",
-    "color": "#fffaf4",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "gap": {
-     "d": "72",
-     "t": "40",
-     "m": "28"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c060",
-     "s": {
-      "vAlign": "center",
-      "align": "center",
-      "span": {
-       "d": 5,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w059",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/Design-sem-nome-2.jpg",
-        "alt": "Atendimento on-line",
-        "w": "100%",
-        "radius": "28px",
-        "shadow": true,
-        "align": "center",
-        "maxw": "440px",
-        "ratio": "4/5",
-        "maxh": {
-         "d": "min(68svh,660px)",
-         "t": "min(48svh,520px)",
-         "m": "min(44svh,400px)"
-        },
-        "objY": 18,
-        "anim": "fade-right",
-        "delay": 0
-       }
-      }
-     ]
-    },
-    {
-     "id": "c066",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 7,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w061",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "color": "#fffaf4",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "Atendimento <span style=\"color:#d48a67\">On-line</span>",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w062",
-       "type": "text",
-       "p": {
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
-        "mt": "16",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "<p>Entendo <strong>na pele</strong> a rotina intensa de famílias atípicas. Não falo apenas como <strong>profissional</strong>, mas como <strong>mãe</strong> que também enfrenta os mesmos <strong>desafios</strong>.</p><p>Meu atendimento on-line respeita o seu tempo e facilita sua vida, sem perder cuidado e proximidade:</p>"
-       }
-      },
-      {
-       "id": "w063",
-       "type": "list",
-       "p": {
-        "icon": "👉",
-        "size": "16px",
-        "mt": "6",
-        "items": [
-         {
-          "text": "Sessões seguras e personalizadas."
-         },
-         {
-          "text": "Psicoeducação e orientação individualizada."
-         },
-         {
-          "text": "Flexibilidade de horários com qualidade e acolhimento."
-         },
-         {
-          "text": "Apoio real sem precisar sair de casa."
-         }
-        ],
-        "anim": "fade-up",
-        "delay": 250
-       }
-      },
-      {
-       "id": "w064",
-       "type": "text",
-       "p": {
-        "mt": "16",
-        "anim": "fade-up",
-        "delay": 350,
-        "html": "<p>Eu estendo minha mão porque sei o quanto é transformador ter alguém que entende de verdade.</p><p>💜 <strong>Você não está sozinha.</strong><br>Juntas, podemos restaurar sua <strong>autoestima</strong> e sua <strong>identidade emocional.</strong></p>"
-       }
-      },
-      {
-       "id": "w065",
-       "type": "button",
-       "p": {
-        "text": "Agendar agora!",
-        "url": "https://wa.me/5531986928599",
-        "icon": "fa-regular fa-calendar-check",
-        "variant": "solid",
-        "newtab": true,
-        "size": "15px",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 450
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s076",
-   "label": "Depoimentos",
-   "anchor": "depoimentos",
-   "menu": "Depoimentos",
-   "s": {
-    "bg": "#FCF6EF",
-    "padT": {
-     "d": "88",
-     "t": "84",
-     "m": "76"
-    },
-    "padB": {
-     "d": "72",
-     "t": "72",
-     "m": "60"
-    },
-    "snap": true
-   },
-   "columns": [
-    {
-     "id": "c075",
-     "s": {
-      "span": {
-       "d": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w068",
-       "type": "heading",
-       "p": {
-        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
-        "align": "center",
-        "color": "#5f5e5c",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "Histórias de <span style=\"color:#d48a67\">transformação!</span>",
-        "tag": "h2"
-       }
-      },
-      {
-       "id": "w069",
-       "type": "text",
-       "p": {
-        "align": "center",
-        "size": "clamp(18px, 1.5vw, 26px)",
-        "mt": "14",
-        "anim": "fade-up",
-        "delay": 150,
-        "html": "<p>Mães e famílias relatam o <strong>impacto positivo</strong> da combinação entre <strong>conhecimento neurocientífico</strong> e <strong>suporte emocional.</strong></p>"
-       }
-      },
-      {
-       "id": "w070",
-       "type": "spacer",
-       "p": {
-        "h": "10"
-       }
-      },
-      {
-       "id": "w071",
-       "type": "gallery",
-       "p": {
-        "items": [
-         {
-          "src": "uploads/2025/07/1-1.jpg",
-          "alt": "Depoimento de Poliana Ramos"
-         },
-         {
-          "src": "uploads/2025/07/2-2.jpg",
-          "alt": "Depoimento de Mayara G."
-         },
-         {
-          "src": "uploads/2025/07/3-2.jpg",
-          "alt": "Depoimento de Adriana G."
-         },
-         {
-          "src": "uploads/2025/07/4-2.jpg",
-          "alt": "Depoimento de Laiane"
-         },
-         {
-          "src": "uploads/2025/07/7-2.jpg",
-          "alt": "Depoimento de Ana Paula L.R."
-         },
-         {
-          "src": "uploads/2025/07/6-2.jpg",
-          "alt": "Depoimento de Cléia G. F"
-         }
-        ],
-        "cols": {
-         "d": 3,
-         "t": 2,
-         "m": 1
-        },
-        "gap": "26",
-        "radius": "10px",
-        "lightbox": true,
-        "anim": "fade-up",
-        "delay": 0
-       }
-      },
-      {
-       "id": "w072",
-       "type": "spacer",
-       "p": {
-        "h": "14"
-       }
-      },
-      {
-       "id": "w073",
-       "type": "text",
-       "p": {
-        "align": "center",
-        "size": "clamp(20px, 1.75vw, 30px)",
-        "anim": "fade-up",
-        "delay": 0,
-        "html": "<p>🌿 Pronta para ser <span style=\"color:#d48a67\"><strong>acolhida?</strong></span></p><p>Agende seu atendimento e permita-se <strong>reconstruir suas forças</strong> com apoio de quem entende suas dores, <strong>sem julgamentos</strong>.</p>"
-       }
-      },
-      {
-       "id": "w074",
-       "type": "button",
-       "p": {
-        "text": "Agendar agora!",
-        "url": "https://wa.me/5531986928599",
-        "icon": "fa-brands fa-whatsapp",
-        "variant": "solid",
-        "newtab": true,
-        "size": "15px",
-        "align": "center",
-        "mt": "18",
-        "anim": "fade-up",
-        "delay": 150
-       }
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "s085",
-   "label": "Rodapé",
-   "anchor": "contato",
-   "menu": "Contato",
-   "s": {
-    "bg": "#4a4947",
-    "color": "#fffaf4",
-    "padT": "50",
-    "padB": "36",
-    "gap": "24",
-    "minH": {
-     "d": "auto"
-    },
-    "snap": false
-   },
-   "columns": [
-    {
-     "id": "c078",
-     "s": {
-      "align": {
-       "d": "left",
-       "m": "center"
-      },
-      "vAlign": "center",
-      "span": {
-       "d": 4,
-       "t": 12,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w077",
-       "type": "image",
-       "p": {
-        "src": "uploads/2025/07/logo-alcioni.png",
-        "alt": "Alcioni Esteves",
-        "w": "260px",
-        "invert": true,
-        "align": {
-         "d": "left",
-         "m": "center"
-        }
-       }
-      }
-     ]
-    },
-    {
-     "id": "c080",
-     "s": {
-      "vAlign": "center",
-      "span": {
-       "d": 4,
-       "t": 6,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w079",
-       "type": "text",
-       "p": {
-        "size": "15px",
-        "align": {
-         "d": "center"
-        },
-        "html": "<p><strong>Horário de Funcionamento</strong><br>Segunda a Sexta – 08h às 21h</p><p><strong>Responsável Técnico:</strong> Alcioni Esteves</p>"
-       }
-      }
-     ]
-    },
-    {
-     "id": "c082",
-     "s": {
-      "align": {
-       "d": "right",
-       "m": "center"
-      },
-      "vAlign": "center",
-      "span": {
-       "d": 4,
-       "t": 6,
-       "m": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w081",
-       "type": "social",
-       "p": {
-        "items": [
-         {
-          "icon": "fa-brands fa-instagram",
-          "url": "https://www.instagram.com/alcioni.neuropsi/",
-          "label": "Instagram"
-         },
-         {
-          "icon": "fa-brands fa-facebook-f",
-          "url": "https://www.facebook.com/alcioni.esteves",
-          "label": "Facebook"
-         },
-         {
-          "icon": "fa-brands fa-linkedin-in",
-          "url": "https://www.linkedin.com/in/alcioni-esteves-4abb8b29b",
-          "label": "LinkedIn"
-         },
-         {
-          "icon": "fa-brands fa-whatsapp",
-          "url": "https://wa.me/5531986928599",
-          "label": "WhatsApp"
-         }
-        ],
-        "bg": "#fffaf4",
-        "color": "#5f5e5c",
-        "size": "44"
-       }
-      }
-     ]
-    },
-    {
-     "id": "c084",
-     "s": {
-      "span": {
-       "d": 12
-      }
-     },
-     "widgets": [
-      {
-       "id": "w083",
-       "type": "text",
-       "p": {
-        "size": "13px",
-        "color": "#cfc9c2",
-        "mt": "10",
-        "html": "<p style=\"text-align:center\">© 2026 Alcioni Esteves · Psicoterapeuta. Todos os direitos reservados.</p>"
-       }
-      }
-     ]
-    }
-   ]
-  }
- ]
+    ]
 }

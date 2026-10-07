@@ -445,7 +445,7 @@ function header_html(array $site, Css $css): string
         $btn = '<a class="btn btn-solid btn-sm" href="' . esc(safe_url($hd['btnUrl'] ?? '') ?: '#') . '" target="_blank" rel="noopener">' . icon_html((string)($hd['btnIcon'] ?? ''), 'bi') . '<span>' . esc($hd['btnText']) . '</span></a>';
     }
     $logo = !empty($hd['logo']) ? '<a href="#top" class="logo">' . img_tag((string)$hd['logo'], 'Logo', '', '', false) . '</a>' : '<span></span>';
-    return '<header id="hdr" class="' . (!empty($hd['solidOnScroll']) ? 'sos' : '') . (!empty($hd['logoOnScroll']) ? ' lh' : '') . (!empty($hd['hideAtTop']) ? ' hat' : '') . '" data-hdr>'
+    return '<header id="hdr" class="' . (!empty($hd['solidOnScroll']) ? 'sos' : '') . (!empty($hd['logoOnScroll']) ? ' lh' : '') . (!empty($hd['hideAtTop']) ? ' hat' : '') . (!empty($hd['hideAtTopMobile']) ? ' hatm' : '') . '" data-hdr>'
         . '<div class="hdr-in">' . $logo . '<nav class="nav" id="nav">' . $nav . $btn . '</nav>'
         . '<button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>';
 }
