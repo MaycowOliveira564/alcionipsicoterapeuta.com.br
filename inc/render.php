@@ -15,7 +15,7 @@ function rv($v): array
 /** Acumulador de CSS responsivo (desktop base, tablet <=1023, mobile <=639) */
 class Css
 {
-    public array $b = ['d' => [], 't' => [], 'm' => []];
+    public array $b = ['d' => [], 'dx' => [], 't' => [], 'tx' => [], 'm' => []];
 
     public function rule(string $sel, string $prop, $value, callable $filter): void
     {
@@ -32,10 +32,16 @@ class Css
         $this->b[$dev][$sel][] = $decl;
     }
 
+    /** Oculta só no dispositivo indicado (d >=1024, t 640-1023, m <=639) */
+    public function hide(string $dev, string $sel): void
+    {
+        $this->b[['d' => 'dx', 't' => 'tx', 'm' => 'm'][$dev]][$sel][] = 'display:none!important';
+    }
+
     public function out(): string
     {
         $s = '';
-        $wrap = ['d' => ['', ''], 't' => ['@media(max-width:1023px){', '}'], 'm' => ['@media(max-width:639px){', '}']];
+        $wrap = ['d' => ['', ''], 'dx' => ['@media(min-width:1024px){', '}'], 't' => ['@media(max-width:1023px){', '}'], 'tx' => ['@media(min-width:640px) and (max-width:1023px){', '}'], 'm' => ['@media(max-width:639px){', '}']];
         foreach ($this->b as $dev => $rules) {
             if (!$rules) continue;
             $s .= $wrap[$dev][0];
@@ -66,7 +72,7 @@ function common_widget_css(Css $css, string $sel, array $p): void
     $css->rule($sel, 'margin-bottom', $p['mb'] ?? '', 'f_len');
     $css->rule($sel, 'max-width', $p['maxw'] ?? '', 'f_len');
     foreach (rv($p['hide'] ?? []) as $dev => $h) {
-        if ($h) $css->raw($dev, $sel, 'display:none!important');
+        if ($h) $css->hide($dev, $sel);
     }
     if (!empty($p['maxw'])) {
         $al = rv($p['align'] ?? '');
@@ -154,15 +160,23 @@ function render_widget(array $w, Css $css, bool $editor): string
             break;
 
         case 'image':
-            $css->rule("$sel img", 'width', $p['w'] ?? '', 'f_len');
-            $css->rule("$sel img", 'height', $p['h'] ?? '', 'f_len');
-            $css->raw('d', "$sel img", 'max-width:100%');
-            if (!empty($p['radius']) && css_lenlist($p['radius']) !== '') $css->raw('d', "$sel img", 'border-radius:' . css_lenlist($p['radius']));
-            if (!empty($p['shadow'])) $css->raw('d', "$sel img", 'box-shadow:0 20px 45px -15px rgba(0,0,0,.35)');
-            if (!empty($p['fit']) && in_array($p['fit'], ['cover', 'contain'], true)) $css->raw('d', "$sel img", 'object-fit:' . $p['fit']);
-            if (!empty($p['invert'])) $css->raw('d', "$sel img", 'filter:brightness(0) invert(1)');
-            if (!empty($p['ratio']) && preg_match('#^\d+/\d+$#', (string)$p['ratio'])) $css->raw('d', "$sel img", 'aspect-ratio:' . $p['ratio'] . ';object-fit:' . (($p['fit'] ?? '') ?: 'cover'));
-            $tagImg = img_tag((string)($p['src'] ?? ''), (string)($p['alt'] ?? ''), (!empty($p['hover']) ? 'hz' : ''));
+            $im = "$sel .im"; $ii = "$sel .im img";
+            $css->rule($im, 'width', $p['w'] ?? '', 'f_len');
+            $css->rule($im, 'height', $p['h'] ?? '', 'f_len');
+            $css->rule($im, 'aspect-ratio', $p['ratio'] ?? '', fn($v) => preg_match('#^\d+(\.\d+)?/\d+(\.\d+)?$#', (string)$v) ? (string)$v : '');
+            $css->rule($im, '--ox', $p['objX'] ?? '', fn($v) => css_num($v, 0, 100) !== '' ? css_num($v, 0, 100) . '%' : '');
+            $css->rule($im, '--oy', $p['objY'] ?? '', fn($v) => css_num($v, 0, 100) !== '' ? css_num($v, 0, 100) . '%' : '');
+            $css->rule($im, '--z', $p['zoom'] ?? '', fn($v) => css_num($v, 20, 400) !== '' ? (string)(css_num($v, 20, 400) / 100) : '');
+            foreach (rv($p['align'] ?? '') as $dev => $al) {
+                if (isset(['left' => 1, 'center' => 1, 'right' => 1][$al])) $css->raw($dev, $im, 'margin:' . ['left' => '0 auto 0 0', 'center' => '0 auto', 'right' => '0 0 0 auto'][$al]);
+            }
+            $css->rule($im, 'border-radius', $p['radius'] ?? '', 'css_lenlist');
+            if (!empty($p['shadow'])) $css->raw('d', $im, 'box-shadow:0 22px 48px -18px rgba(0,0,0,.4)');
+            $fixed = !empty($p['ratio']) || !empty($p['h']);
+            $fit = in_array($p['fit'] ?? '', ['cover', 'contain', 'fill'], true) ? $p['fit'] : 'cover';
+            if ($fixed || !empty($p['zoom']) || ($p['fit'] ?? '') !== '') $css->raw('d', $ii, 'height:100%;object-fit:' . $fit);
+            if (!empty($p['invert'])) $css->raw('d', $ii, 'filter:brightness(0) invert(1)');
+            $tagImg = img_tag((string)($p['src'] ?? ''), (string)($p['alt'] ?? ''), '', '');
             if ($tagImg === '' && $editor) $tagImg = '<div class="ph">Selecione uma imagem</div>';
             $link = safe_url($p['link'] ?? '');
             $inner = $link ? '<a href="' . esc($link) . '"' . (!empty($p['newtab']) ? ' target="_blank" rel="noopener"' : '') . '>' . $tagImg . '</a>' : $tagImg;
@@ -291,7 +305,10 @@ function render_column(array $c, Css $css, bool $editor): string
     $id = preg_replace('/[^a-z0-9_-]/i', '', (string)($c['id'] ?? uid('c')));
     $s = $c['s'] ?? [];
     $sel = ".e-$id";
-    $css->rule($sel, 'grid-column', $s['span'] ?? ['d' => 12], fn($n) => 'span ' . max(1, min(12, (int)$n)) . ' / span ' . max(1, min(12, (int)$n)));
+    $css->rule($sel, 'width', $s['span'] ?? ['d' => 12], function ($n) {
+        $n = max(1, min(12, (int)$n));
+        return $n === 12 ? '100%' : 'calc((100% - 11 * var(--g)) / 12 * ' . $n . ' + ' . ($n - 1) . ' * var(--g) - .5px)';
+    });
     $css->rule($sel, 'text-align', $s['align'] ?? '', 'f_align');
     $css->rule($sel, 'padding', $s['pad'] ?? '', 'css_lenlist');
     $css->rule($sel, 'background-color', $s['bg'] ?? '', 'f_color');
@@ -299,7 +316,7 @@ function render_column(array $c, Css $css, bool $editor): string
     $css->rule($sel, 'justify-content', $s['vAlign'] ?? '', fn($v) => ['start' => 'flex-start', 'center' => 'center', 'end' => 'flex-end', 'between' => 'space-between'][$v] ?? '');
     $css->rule($sel, 'gap', $s['gap'] ?? '', 'f_len');
     if (!empty($s['radius']) && css_lenlist($s['radius']) !== '') $css->raw('d', $sel, 'border-radius:' . css_lenlist($s['radius']));
-    foreach (rv($s['hide'] ?? []) as $dev => $h) if ($h) $css->raw($dev, $sel, 'display:none!important');
+    foreach (rv($s['hide'] ?? []) as $dev => $h) if ($h) $css->hide($dev, $sel);
     $html = '';
     foreach (($c['widgets'] ?? []) as $w) $html .= render_widget($w, $css, $editor);
     if ($html === '' && $editor) $html = '<div class="ph">Coluna vazia — adicione elementos</div>';
@@ -318,23 +335,29 @@ function render_section(array $sec, Css $css, bool $editor): string
     $css->rule("$sel .sec-in", 'padding-left', $s['padX'] ?? '', 'f_len');
     $css->rule("$sel .sec-in", 'padding-right', $s['padX'] ?? '', 'f_len');
     $css->rule("$sel .sec-in", 'max-width', $s['maxw'] ?? '', 'f_len');
-    $css->rule("$sel .sec-row", 'gap', $s['gap'] ?? '', 'f_len');
+    $css->rule("$sel .sec-row", '--g', $s['gap'] ?? '', 'f_len');
     $css->rule("$sel .sec-row", 'align-items', $s['vAlign'] ?? '', fn($v) => ['start' => 'start', 'center' => 'center', 'end' => 'end', 'stretch' => 'stretch'][$v] ?? '');
     $css->rule($sel, 'min-height', $s['minH'] ?? '', fn($v) => $v === 'screen' ? '100vh;min-height:100svh' : css_len($v));
     if (!empty($s['minH']) && (rv($s['minH'])['d'] ?? '') !== '') $css->raw('d', $sel, 'display:flex;flex-direction:column;justify-content:' . (['start' => 'flex-start', 'center' => 'center', 'end' => 'flex-end'][$s['contentV'] ?? 'center'] ?? 'center'));
-    foreach (rv($s['hide'] ?? []) as $dev => $h) if ($h) $css->raw($dev, $sel, 'display:none!important');
+    foreach (rv($s['hide'] ?? []) as $dev => $h) if ($h) $css->hide($dev, $sel);
 
     $bg = '';
-    $img = asset_url((string)($s['bgImage'] ?? ''));
-    if ($img !== '' || !empty($s['overlay'])) {
-        $st = '';
-        if ($img !== '') {
-            $st .= 'background-image:url(\'' . esc(str_replace(["'", '\\', ')', '('], ['%27', '', '%29', '%28'], $img)) . '\');';
-            $pos = preg_match('/^(\d{1,3}%|center|top|bottom|left|right)( (\d{1,3}%|center|top|bottom|left|right))?$/', (string)($s['bgPos'] ?? '')) ? $s['bgPos'] : 'center';
-            $st .= 'background-position:' . $pos . ';background-size:' . (($s['bgSize'] ?? 'cover') === 'contain' ? 'contain' : 'cover') . ';background-repeat:no-repeat;';
-        }
-        $bg = '<div class="sec-bg' . (!empty($s['parallax']) ? ' plx' : '') . '" style="' . $st . '"></div>';
-        if (!empty($s['overlay']) && css_color($s['overlay']) !== '') $bg .= '<div class="sec-ov" style="background:' . css_color($s['overlay']) . '"></div>';
+    $bgs = "$sel .sec-bg";
+    $css->rule($bgs, 'background-image', $s['bgImage'] ?? '', function ($v) {
+        $u = asset_url((string)$v);
+        return $u === '' ? '' : "url('" . str_replace(["'", '\\', ')', '(', '"', ' '], ['%27', '', '%29', '%28', '%22', '%20'], $u) . "')";
+    });
+    $css->rule($bgs, '--bx', $s['bgX'] ?? '', fn($v) => css_num($v, -100, 200) !== '' ? css_num($v, -100, 200) . '%' : '');
+    $css->rule($bgs, '--by', $s['bgY'] ?? '', fn($v) => css_num($v, -100, 200) !== '' ? css_num($v, -100, 200) . '%' : '');
+    if (empty($s['bgX']) && empty($s['bgY']) && !empty($s['bgPos']) && preg_match('/^(\d{1,3}%|center|top|bottom|left|right)( (\d{1,3}%|center|top|bottom|left|right))?$/', (string)$s['bgPos'])) $css->raw('d', $bgs, 'background-position:' . $s['bgPos']);
+    if (($s['bgFit'] ?? 'cover') === 'contain') $css->raw('d', $bgs, 'background-size:contain');
+    if (($s['bgFit'] ?? 'cover') === 'custom') $css->rule($bgs, 'background-size', $s['bgW'] ?? '', fn($v) => css_num($v, 10, 600) !== '' ? css_num($v, 10, 600) . '%' : '');
+    foreach (rv($s['bgHide'] ?? []) as $dev => $h) if ($h) { $css->hide($dev, "$sel .sec-bg"); $css->hide($dev, "$sel .sec-ov"); }
+    $hasImg = array_filter(rv($s['bgImage'] ?? ''), fn($v) => $v !== '');
+    if ($hasImg || !empty($s['overlay'])) {
+        $bg = '<div class="sec-bg' . (!empty($s['parallax']) ? ' plx' : '') . '"></div>';
+        $css->rule("$sel .sec-ov", 'background', $s['overlay'] ?? '', 'f_color');
+        if (!empty($s['overlay'])) $bg .= '<div class="sec-ov"></div>';
     }
     $cols = '';
     foreach (($sec['columns'] ?? []) as $c) $cols .= render_column($c, $css, $editor);
@@ -382,7 +405,7 @@ function header_html(array $site, Css $css): string
         $btn = '<a class="btn btn-solid btn-sm" href="' . esc(safe_url($hd['btnUrl'] ?? '') ?: '#') . '" target="_blank" rel="noopener">' . icon_html((string)($hd['btnIcon'] ?? ''), 'bi') . '<span>' . esc($hd['btnText']) . '</span></a>';
     }
     $logo = !empty($hd['logo']) ? '<a href="#top" class="logo">' . img_tag((string)$hd['logo'], 'Logo', '', '', false) . '</a>' : '<span></span>';
-    return '<header id="hdr" class="' . (!empty($hd['solidOnScroll']) ? 'sos' : '') . (!empty($hd['logoOnScroll']) ? ' lh' : '') . '" data-hdr>'
+    return '<header id="hdr" class="' . (!empty($hd['solidOnScroll']) ? 'sos' : '') . (!empty($hd['logoOnScroll']) ? ' lh' : '') . (!empty($hd['hideAtTop']) ? ' hat' : '') . '" data-hdr>'
         . '<div class="hdr-in">' . $logo . '<nav class="nav" id="nav">' . $nav . $btn . '</nav>'
         . '<button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>';
 }
@@ -395,8 +418,8 @@ function global_css(array $site): string
     $vars = '';
     foreach ($def as $k => $v) $vars .= '--c-' . $k . ':' . (css_color($c[$k] ?? '') ?: $v) . ';';
     $f = fn($n, $d) => preg_match('/^[A-Za-z0-9 ]{2,40}$/', (string)$n) ? $n : $d;
-    $fb = $f($st['fonts']['body'] ?? '', 'Raleway');
-    $fh = $f($st['fonts']['heading'] ?? '', 'Raleway');
+    $fb = $f($st['fonts']['body'] ?? '', 'Nunito Sans');
+    $fh = $f($st['fonts']['heading'] ?? '', 'Playfair Display');
     $fs = $f($st['fonts']['script'] ?? '', 'Great Vibes');
     $vars .= "--f-body:'$fb',system-ui,sans-serif;--f-head:'$fh',system-ui,sans-serif;--f-script:'$fs',cursive;";
     return ":root{" . $vars . "}";
@@ -405,12 +428,12 @@ function global_css(array $site): string
 function fonts_link(array $site): string
 {
     $st = $site['settings']['fonts'] ?? [];
-    $names = array_unique(array_filter([$st['body'] ?? 'Raleway', $st['heading'] ?? 'Raleway', $st['script'] ?? 'Great Vibes'], fn($n) => preg_match('/^[A-Za-z0-9 ]{2,40}$/', (string)$n)));
-    // Great Vibes e similares só têm peso 400; o Google devolve erro com pesos inexistentes, então pedimos sem eixos para eles
+    $names = array_unique(array_filter([$st['body'] ?? 'Nunito Sans', $st['heading'] ?? 'Playfair Display', $st['script'] ?? 'Great Vibes'], fn($n) => preg_match('/^[A-Za-z0-9 ]{2,40}$/', (string)$n)));
+    // Fontes de peso único não aceitam eixo de peso na URL do Google Fonts
+    $single = ['Great Vibes', 'Pacifico', 'Dancing Script', 'Allura', 'Satisfy', 'Sacramento', 'DM Serif Display', 'Abril Fatface'];
     $q = '';
     foreach ($names as $n) {
-        $single = in_array($n, ['Great Vibes', 'Pacifico', 'Dancing Script', 'Allura', 'Satisfy', 'Sacramento'], true);
-        $q .= '&family=' . str_replace(' ', '+', $n) . ($single ? '' : ':ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600');
+        $q .= '&family=' . str_replace(' ', '+', $n) . (in_array($n, $single, true) ? '' : ':wght@400;500;600;700');
     }
     return 'https://fonts.googleapis.com/css2?' . ltrim($q, '&') . '&display=swap';
 }

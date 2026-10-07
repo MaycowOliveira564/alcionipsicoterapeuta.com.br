@@ -18,7 +18,7 @@ header('Cache-Control: no-store');
 <script src="https://cdn.tailwindcss.com"></script>
 <style id="dyn"></style>
 <style>
- #hdr{position:absolute}
+ #hdr{position:absolute;transform:none!important;pointer-events:auto!important}
  [data-sid],[data-cid],[data-wid]{cursor:pointer}
  [data-sid]:hover{outline:2px dashed rgba(99,102,241,.55);outline-offset:-2px}
  [data-cid]:hover{outline:1px dashed rgba(16,185,129,.8);outline-offset:-1px}

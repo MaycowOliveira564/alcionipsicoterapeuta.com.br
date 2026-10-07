@@ -16,15 +16,16 @@
    "light": "#ffffff"
   },
   "fonts": {
-   "body": "Raleway",
-   "heading": "Raleway",
+   "body": "Nunito Sans",
+   "heading": "Playfair Display",
    "script": "Great Vibes"
   },
   "header": {
    "enabled": true,
    "logo": "uploads/2025/07/logo-alcioni.png",
-   "logoH": "44",
-   "logoOnScroll": true,
+   "logoH": "48",
+   "logoOnScroll": false,
+   "hideAtTop": true,
    "bg": "rgba(255,250,244,.78)",
    "solidOnScroll": true,
    "color": "#5f5e5c",
@@ -39,23 +40,40 @@
  },
  "sections": [
   {
-   "id": "s010",
+   "id": "s011",
    "label": "Início",
    "anchor": "inicio",
    "menu": "Início",
    "s": {
-    "bg": "#d9d3d6",
+    "bg": {
+     "d": "#d9d3d6",
+     "t": "#fffaf4",
+     "m": "#fffaf4"
+    },
     "bgImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
-    "bgPos": "30% center",
-    "minH": "screen",
+    "bgX": {
+     "d": 30
+    },
+    "bgY": {
+     "d": 50
+    },
+    "bgHide": {
+     "t": true,
+     "m": true
+    },
+    "minH": {
+     "d": "screen"
+    },
     "color": "#5f5e5c",
     "padT": {
-     "d": "110",
-     "m": "100"
+     "d": "96",
+     "t": "90",
+     "m": "84"
     },
     "padB": {
-     "d": "60",
-     "m": "40"
+     "d": "70",
+     "t": "56",
+     "m": "48"
     },
     "contentV": "center",
     "vAlign": "center",
@@ -63,7 +81,7 @@
    },
    "columns": [
     {
-     "id": "c002",
+     "id": "c003",
      "s": {
       "span": {
        "d": 6,
@@ -76,25 +94,47 @@
        "id": "w001",
        "type": "spacer",
        "p": {
-        "h": {
-         "d": "0",
-         "t": "380",
-         "m": "280"
+        "h": "0",
+        "hide": {
+         "t": true,
+         "m": true
+        }
+       }
+      },
+      {
+       "id": "w002",
+       "type": "image",
+       "p": {
+        "src": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
+        "alt": "Alcioni Esteves",
+        "w": "100%",
+        "ratio": "4/5",
+        "objX": 22,
+        "objY": 30,
+        "zoom": 115,
+        "radius": "28px",
+        "shadow": true,
+        "hide": {
+         "d": true
         }
        }
       }
      ]
     },
     {
-     "id": "c009",
+     "id": "c010",
      "s": {
       "pad": {
-       "d": "36px 40px",
-       "t": "28px",
-       "m": "22px"
+       "d": "40px 48px",
+       "t": "0px",
+       "m": "0px"
       },
-      "bg": "rgba(255,250,244,.9)",
-      "radius": "22px",
+      "bg": {
+       "d": "rgba(255,250,244,.92)",
+       "t": "transparent",
+       "m": "transparent"
+      },
+      "radius": "26px",
       "vAlign": "center",
       "anim": "fade-in",
       "delay": 0,
@@ -106,7 +146,7 @@
      },
      "widgets": [
       {
-       "id": "w003",
+       "id": "w004",
        "type": "image",
        "p": {
         "src": "uploads/2025/07/logo-alcioni.png",
@@ -125,14 +165,14 @@
        }
       },
       {
-       "id": "w004",
+       "id": "w005",
        "type": "heading",
        "p": {
         "tag": "h1",
         "size": {
-         "d": "44px",
-         "t": "38px",
-         "m": "30px"
+         "d": "50px",
+         "t": "42px",
+         "m": "33px"
         },
         "align": {
          "d": "right",
@@ -146,7 +186,7 @@
        }
       },
       {
-       "id": "w005",
+       "id": "w006",
        "type": "text",
        "p": {
         "align": {
@@ -161,7 +201,7 @@
        }
       },
       {
-       "id": "w006",
+       "id": "w007",
        "type": "text",
        "p": {
         "align": "left",
@@ -173,7 +213,7 @@
        }
       },
       {
-       "id": "w007",
+       "id": "w008",
        "type": "button",
        "p": {
         "text": "AGENDE SUA SESSÃO",
@@ -192,7 +232,7 @@
        }
       },
       {
-       "id": "w008",
+       "id": "w009",
        "type": "text",
        "p": {
         "align": {
@@ -211,20 +251,32 @@
    ]
   },
   {
-   "id": "s017",
+   "id": "s018",
    "label": "Quem eu ajudo",
    "anchor": "ajudo",
    "menu": "Quem eu ajudo",
    "s": {
     "bg": "#FFFAF4",
-    "padT": "90",
-    "padB": "90",
-    "gap": "56",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "gap": {
+     "d": "80",
+     "t": "44",
+     "m": "34"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c012",
+     "id": "c013",
      "s": {
       "vAlign": "center",
       "align": "center",
@@ -236,7 +288,7 @@
      },
      "widgets": [
       {
-       "id": "w011",
+       "id": "w012",
        "type": "image",
        "p": {
         "src": "uploads/2025/07/A-sobrecarga-de-quem-cuida-o-dia-das-maes-atipicas_Imagem-destaque.jpg",
@@ -252,7 +304,7 @@
      ]
     },
     {
-     "id": "c016",
+     "id": "c017",
      "s": {
       "vAlign": "center",
       "span": {
@@ -263,12 +315,13 @@
      },
      "widgets": [
       {
-       "id": "w013",
+       "id": "w014",
        "type": "heading",
        "p": {
         "size": {
-         "d": "50px",
-         "m": "34px"
+         "d": "52px",
+         "t": "43px",
+         "m": "33px"
         },
         "color": "#5f5e5c",
         "anim": "fade-up",
@@ -278,7 +331,7 @@
        }
       },
       {
-       "id": "w014",
+       "id": "w015",
        "type": "text",
        "p": {
         "size": "17px",
@@ -289,7 +342,7 @@
        }
       },
       {
-       "id": "w015",
+       "id": "w016",
        "type": "text",
        "p": {
         "mt": "10",
@@ -305,21 +358,33 @@
    ]
   },
   {
-   "id": "s025",
+   "id": "s026",
    "label": "Quem é Alcioni",
    "anchor": "sobre",
    "menu": "Quem sou",
    "s": {
     "bg": "#5F5E5C",
     "color": "#fffaf4",
-    "padT": "90",
-    "padB": "90",
-    "gap": "56",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "gap": {
+     "d": "80",
+     "t": "44",
+     "m": "34"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c021",
+     "id": "c022",
      "s": {
       "vAlign": "center",
       "span": {
@@ -330,12 +395,13 @@
      },
      "widgets": [
       {
-       "id": "w018",
+       "id": "w019",
        "type": "heading",
        "p": {
         "size": {
-         "d": "46px",
-         "m": "32px"
+         "d": "48px",
+         "t": "40px",
+         "m": "31px"
         },
         "color": "#fffaf4",
         "anim": "fade-up",
@@ -345,7 +411,7 @@
        }
       },
       {
-       "id": "w019",
+       "id": "w020",
        "type": "text",
        "p": {
         "size": "16.5px",
@@ -356,7 +422,7 @@
        }
       },
       {
-       "id": "w020",
+       "id": "w021",
        "type": "list",
        "p": {
         "icon": "fa-solid fa-diamond",
@@ -408,7 +474,7 @@
      ]
     },
     {
-     "id": "c024",
+     "id": "c025",
      "s": {
       "vAlign": "center",
       "align": "center",
@@ -420,7 +486,7 @@
      },
      "widgets": [
       {
-       "id": "w022",
+       "id": "w023",
        "type": "image",
        "p": {
         "src": "uploads/2025/08/MG_9984-Editar-3.jpg",
@@ -429,13 +495,15 @@
         "radius": "28px 140px 28px 140px",
         "shadow": true,
         "align": "center",
-        "maxw": "420px",
+        "maxw": "440px",
+        "ratio": "4/5",
+        "objY": 14,
         "anim": "fade-left",
         "delay": 0
        }
       },
       {
-       "id": "w023",
+       "id": "w024",
        "type": "heading",
        "p": {
         "tag": "p",
@@ -455,20 +523,32 @@
    ]
   },
   {
-   "id": "s033",
+   "id": "s034",
    "label": "Como funciona",
    "anchor": "como-funciona",
    "menu": "Como funciona",
    "s": {
     "bg": "#FFFAF4",
-    "padT": "90",
-    "padB": "90",
-    "gap": "56",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "gap": {
+     "d": "80",
+     "t": "44",
+     "m": "34"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c027",
+     "id": "c028",
      "s": {
       "vAlign": "center",
       "align": "center",
@@ -480,16 +560,18 @@
      },
      "widgets": [
       {
-       "id": "w026",
+       "id": "w027",
        "type": "image",
        "p": {
-        "src": "uploads/2025/07/Design-sem-nome-1-1.jpg",
+        "src": "uploads/2025/07/Design-sem-nome.png",
         "alt": "Alcioni em atendimento",
         "w": "100%",
         "radius": "140px 28px 140px 28px",
         "shadow": true,
         "align": "center",
-        "maxw": "430px",
+        "maxw": "460px",
+        "ratio": "1/1",
+        "objY": 0,
         "anim": "fade-right",
         "delay": 0
        }
@@ -497,7 +579,7 @@
      ]
     },
     {
-     "id": "c032",
+     "id": "c033",
      "s": {
       "vAlign": "center",
       "span": {
@@ -508,12 +590,13 @@
      },
      "widgets": [
       {
-       "id": "w028",
+       "id": "w029",
        "type": "heading",
        "p": {
         "size": {
-         "d": "46px",
-         "m": "32px"
+         "d": "48px",
+         "t": "40px",
+         "m": "31px"
         },
         "color": "#5f5e5c",
         "anim": "fade-up",
@@ -523,7 +606,7 @@
        }
       },
       {
-       "id": "w029",
+       "id": "w030",
        "type": "text",
        "p": {
         "size": "16.5px",
@@ -534,7 +617,7 @@
        }
       },
       {
-       "id": "w030",
+       "id": "w031",
        "type": "text",
        "p": {
         "mt": "12",
@@ -545,7 +628,7 @@
        }
       },
       {
-       "id": "w031",
+       "id": "w032",
        "type": "button",
        "p": {
         "text": "Quero conhecer os serviços",
@@ -564,21 +647,33 @@
    ]
   },
   {
-   "id": "s050",
+   "id": "s051",
    "label": "Serviços",
    "anchor": "servicos",
    "menu": "Serviços",
    "s": {
     "bg": "#5F5E5C",
     "color": "#fffaf4",
-    "padT": "90",
-    "padB": "90",
-    "gap": "28",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "gap": {
+     "d": "36",
+     "t": "30",
+     "m": "24"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c037",
+     "id": "c038",
      "s": {
       "span": {
        "d": 12
@@ -586,12 +681,13 @@
      },
      "widgets": [
       {
-       "id": "w034",
+       "id": "w035",
        "type": "heading",
        "p": {
         "size": {
-         "d": "42px",
-         "m": "28px"
+         "d": "46px",
+         "t": "38px",
+         "m": "30px"
         },
         "align": "center",
         "color": "#fffaf4",
@@ -602,7 +698,7 @@
        }
       },
       {
-       "id": "w035",
+       "id": "w036",
        "type": "text",
        "p": {
         "align": "center",
@@ -614,7 +710,7 @@
        }
       },
       {
-       "id": "w036",
+       "id": "w037",
        "type": "spacer",
        "p": {
         "h": {
@@ -626,7 +722,7 @@
      ]
     },
     {
-     "id": "c039",
+     "id": "c040",
      "s": {
       "align": "center",
       "span": {
@@ -637,7 +733,7 @@
      },
      "widgets": [
       {
-       "id": "w038",
+       "id": "w039",
        "type": "iconbox",
        "p": {
         "img": "uploads/2025/08/mindset_9452679.svg",
@@ -655,7 +751,7 @@
      ]
     },
     {
-     "id": "c041",
+     "id": "c042",
      "s": {
       "align": "center",
       "span": {
@@ -666,7 +762,7 @@
      },
      "widgets": [
       {
-       "id": "w040",
+       "id": "w041",
        "type": "iconbox",
        "p": {
         "img": "uploads/2025/08/woman.svg",
@@ -684,7 +780,7 @@
      ]
     },
     {
-     "id": "c043",
+     "id": "c044",
      "s": {
       "align": "center",
       "span": {
@@ -695,7 +791,7 @@
      },
      "widgets": [
       {
-       "id": "w042",
+       "id": "w043",
        "type": "iconbox",
        "p": {
         "img": "uploads/2025/07/piece_4205637.svg",
@@ -713,7 +809,7 @@
      ]
     },
     {
-     "id": "c045",
+     "id": "c046",
      "s": {
       "align": "center",
       "span": {
@@ -724,7 +820,7 @@
      },
      "widgets": [
       {
-       "id": "w044",
+       "id": "w045",
        "type": "iconbox",
        "p": {
         "img": "uploads/2025/07/open-magazine.svg",
@@ -742,7 +838,7 @@
      ]
     },
     {
-     "id": "c047",
+     "id": "c048",
      "s": {
       "align": "center",
       "span": {
@@ -753,7 +849,7 @@
      },
      "widgets": [
       {
-       "id": "w046",
+       "id": "w047",
        "type": "iconbox",
        "p": {
         "img": "uploads/2025/07/hand-in-hand.svg",
@@ -771,7 +867,7 @@
      ]
     },
     {
-     "id": "c049",
+     "id": "c050",
      "s": {
       "align": "center",
       "span": {
@@ -782,7 +878,7 @@
      },
      "widgets": [
       {
-       "id": "w048",
+       "id": "w049",
        "type": "iconbox",
        "p": {
         "img": "uploads/2025/07/community.svg",
@@ -802,20 +898,32 @@
    ]
   },
   {
-   "id": "s057",
+   "id": "s058",
    "label": "Benefícios",
    "anchor": "beneficios",
    "menu": "",
    "s": {
     "bg": "#FCF6EF",
-    "padT": "90",
-    "padB": "90",
-    "gap": "56",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "gap": {
+     "d": "80",
+     "t": "44",
+     "m": "34"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c054",
+     "id": "c055",
      "s": {
       "vAlign": "center",
       "span": {
@@ -826,12 +934,13 @@
      },
      "widgets": [
       {
-       "id": "w051",
+       "id": "w052",
        "type": "heading",
        "p": {
         "size": {
-         "d": "46px",
-         "m": "32px"
+         "d": "48px",
+         "t": "40px",
+         "m": "31px"
         },
         "color": "#5f5e5c",
         "anim": "fade-up",
@@ -841,7 +950,7 @@
        }
       },
       {
-       "id": "w052",
+       "id": "w053",
        "type": "list",
        "p": {
         "icon": "🔸",
@@ -869,7 +978,7 @@
        }
       },
       {
-       "id": "w053",
+       "id": "w054",
        "type": "text",
        "p": {
         "mt": "20",
@@ -881,7 +990,7 @@
      ]
     },
     {
-     "id": "c056",
+     "id": "c057",
      "s": {
       "vAlign": "center",
       "span": {
@@ -892,7 +1001,7 @@
      },
      "widgets": [
       {
-       "id": "w055",
+       "id": "w056",
        "type": "image",
        "p": {
         "src": "uploads/2025/07/Imagem-feita-pelo-firefly-1.jpg",
@@ -911,21 +1020,33 @@
    ]
   },
   {
-   "id": "s066",
+   "id": "s067",
    "label": "Atendimento On-line",
    "anchor": "online",
    "menu": "Atendimento On-line",
    "s": {
     "bg": "#5F5E5C",
     "color": "#fffaf4",
-    "padT": "90",
-    "padB": "90",
-    "gap": "56",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "gap": {
+     "d": "80",
+     "t": "44",
+     "m": "34"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c059",
+     "id": "c060",
      "s": {
       "vAlign": "center",
       "align": "center",
@@ -937,7 +1058,7 @@
      },
      "widgets": [
       {
-       "id": "w058",
+       "id": "w059",
        "type": "image",
        "p": {
         "src": "uploads/2025/07/Design-sem-nome-2.jpg",
@@ -946,7 +1067,9 @@
         "radius": "140px 28px 140px 28px",
         "shadow": true,
         "align": "center",
-        "maxw": "420px",
+        "maxw": "440px",
+        "ratio": "4/5",
+        "objY": 18,
         "anim": "fade-right",
         "delay": 0
        }
@@ -954,7 +1077,7 @@
      ]
     },
     {
-     "id": "c065",
+     "id": "c066",
      "s": {
       "vAlign": "center",
       "span": {
@@ -965,12 +1088,13 @@
      },
      "widgets": [
       {
-       "id": "w060",
+       "id": "w061",
        "type": "heading",
        "p": {
         "size": {
-         "d": "46px",
-         "m": "32px"
+         "d": "48px",
+         "t": "40px",
+         "m": "31px"
         },
         "color": "#fffaf4",
         "anim": "fade-up",
@@ -980,7 +1104,7 @@
        }
       },
       {
-       "id": "w061",
+       "id": "w062",
        "type": "text",
        "p": {
         "size": "16.5px",
@@ -991,7 +1115,7 @@
        }
       },
       {
-       "id": "w062",
+       "id": "w063",
        "type": "list",
        "p": {
         "icon": "👉",
@@ -1016,7 +1140,7 @@
        }
       },
       {
-       "id": "w063",
+       "id": "w064",
        "type": "text",
        "p": {
         "mt": "16",
@@ -1026,7 +1150,7 @@
        }
       },
       {
-       "id": "w064",
+       "id": "w065",
        "type": "button",
        "p": {
         "text": "Agendar agora!",
@@ -1045,20 +1169,27 @@
    ]
   },
   {
-   "id": "s075",
+   "id": "s076",
    "label": "Depoimentos",
    "anchor": "depoimentos",
    "menu": "Depoimentos",
    "s": {
     "bg": "#FCF6EF",
-    "padT": "90",
-    "padB": "90",
-    "maxw": "1180",
+    "padT": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
+    "padB": {
+     "d": "110",
+     "t": "84",
+     "m": "60"
+    },
     "snap": true
    },
    "columns": [
     {
-     "id": "c074",
+     "id": "c075",
      "s": {
       "span": {
        "d": 12
@@ -1066,12 +1197,13 @@
      },
      "widgets": [
       {
-       "id": "w067",
+       "id": "w068",
        "type": "heading",
        "p": {
         "size": {
-         "d": "46px",
-         "m": "32px"
+         "d": "48px",
+         "t": "40px",
+         "m": "31px"
         },
         "align": "center",
         "color": "#5f5e5c",
@@ -1082,7 +1214,7 @@
        }
       },
       {
-       "id": "w068",
+       "id": "w069",
        "type": "text",
        "p": {
         "align": "center",
@@ -1094,14 +1226,14 @@
        }
       },
       {
-       "id": "w069",
+       "id": "w070",
        "type": "spacer",
        "p": {
         "h": "24"
        }
       },
       {
-       "id": "w070",
+       "id": "w071",
        "type": "gallery",
        "p": {
         "items": [
@@ -1143,14 +1275,14 @@
        }
       },
       {
-       "id": "w071",
+       "id": "w072",
        "type": "spacer",
        "p": {
         "h": "30"
        }
       },
       {
-       "id": "w072",
+       "id": "w073",
        "type": "text",
        "p": {
         "align": "center",
@@ -1161,7 +1293,7 @@
        }
       },
       {
-       "id": "w073",
+       "id": "w074",
        "type": "button",
        "p": {
         "text": "Agendar agora!",
@@ -1181,7 +1313,7 @@
    ]
   },
   {
-   "id": "s084",
+   "id": "s085",
    "label": "Rodapé",
    "anchor": "contato",
    "menu": "Contato",
@@ -1195,7 +1327,7 @@
    },
    "columns": [
     {
-     "id": "c077",
+     "id": "c078",
      "s": {
       "align": {
        "d": "left",
@@ -1210,7 +1342,7 @@
      },
      "widgets": [
       {
-       "id": "w076",
+       "id": "w077",
        "type": "image",
        "p": {
         "src": "uploads/2025/07/logo-alcioni.png",
@@ -1226,7 +1358,7 @@
      ]
     },
     {
-     "id": "c079",
+     "id": "c080",
      "s": {
       "vAlign": "center",
       "span": {
@@ -1237,7 +1369,7 @@
      },
      "widgets": [
       {
-       "id": "w078",
+       "id": "w079",
        "type": "text",
        "p": {
         "size": "15px",
@@ -1250,7 +1382,7 @@
      ]
     },
     {
-     "id": "c081",
+     "id": "c082",
      "s": {
       "align": {
        "d": "right",
@@ -1265,7 +1397,7 @@
      },
      "widgets": [
       {
-       "id": "w080",
+       "id": "w081",
        "type": "social",
        "p": {
         "items": [
@@ -1298,7 +1430,7 @@
      ]
     },
     {
-     "id": "c083",
+     "id": "c084",
      "s": {
       "span": {
        "d": 12
@@ -1306,7 +1438,7 @@
      },
      "widgets": [
       {
-       "id": "w082",
+       "id": "w083",
        "type": "text",
        "p": {
         "size": "13px",

@@ -20,7 +20,7 @@
   var hdr = D.getElementById('hdr'), prog = D.getElementById('prog');
   function onScroll() {
     var y = W.scrollY || D.documentElement.scrollTop;
-    if (hdr) hdr.classList.toggle('solid', hdr.classList.contains('sos') && y > 60);
+    if (hdr) { hdr.classList.toggle('scrolled', y > 60); hdr.classList.toggle('solid', hdr.classList.contains('sos') && y > 60); }
     if (prog) { var h = D.documentElement.scrollHeight - W.innerHeight; prog.style.width = (h > 0 ? y / h * 100 : 0) + '%'; }
     mark();
   }

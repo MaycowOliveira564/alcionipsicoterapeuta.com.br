@@ -70,7 +70,7 @@
     accordion: { items: [{ q: 'Pergunta', a: '<p>Resposta</p>' }], open: true }, spacer: { h: '40' }, divider: {}, html: { code: '<p>Seu HTML aqui</p>' }
   };
   var ANIMS = [['', 'Nenhuma'], ['fade-up', 'Subir suave'], ['fade-in', 'Aparecer'], ['fade-down', 'Descer suave'], ['fade-left', 'Da esquerda'], ['fade-right', 'Da direita'], ['zoom-in', 'Zoom'], ['slide-up', 'Subir longo']];
-  var FONTS = ['Raleway', 'Montserrat', 'Poppins', 'Nunito', 'Lato', 'Open Sans', 'Inter', 'Roboto', 'Playfair Display', 'Merriweather', 'Lora', 'Cormorant Garamond', 'DM Sans', 'Great Vibes', 'Dancing Script', 'Pacifico', 'Allura'];
+  var FONTS = ['Playfair Display', 'Cormorant Garamond', 'Lora', 'Libre Baskerville', 'Merriweather', 'DM Serif Display', 'Nunito Sans', 'Nunito', 'Lato', 'DM Sans', 'Raleway', 'Montserrat', 'Poppins', 'Open Sans', 'Inter', 'Roboto', 'Great Vibes', 'Dancing Script', 'Allura'];
   var ICONS = ['fa-brands fa-whatsapp', 'fa-brands fa-instagram', 'fa-brands fa-facebook-f', 'fa-brands fa-linkedin-in', 'fa-brands fa-youtube', 'fa-brands fa-tiktok', 'fa-solid fa-envelope', 'fa-solid fa-phone', 'fa-regular fa-calendar-check', 'fa-regular fa-hand-point-right', 'fa-solid fa-heart', 'fa-solid fa-star', 'fa-solid fa-check', 'fa-solid fa-arrow-right', 'fa-solid fa-brain', 'fa-solid fa-user', 'fa-solid fa-users', 'fa-solid fa-book-open', 'fa-solid fa-hands-holding-child', 'fa-solid fa-puzzle-piece', 'fa-solid fa-leaf', 'fa-solid fa-location-dot', 'fa-solid fa-link', 'fa-solid fa-diamond'];
   var PRESETS = [[12], [6, 6], [4, 8], [8, 4], [4, 4, 4], [3, 3, 3, 3]];
 
@@ -86,8 +86,14 @@
     heading: [{ g: 'Conteúdo', open: true, f: [{ t: 'rich', k: 'p.html', l: 'Texto', min: 1 }, { t: 'sel', k: 'p.tag', l: 'Nível (SEO)', o: [['h1', 'H1 (principal)'], ['h2', 'H2'], ['h3', 'H3'], ['h4', 'H4'], ['p', 'Parágrafo']] }] },
       { g: 'Estilo', open: true, f: [SIZE, { t: 'color', k: 'p.color', l: 'Cor' }, { t: 'sel', k: 'p.weight', l: 'Peso', o: [['', 'Padrão'], ['300', 'Leve'], ['500', 'Médio'], ['600', 'Semi-negrito'], ['700', 'Negrito'], ['800', 'Extra-negrito']] }, { t: 'sel', k: 'p.family', l: 'Fonte', o: [['', 'Título'], ['script', 'Cursiva (assinatura)']] }, { t: 'tog', k: 'p.italic', l: 'Itálico' }, { t: 'tog', k: 'p.upper', l: 'Maiúsculas' }, { t: 'num', k: 'p.lh', l: 'Altura da linha (ex.: 1.2)' }] }, ADV],
     text: [{ g: 'Conteúdo', open: true, f: [{ t: 'rich', k: 'p.html', l: 'Texto' }] }, { g: 'Estilo', open: false, f: [SIZE, { t: 'color', k: 'p.color', l: 'Cor' }, { t: 'num', k: 'p.lh', l: 'Altura da linha (ex.: 1.7)' }] }, ADV],
-    image: [{ g: 'Imagem', open: true, f: [{ t: 'img', k: 'p.src', l: 'Imagem' }, { t: 'txt', k: 'p.alt', l: 'Texto alternativo (acessibilidade/SEO)' }, { t: 'txt', k: 'p.link', l: 'Link ao clicar (opcional)' }] },
-      { g: 'Estilo', open: true, f: [{ t: 'txt', k: 'p.w', l: 'Largura (ex.: 100%, 420px)', r: 1 }, { t: 'txt', k: 'p.h', l: 'Altura (opcional)', r: 1 }, { t: 'sel', k: 'p.ratio', l: 'Proporção', o: [['', 'Original'], ['1/1', 'Quadrada'], ['4/3', '4:3'], ['3/4', '3:4 (retrato)'], ['16/9', '16:9']] }, { t: 'txt', k: 'p.radius', l: 'Cantos arredondados (ex.: 20px ou 28px 140px 28px 140px)' }, { t: 'tog', k: 'p.shadow', l: 'Sombra' }, { t: 'tog', k: 'p.hover', l: 'Zoom ao passar o mouse' }, { t: 'tog', k: 'p.invert', l: 'Tornar branca (logos escuras)' }] }, ADV],
+    image: [{ g: 'Imagem', open: true, f: [{ t: 'img', k: 'p.src', l: 'Imagem' }, { t: 'txt', k: 'p.alt', l: 'Texto alternativo (SEO)' }, { t: 'txt', k: 'p.link', l: 'Link ao clicar (opcional)' }] },
+      { g: 'Tamanho e enquadramento', open: true, f: [
+        { t: 'txt', k: 'p.w', l: 'Largura (ex.: 100%, 420px)', r: 1 }, { t: 'txt', k: 'p.h', l: 'Altura (ex.: 480px)', r: 1 },
+        { t: 'sel', k: 'p.ratio', l: 'Proporção', r: 1, o: [['', 'Original'], ['1/1', '1:1 quadrada'], ['4/5', '4:5 retrato'], ['3/4', '3:4 retrato'], ['2/3', '2:3 retrato'], ['4/3', '4:3 paisagem'], ['3/2', '3:2 paisagem'], ['16/9', '16:9 panorâmica'], ['21/9', '21:9 cinema']] },
+        { t: 'sel', k: 'p.fit', l: 'Encaixe', o: [['', 'Preencher (corta)'], ['contain', 'Mostrar inteira'], ['fill', 'Esticar']] },
+        { t: 'focal', kx: 'p.objX', ky: 'p.objY', src: 'p.src', l: 'Ponto de foco — clique ou arraste na imagem', r: 1 },
+        { t: 'range', k: 'p.zoom', l: 'Zoom (%)', min: 50, max: 300, def: 100, r: 1 }, { t: 'range', k: 'p.objX', l: 'Posição horizontal (%)', min: 0, max: 100, def: 50, r: 1 }, { t: 'range', k: 'p.objY', l: 'Posição vertical (%)', min: 0, max: 100, def: 50, r: 1 }] },
+      { g: 'Forma e estilo', open: true, f: [{ t: 'corners', k: 'p.radius', l: 'Forma — cantos arredondados' }, { t: 'tog', k: 'p.shadow', l: 'Sombra' }, { t: 'tog', k: 'p.hover', l: 'Zoom ao passar o mouse' }, { t: 'tog', k: 'p.invert', l: 'Tornar branca (logos escuras)' }] }, ADV],
     button: [{ g: 'Botão', open: true, f: [{ t: 'txt', k: 'p.text', l: 'Texto' }, { t: 'txt', k: 'p.url', l: 'Link (https://…, #secao, tel:…)' }, { t: 'icon', k: 'p.icon', l: 'Ícone' }, { t: 'seg', k: 'p.iconPos', l: 'Posição do ícone', o: [['left', 'Esquerda'], ['right', 'Direita']] }, { t: 'tog', k: 'p.newtab', l: 'Abrir em nova aba' }] },
       { g: 'Estilo', open: true, f: [{ t: 'seg', k: 'p.variant', l: 'Tipo', o: [['solid', 'Cheio'], ['outline', 'Contorno'], ['ghost', 'Texto']] }, { t: 'color', k: 'p.bg', l: 'Cor de fundo' }, { t: 'color', k: 'p.color', l: 'Cor do texto' }, SIZE, { t: 'txt', k: 'p.radius', l: 'Arredondamento (ex.: 8px, 999px)' }, { t: 'tog', k: 'p.full', l: 'Largura total' }] }, ADV],
     iconbox: [{ g: 'Conteúdo', open: true, f: [{ t: 'img', k: 'p.img', l: 'Ícone em imagem/SVG (opcional)' }, { t: 'icon', k: 'p.icon', l: 'ou ícone Font Awesome' }, { t: 'txt', k: 'p.title', l: 'Título' }, { t: 'area', k: 'p.text', l: 'Descrição' }] },
@@ -97,7 +103,7 @@
     html: [{ g: 'HTML', open: true, f: [{ t: 'code', k: 'p.code', l: 'Código HTML (mapas, formulários, embeds)' }] }, ADV],
     video: [{ g: 'Vídeo', open: true, f: [{ t: 'txt', k: 'p.url', l: 'Link do YouTube/Vimeo ou arquivo .mp4' }, { t: 'sel', k: 'p.ratio', l: 'Proporção', o: [['16/9', '16:9'], ['4/3', '4:3'], ['1/1', 'Quadrado'], ['9/16', 'Vertical']] }] }, ADV],
     gallery: [{ g: 'Imagens', open: true, f: [{ t: 'gal', k: 'p.items', l: 'Imagens' }] },
-      { g: 'Estilo', open: true, f: [{ t: 'num', k: 'p.cols', l: 'Colunas', r: 1 }, { t: 'num', k: 'p.gap', l: 'Espaço entre imagens (px)' }, { t: 'txt', k: 'p.radius', l: 'Arredondamento' }, { t: 'sel', k: 'p.ratio', l: 'Proporção', o: [['', 'Original'], ['1/1', 'Quadrada'], ['4/3', '4:3'], ['3/4', '3:4']] }, { t: 'tog', k: 'p.lightbox', l: 'Ampliar ao clicar' }] }, ADV],
+      { g: 'Estilo', open: true, f: [{ t: 'num', k: 'p.cols', l: 'Colunas', r: 1 }, { t: 'num', k: 'p.gap', l: 'Espaço entre imagens (px)' }, { t: 'corners', k: 'p.radius', l: 'Forma das imagens' }, { t: 'sel', k: 'p.ratio', l: 'Proporção', o: [['', 'Original'], ['1/1', 'Quadrada'], ['4/3', '4:3'], ['3/4', '3:4']] }, { t: 'tog', k: 'p.lightbox', l: 'Ampliar ao clicar' }] }, ADV],
     list: [{ g: 'Itens', open: true, f: [{ t: 'icon', k: 'p.icon', l: 'Ícone padrão (ou emoji)' }, { t: 'rep', k: 'p.items', l: 'Itens', add: { text: 'Novo item' }, sub: [{ t: 'txt', k: 'text', l: 'Texto' }], title: 'text' }] },
       { g: 'Estilo', open: false, f: [SIZE, { t: 'color', k: 'p.color', l: 'Cor do texto' }, { t: 'color', k: 'p.iconColor', l: 'Cor do ícone' }] }, ADV],
     social: [{ g: 'Redes', open: true, f: [{ t: 'rep', k: 'p.items', l: 'Redes sociais', add: { icon: 'fa-brands fa-instagram', url: '', label: 'Rede' }, sub: [{ t: 'icon', k: 'icon', l: 'Ícone' }, { t: 'txt', k: 'url', l: 'Link' }, { t: 'txt', k: 'label', l: 'Nome (acessibilidade)' }], title: 'label' }] },
@@ -111,7 +117,10 @@
   ];
   var SECTION_SCHEMA = [
     { g: 'Geral', open: true, f: [{ t: 'txt', k: 'label', l: 'Nome da seção (só para você)' }, { t: 'anchor', k: 'anchor', l: 'Âncora (link #…)' }, { t: 'txt', k: 'menu', l: 'Texto no menu (vazio = não aparece)' }, { t: 'tog', k: 'disabled', l: 'Ocultar seção do site' }, { t: 'tog', k: 's.snap', l: 'Incluir no auto-scroll por seção', def: true }] },
-    { g: 'Fundo', open: true, f: [{ t: 'color', k: 's.bg', l: 'Cor de fundo' }, { t: 'img', k: 's.bgImage', l: 'Imagem de fundo' }, { t: 'sel', k: 's.bgPos', l: 'Posição da imagem', o: [['', 'Centro'], ['center top', 'Topo'], ['center bottom', 'Base'], ['left center', 'Esquerda'], ['30% center', 'Esquerda-centro'], ['right center', 'Direita']] }, { t: 'tog', k: 's.parallax', l: 'Efeito parallax (desktop)' }, { t: 'color', k: 's.overlay', l: 'Camada de cor sobre a imagem (use transparência)' }, { t: 'color', k: 's.color', l: 'Cor padrão do texto' }] },
+    { g: 'Fundo', open: true, f: [{ t: 'color', k: 's.bg', l: 'Cor de fundo', r: 1 }, { t: 'img', k: 's.bgImage', l: 'Imagem de fundo (por dispositivo)', r: 1 },
+      { t: 'seg', k: 's.bgFit', l: 'Ajuste da imagem', o: [['cover', 'Cobrir'], ['contain', 'Conter'], ['custom', 'Zoom']] }, { t: 'range', k: 's.bgW', l: 'Tamanho (%) — modo Zoom', min: 50, max: 400, def: 100, r: 1 },
+      { t: 'focal', kx: 's.bgX', ky: 's.bgY', src: 's.bgImage', l: 'Ponto de foco do fundo', r: 1 }, { t: 'hide', k: 's.bgHide', l: 'Ocultar imagem de fundo em' },
+      { t: 'tog', k: 's.parallax', l: 'Efeito parallax (desktop)' }, { t: 'color', k: 's.overlay', l: 'Camada de cor sobre a imagem' }, { t: 'color', k: 's.color', l: 'Cor padrão do texto' }] },
     { g: 'Tamanho e espaçamento', open: true, f: [{ t: 'sel', k: 's.minH', l: 'Altura', o: [['', 'Automática'], ['screen', 'Tela inteira'], ['70vh', '70% da tela'], ['500px', '500px']], r: 1 }, { t: 'sel', k: 's.contentV', l: 'Conteúdo na vertical (altura fixa)', o: [['center', 'Centro'], ['start', 'Topo'], ['end', 'Base']] }, { t: 'num', k: 's.padT', l: 'Espaço interno acima (px)', r: 1 }, { t: 'num', k: 's.padB', l: 'Espaço interno abaixo (px)', r: 1 }, { t: 'num', k: 's.padX', l: 'Margem lateral (px)', r: 1 }, { t: 'txt', k: 's.maxw', l: 'Largura máxima do conteúdo (ex.: 1180px)', r: 1 }, { t: 'num', k: 's.gap', l: 'Espaço entre colunas (px)', r: 1 }, { t: 'sel', k: 's.vAlign', l: 'Alinhar colunas', o: [['', 'Padrão'], ['start', 'Topo'], ['center', 'Centro'], ['end', 'Base'], ['stretch', 'Esticar']] }, { t: 'hide', k: 's.hide', l: 'Ocultar em' }] }
   ];
 
@@ -193,7 +202,7 @@
   window.addEventListener('message', function (e) {
     var d = e.data || {};
     if (d.type === 'ready') { S.ready = true; preview(); }
-    if (d.type === 'select') { select(d.sel, { tab: 'edit', noPost: true }); }
+    if (d.type === 'select') { if (app.classList.contains('nopanel')) togglePanel(); select(d.sel, { tab: 'edit', noPost: true }); }
   });
 
   /* ---------- seleção ---------- */
@@ -215,26 +224,35 @@
     [['d', 'fa-solid fa-desktop', 'Desktop'], ['t', 'fa-solid fa-tablet-screen-button', 'Tablet'], ['m', 'fa-solid fa-mobile-screen', 'Celular']].forEach(function (x) {
       devs.appendChild(el('button', { class: 'tb' + (S.dev === x[0] ? ' on' : ''), 'data-d': x[0], icon: x[1], title: x[2], onclick: function () { S.dev = x[0]; frameBox.className = 'frame ' + x[0]; [].forEach.call(devs.children, function (b) { b.classList.toggle('on', b.dataset.d === x[0]); }); renderPane(); } }));
     });
-    var top = el('div', { class: 'top' },
-      el('div', { class: 'brand' }, el('i', { class: 'fa-solid fa-wand-magic-sparkles' }), el('span', { text: 'Editor do site' })),
+    var togBtn = el('button', { class: 'tb', icon: 'fa-solid fa-table-columns', title: 'Mostrar/ocultar painel ( [ )', onclick: togglePanel });
+    var top = el('div', { class: 'top' }, togBtn,
       devs, btnUndo, btnRedo, el('div', { class: 'sp' }),
-      el('a', { class: 'tb', href: BASE + '/', target: '_blank', rel: 'noopener' }, el('i', { class: 'fa-solid fa-arrow-up-right-from-square' }), el('span', { text: 'Ver site' })),
-      el('a', { class: 'tb', href: CFG.logout, onclick: function (e) { if (S.dirty && !confirm('Há alterações não salvas. Sair mesmo assim?')) e.preventDefault(); } }, el('i', { class: 'fa-solid fa-right-from-bracket' }), el('span', { text: 'Sair' })),
+      el('a', { class: 'tb', href: BASE + '/', target: '_blank', rel: 'noopener', title: 'Ver site publicado' }, el('i', { class: 'fa-solid fa-arrow-up-right-from-square' })),
+      el('a', { class: 'tb', href: CFG.logout, title: 'Sair', onclick: function (e) { if (S.dirty && !confirm('Há alterações não salvas. Sair mesmo assim?')) e.preventDefault(); } }, el('i', { class: 'fa-solid fa-right-from-bracket' })),
       btnSave);
     tabsEl = el('div', { class: 'tabs' });
     pane = el('div', { class: 'pane' });
     side = el('div', { class: 'side' }, tabsEl, pane);
     iframe = el('iframe', { src: BASE + '/admin/preview.php', title: 'Pré-visualização' });
     frameBox = el('div', { class: 'frame ' + S.dev }, iframe);
+    var rs = el('div', { class: 'rs', title: 'Arraste para redimensionar' });
+    rs.addEventListener('pointerdown', function (e) {
+      rs.setPointerCapture(e.pointerId); iframe.style.pointerEvents = 'none';
+      var mv = function (ev) { setSW(ev.clientX); }, up = function () { rs.removeEventListener('pointermove', mv); rs.removeEventListener('pointerup', up); iframe.style.pointerEvents = ''; };
+      rs.addEventListener('pointermove', mv); rs.addEventListener('pointerup', up);
+    });
     app.appendChild(top);
-    app.appendChild(el('div', { class: 'main' }, side, el('div', { class: 'stage' }, frameBox)));
+    app.appendChild(el('div', { class: 'main' }, side, rs, el('div', { class: 'stage' }, frameBox)));
+    try { var sw = parseInt(localStorage.getItem('ed_sw'), 10); if (sw) setSW(sw); if (localStorage.getItem('ed_np') === '1') app.classList.add('nopanel'); } catch (e) { }
     renderTabs(); renderPane(); updTop();
   }
+  function setSW(x) { x = Math.max(250, Math.min(560, x)); app.style.setProperty('--sw', x + 'px'); try { localStorage.setItem('ed_sw', x); } catch (e) { } }
+  function togglePanel() { var c = app.classList.toggle('nopanel'); try { localStorage.setItem('ed_np', c ? '1' : '0'); } catch (e) { } }
   function renderAll() { renderTabs(); renderPane(); }
   function renderTabs() {
     tabsEl.innerHTML = '';
-    [['structure', 'fa-solid fa-sitemap', 'Estrutura'], ['add', 'fa-solid fa-circle-plus', 'Elementos'], ['edit', 'fa-solid fa-sliders', 'Editar'], ['site', 'fa-solid fa-gear', 'Site'], ['media', 'fa-regular fa-images', 'Mídia']].forEach(function (t) {
-      tabsEl.appendChild(el('button', { class: S.tab === t[0] ? 'on' : '', onclick: function () { S.tab = t[0]; renderTabs(); renderPane(); } }, el('i', { class: t[1] }), el('span', { text: t[2] })));
+    [['structure', 'fa-solid fa-sitemap', 'Estrutura'], ['add', 'fa-solid fa-plus', 'Adicionar elemento'], ['edit', 'fa-solid fa-sliders', 'Editar selecionado'], ['site', 'fa-solid fa-gear', 'Site (SEO, cores, fontes, menu)'], ['media', 'fa-regular fa-images', 'Mídia']].forEach(function (t) {
+      tabsEl.appendChild(el('button', { class: S.tab === t[0] ? 'on' : '', title: t[2], onclick: function () { S.tab = t[0]; renderTabs(); renderPane(); } }, el('i', { class: t[1] })));
     });
   }
   function renderPane() {
@@ -363,6 +381,7 @@
   function toHex(v) { v = resolveColor(v); return /^#[0-9a-f]{6}$/i.test(v) ? v : (/^#([0-9a-f]{3})$/i.test(v) ? '#' + v.slice(1).split('').map(function (x) { return x + x; }).join('') : '#ffffff'); }
 
   function rget(node, f) {
+    if (!f.k) return { v: '', inh: '' };
     var v = get(node, f.k);
     if (!f.r) return { v: v === undefined ? '' : v, inh: '' };
     if (v && typeof v === 'object' && !Array.isArray(v)) {
@@ -385,11 +404,11 @@
   var onField = function (node, f, val, structural) { rset(node, f, val); touch(!!structural); };
 
   function field(node, f) {
-    var w = el('div', { class: 'f' }), cur = rget(node, f), t = f.t;
+    var w = el('div', { class: 'f' + (f.t === 'num' ? ' h' : '') }), cur = rget(node, f), t = f.t;
     if (t === 'tog') {
       var v0 = get(node, f.k); if (v0 === undefined && f.def) v0 = true;
       var cb = el('input', { type: 'checkbox', onchange: function () { onField(node, f, cb.checked ? true : (f.def ? false : '')); } }); cb.checked = !!v0;
-      return el('div', { class: 'f' }, el('label', { class: 'tog' }, cb, el('span', { text: f.l })));
+      return el('div', { class: 'f h' }, el('label', { class: 'tog' }, cb, el('span', { text: f.l })));
     }
     w.appendChild(label(f));
     var inp;
@@ -447,6 +466,17 @@
       var sv = cur.v || ''; var inh = cur.inh || 12;
       var sel = el('select', { onchange: function () { onField(node, f, sel.value ? Number(sel.value) : ''); } }, [el('option', { value: '', text: 'Herdar (' + inh + ')' })].concat(Array.apply(null, Array(12)).map(function (_, i) { return el('option', { value: String(i + 1), text: (i + 1) + ' de 12' + (i + 1 === 12 ? ' (toda a largura)' : i + 1 === 6 ? ' (metade)' : '') }); })));
       sel.value = String(sv); w.appendChild(sel);
+    } else if (t === 'corners') {
+      w.appendChild(cornersField(node, f, cur.v));
+    } else if (t === 'range') {
+      var hasV = cur.v !== '' && cur.v !== undefined, shown = hasV ? cur.v : (cur.inh !== '' ? cur.inh : (f.def !== undefined ? f.def : f.min));
+      var rg = el('input', { type: 'range', min: f.min, max: f.max, step: f.step || 1, value: shown });
+      var nb = el('input', { type: 'number', min: f.min, max: f.max, value: hasV ? cur.v : '', placeholder: String(shown), style: { width: '64px', flex: 'none' } });
+      rg.addEventListener('input', function () { nb.value = rg.value; onField(node, f, Number(rg.value)); });
+      nb.addEventListener('input', function () { if (nb.value === '') { onField(node, f, ''); return; } rg.value = nb.value; onField(node, f, Number(nb.value)); });
+      w.appendChild(el('div', { class: 'row' }, rg, nb, el('button', { class: 'btn sm fix', text: '↺', title: 'Padrão', onclick: function () { onField(node, f, ''); renderPane(); } })));
+    } else if (t === 'focal') {
+      w.appendChild(focalField(node, f));
     } else if (t === 'rich') {
       w.appendChild(richEditor(cur.v, function (h) { onField(node, f, h, false); }));
     } else if (t === 'gal') {
@@ -456,6 +486,53 @@
     }
     return w;
   }
+
+  function cornersField(node, f, raw) {
+    raw = String(raw || '').trim();
+    var pr = raw ? raw.split(/\s+/) : [], e;
+    e = pr.length === 1 ? [pr[0], pr[0], pr[0], pr[0]] : pr.length === 2 ? [pr[0], pr[1], pr[0], pr[1]] : pr.length === 3 ? [pr[0], pr[1], pr[2], pr[1]] : pr.length === 4 ? pr : ['0', '0', '0', '0'];
+    var isPct = /%/.test(raw), box = el('div', {}), grid = el('div', { class: 'cg' }), ins = [];
+    ['↖ topo esq.', '↗ topo dir.', '↘ base dir.', '↙ base esq.'].forEach(function (lb, i) {
+      var inp = el('input', { type: 'number', min: 0, max: 600, value: isPct ? '' : (parseFloat(e[i]) || 0), placeholder: isPct ? '%' : '0', title: lb + ' (px)' });
+      inp.addEventListener('input', function () {
+        var v = ins.map(function (x) { return Math.max(0, Number(x.value) || 0); });
+        onField(node, f, v.every(function (n) { return n === 0; }) ? '' : v.join('px ') + 'px');
+      });
+      ins.push(inp); grid.appendChild(el('label', { class: 'cc' }, el('span', { text: lb }), inp));
+    });
+    box.appendChild(grid);
+    var pre = el('div', { class: 'chips' });
+    [['Reto', ''], ['Suave', '24px'], ['Folha', '28px 140px 28px 140px'], ['Folha ↔', '140px 28px 140px 28px'], ['Arco', '999px 999px 0 0'], ['Pílula', '999px'], ['Círculo', '50%']].forEach(function (x) {
+      pre.appendChild(el('button', { class: 'chip', text: x[0], title: x[1] || 'sem arredondamento', onclick: function () { onField(node, f, x[1]); renderPane(); } }));
+    });
+    box.appendChild(pre);
+    box.appendChild(el('div', { class: 'hint', style: { margin: '4px 0 0' }, text: 'Dica: "Círculo" e "Pílula" ficam melhores com proporção 1:1 / altura definida.' }));
+    return box;
+  }
+  function respVal(node, path) {
+    var v = get(node, path);
+    if (v && typeof v === 'object') { var o = S.dev === 'd' ? ['d'] : S.dev === 't' ? ['t', 'd'] : ['m', 't', 'd']; for (var i = 0; i < o.length; i++) if (v[o[i]]) return v[o[i]]; return ''; }
+    return v || '';
+  }
+  function focalField(node, f) {
+    var fx = { k: f.kx, r: 1 }, fy = { k: f.ky, r: 1 };
+    var src = respVal(node, f.src), box = el('div', { class: 'focal' });
+    if (!src) { box.appendChild(el('div', { class: 'hint', style: { margin: '10px' }, text: 'Escolha uma imagem primeiro.' })); return box; }
+    var im = el('img', { src: /^https?:/.test(src) ? src : BASE + '/' + src.replace(/^\//, ''), draggable: 'false' });
+    var dot = el('span', { class: 'dot' });
+    function place() { var x = rget(node, fx), y = rget(node, fy); dot.style.left = ((x.v !== '' ? x.v : (x.inh !== '' ? x.inh : 50))) + '%'; dot.style.top = ((y.v !== '' ? y.v : (y.inh !== '' ? y.inh : 50))) + '%'; }
+    function setFrom(e) {
+      var r = im.getBoundingClientRect(); var x = Math.max(0, Math.min(100, Math.round((e.clientX - r.left) / r.width * 100))), y = Math.max(0, Math.min(100, Math.round((e.clientY - r.top) / r.height * 100)));
+      rset(node, fx, x); rset(node, fy, y); place(); touch();
+    }
+    var drag = false;
+    box.addEventListener('pointerdown', function (e) { drag = true; box.setPointerCapture(e.pointerId); setFrom(e); });
+    box.addEventListener('pointermove', function (e) { if (drag) setFrom(e); });
+    box.addEventListener('pointerup', function () { drag = false; renderPaneSoon(); });
+    box.appendChild(im); box.appendChild(dot); place();
+    return box;
+  }
+  var renderPaneSoon = debounce(function () { if (S.tab === 'edit') { var k = pane.scrollTop; renderPane(); pane.scrollTop = k; } }, 50);
 
   function repeater(node, f) {
     var box = el('div', {}); var items = get(node, f.k) || [];
@@ -518,7 +595,7 @@
   function renderGroups(node, schema) {
     schema.forEach(function (g) {
       var d = el('details', { class: 'grp' }); if (g.open) d.open = true;
-      d.appendChild(el('summary', { text: g.g })); var b = el('div', {});
+      d.appendChild(el('summary', { text: g.g })); var b = el('div', { class: 'gb' });
       g.f.forEach(function (f) { b.appendChild(field(node, Object.assign({}, f))); });
       d.appendChild(b); pane.appendChild(d);
     });
@@ -555,12 +632,12 @@
       { g: 'Rolagem e animações', open: true, f: [{ t: 'seg', k: 'autoscroll', l: 'Auto-scroll por seção (desktop)', o: [['sections', 'Ligado'], ['off', 'Desligado']] }] },
       { g: 'Cores do tema', open: false, f: ['primary:Cor principal', 'dark:Cor escura', 'cream:Fundo claro', 'cream2:Fundo claro 2', 'text:Cor do texto', 'light:Branco'].map(function (x) { var p = x.split(':'); return { t: 'color', k: 'colors.' + p[0], l: p[1] }; }) },
       { g: 'Fontes', open: false, f: [{ t: 'sel', k: 'fonts.body', l: 'Texto', o: FONTS.map(function (x) { return [x, x]; }) }, { t: 'sel', k: 'fonts.heading', l: 'Títulos', o: FONTS.map(function (x) { return [x, x]; }) }, { t: 'sel', k: 'fonts.script', l: 'Cursiva', o: FONTS.map(function (x) { return [x, x]; }) }] },
-      { g: 'Cabeçalho / menu', open: false, f: [{ t: 'tog', k: 'header.enabled', l: 'Mostrar cabeçalho' }, { t: 'img', k: 'header.logo', l: 'Logo' }, { t: 'num', k: 'header.logoH', l: 'Altura do logo (px)' }, { t: 'tog', k: 'header.logoOnScroll', l: 'Mostrar logo só ao rolar' }, { t: 'tog', k: 'header.solidOnScroll', l: 'Fundo sólido ao rolar' }, { t: 'color', k: 'header.bg', l: 'Fundo no topo' }, { t: 'color', k: 'header.color', l: 'Cor dos links' }, { t: 'color', k: 'header.solidBg', l: 'Fundo ao rolar' }, { t: 'color', k: 'header.solidColor', l: 'Cor dos links ao rolar' },
+      { g: 'Cabeçalho / menu', open: false, f: [{ t: 'tog', k: 'header.enabled', l: 'Mostrar cabeçalho' }, { t: 'img', k: 'header.logo', l: 'Logo' }, { t: 'num', k: 'header.logoH', l: 'Altura do logo (px)' }, { t: 'tog', k: 'header.logoOnScroll', l: 'Mostrar logo só ao rolar' }, { t: 'tog', k: 'header.hideAtTop', l: 'Esconder menu no topo (aparece ao rolar)' }, { t: 'tog', k: 'header.solidOnScroll', l: 'Fundo sólido ao rolar' }, { t: 'color', k: 'header.bg', l: 'Fundo no topo' }, { t: 'color', k: 'header.color', l: 'Cor dos links' }, { t: 'color', k: 'header.solidBg', l: 'Fundo ao rolar' }, { t: 'color', k: 'header.solidColor', l: 'Cor dos links ao rolar' },
         { t: 'seg', k: 'header.menuMode', l: 'Itens do menu', o: [['auto', 'Automático (seções)'], ['custom', 'Personalizado']] }, { t: 'rep', k: 'header.menu', l: 'Menu personalizado', add: { label: 'Item', url: '#' }, sub: [{ t: 'txt', k: 'label', l: 'Texto' }, { t: 'txt', k: 'url', l: 'Link' }], title: 'label' },
         { t: 'txt', k: 'header.btnText', l: 'Botão do cabeçalho (vazio = sem botão)' }, { t: 'txt', k: 'header.btnUrl', l: 'Link do botão' }, { t: 'icon', k: 'header.btnIcon', l: 'Ícone do botão' }] }
     ];
     T.forEach(function (g) {
-      var d = el('details', { class: 'grp' }); if (g.open) d.open = true; d.appendChild(el('summary', { text: g.g })); var b = el('div', {});
+      var d = el('details', { class: 'grp' }); if (g.open) d.open = true; d.appendChild(el('summary', { text: g.g })); var b = el('div', { class: 'gb' });
       g.f.forEach(function (f) {
         f = Object.assign({}, f);
         if (f.k === 'autoscroll') { var v = st.autoscroll; if (!v) st.autoscroll = 'sections'; }
@@ -646,6 +723,7 @@
 
   /* ---------- atalhos e inicialização ---------- */
   document.addEventListener('keydown', function (e) {
+    if (e.key === '[' && !/input|textarea|select/i.test(e.target.tagName) && !e.target.isContentEditable) { togglePanel(); return; }
     var mod = e.ctrlKey || e.metaKey; if (!mod) return;
     var k = e.key.toLowerCase();
     if (k === 's') { e.preventDefault(); save(); }

@@ -28,8 +28,12 @@ Esqueceu a senha? `php tools/set-password.php USUARIO NOVASENHA`.
 - **Versões anteriores**: as últimas 30 versões salvas ficam em `data/backups/` e podem ser restauradas.
 - Atalhos: `Ctrl+S` salvar, `Ctrl+Z` / `Ctrl+Y` desfazer/refazer.
 
+## Imagens: controle total
+Em *Editar → Imagem*: largura, altura e proporção da **moldura** (por dispositivo), encaixe, zoom, posição e **ponto de foco clicável**,
+e a **forma** (4 cantos individuais + formatos prontos: folha, arco, pílula, círculo). O painel pode ser recolhido (tecla `[`) e redimensionado.
+
 ## Site público
-Animações de entrada por elemento, **auto-scroll por seção** (desktop; liga/desliga em *Site*), pontos de navegação laterais,
+Tipografia: Playfair Display (títulos) + Nunito Sans (texto), trocáveis em *Site → Fontes*. Menu escondido no topo (aparece ao rolar). Animações de entrada por elemento, **auto-scroll por seção** (desktop; liga/desliga em *Site*), pontos de navegação laterais,
 menu hambúrguer no celular, cabeçalho que ganha fundo ao rolar, parallax opcional, lightbox na galeria. Respeita `prefers-reduced-motion`.
 
 ## Estrutura
