@@ -100,6 +100,31 @@
     D.documentElement.style.scrollBehavior = 'auto';
   }
 
+  /* ajusta cada seção à altura da tela (encolhe só texto) quando o conteúdo não cabe */
+  var fitSecs = secs.filter(function (s) { return !s.hasAttribute('data-nofit'); });
+  function fit() {
+    var vh = W.innerHeight;
+    fitSecs.forEach(function (s) {
+      var inn = s.querySelector('.sec-in'); if (!inn) return;
+      s.style.removeProperty('--fit');
+      var cs = getComputedStyle(inn), pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+      var r = 1;
+      for (var i = 0; i < 4; i++) {
+        var need = inn.offsetHeight;
+        if (need <= vh + 1) break;
+        r = Math.max(0.68, r * (vh - pad) / (need - pad));
+        s.style.setProperty('--fit', r.toFixed(3));
+        if (r <= 0.68) break;
+      }
+    });
+    mark();
+  }
+  var fitT; function fitSoon() { clearTimeout(fitT); fitT = setTimeout(fit, 120); }
+  W.addEventListener('resize', fitSoon);
+  W.addEventListener('load', fit);
+  if (D.fonts && D.fonts.ready) D.fonts.ready.then(fit);
+  fit();
+
   /* links âncora com rolagem suave */
   D.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#"]');

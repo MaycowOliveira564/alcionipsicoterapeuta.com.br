@@ -127,7 +127,7 @@
         "objX": 22,
         "objY": 30,
         "zoom": 115,
-        "radius": "28px 140px 28px 140px",
+        "radius": "28px",
         "shadow": true,
         "hide": {
          "d": true
@@ -157,7 +157,7 @@
         "src": "uploads/2025/07/logo-alcioni.png",
         "alt": "Alcioni Esteves — Psicoterapeuta",
         "w": {
-         "d": "clamp(280px, min(32vw, 42vh), 600px)",
+         "d": "600px",
          "t": "420px",
          "m": "270px"
         },
@@ -175,7 +175,11 @@
        "type": "heading",
        "p": {
         "tag": "h1",
-        "size": "clamp(30px, min(4vw, 6.4vh), 58px)",
+        "size": {
+         "d": "56px",
+         "t": "44px",
+         "m": "34px"
+        },
         "align": {
          "d": "right",
          "m": "center"
@@ -195,7 +199,7 @@
          "d": "right",
          "m": "center"
         },
-        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
+        "size": "17px",
         "mt": "16",
         "anim": "fade-up",
         "delay": 300,
@@ -207,7 +211,7 @@
        "type": "text",
        "p": {
         "align": "left",
-        "size": "clamp(14px, min(1.1vw, 2.2vh), 17px)",
+        "size": "16px",
         "mt": "10",
         "anim": "fade-up",
         "delay": 450,
@@ -496,7 +500,7 @@
         "src": "uploads/2025/08/MG_9984-Editar-3.jpg",
         "alt": "Alcioni Esteves",
         "w": "100%",
-        "radius": "28px 140px 28px 140px",
+        "radius": "28px",
         "shadow": true,
         "align": "center",
         "maxw": "440px",
@@ -575,7 +579,7 @@
         "src": "uploads/2025/07/Design-sem-nome.png",
         "alt": "Alcioni em atendimento",
         "w": "100%",
-        "radius": "28px 140px 28px 140px",
+        "radius": "28px",
         "shadow": true,
         "align": "center",
         "maxw": "460px",
@@ -1009,7 +1013,7 @@
         "src": "uploads/2025/07/Imagem-feita-pelo-firefly-1.jpg",
         "alt": "Alcioni com tablet em atendimento",
         "w": "100%",
-        "radius": "28px 140px 28px 140px",
+        "radius": "28px",
         "shadow": true,
         "ratio": "4/3",
         "maxh": {
@@ -1071,7 +1075,7 @@
         "src": "uploads/2025/07/Design-sem-nome-2.jpg",
         "alt": "Atendimento on-line",
         "w": "100%",
-        "radius": "28px 140px 28px 140px",
+        "radius": "28px",
         "shadow": true,
         "align": "center",
         "maxw": "440px",

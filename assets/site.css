@@ -123,3 +123,6 @@ h1,h2,h3,h4,h5,h6{font-family:var(--f-head);margin:0;line-height:1.1;font-weight
 .gnav:hover{background:var(--c-primary);color:#fff}
 .gnav.gp{left:-10px}.gnav.gn{right:-10px}
 @media(max-width:639px){.gnav{width:38px;height:38px;font-size:22px}.gnav.gp{left:2px}.gnav.gn{right:2px}}
+
+/* ajuste automático à altura da tela: só texto/espaçamentos encolhem (logo e fotos não) */
+.sec[style*="--fit"] .w:not(.w-image):not(.w-spacer):not(.w-gallery){zoom:var(--fit)}
