@@ -28,6 +28,7 @@ header('Content-Type: text/html; charset=utf-8');
 <div id="page"><?= $out['html'] ?></div>
 <nav id="dots" aria-label="Seções"></nav>
 <div id="lbx"></div>
+<?php if (($st['backToTop'] ?? true) !== false): ?><button type="button" id="totop" aria-label="Voltar ao topo" title="Voltar ao topo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button><?php endif; ?>
 <script>window.SITE_CFG=<?= json_encode(['autoscroll' => ($st['autoscroll'] ?? 'sections')], JSON_UNESCAPED_SLASHES) ?>;</script>
 <script src="<?= $b ?>/assets/site.js?v=<?= $ver ?>" defer></script>
 </body>

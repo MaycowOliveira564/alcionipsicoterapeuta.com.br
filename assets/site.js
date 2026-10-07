@@ -21,9 +21,12 @@
   function onScroll() {
     var y = W.scrollY || D.documentElement.scrollTop;
     if (hdr) { hdr.classList.toggle('scrolled', y > 60); hdr.classList.toggle('solid', hdr.classList.contains('sos') && y > 60); }
+    if (totop) totop.classList.toggle('show', y > Math.max(300, W.innerHeight * 0.5));
     if (prog) { var h = D.documentElement.scrollHeight - W.innerHeight; prog.style.width = (h > 0 ? y / h * 100 : 0) + '%'; }
     mark();
   }
+  var totop = D.getElementById('totop');
+  if (totop) totop.addEventListener('click', function () { locked = true; W.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); setTimeout(function () { locked = false; }, 950); });
   var burger = D.getElementById('burger');
   if (burger) {
     burger.addEventListener('click', function () {
