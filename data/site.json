@@ -576,7 +576,7 @@
                             "id": "w027",
                             "type": "image",
                             "p": {
-                                "src": "uploads/2025/07/MG_9993-Editar.jpg",
+                                "src": "uploads/2024/02/MG_9963-Editar.jpg",
                                 "alt": "Alcioni em atendimento",
                                 "w": "100%",
                                 "radius": "28px",
@@ -588,7 +588,7 @@
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 18,
+                                "objY": 35,
                                 "anim": "fade-right",
                                 "delay": 0,
                                 "fill": true,
@@ -1011,8 +1011,8 @@
                             "id": "w056",
                             "type": "image",
                             "p": {
-                                "src": "uploads/2025/07/Imagem-feita-pelo-firefly-1.jpg",
-                                "alt": "Alcioni com tablet em atendimento",
+                                "src": "uploads/2024/02/55.png",
+                                "alt": "Alcioni em atendimento",
                                 "w": "100%",
                                 "radius": "28px",
                                 "shadow": true,
@@ -1073,7 +1073,7 @@
                             "id": "w059",
                             "type": "image",
                             "p": {
-                                "src": "uploads/2025/07/Design-sem-nome-2.jpg",
+                                "src": "uploads/2024/02/MG_9968-Editar-1.jpg",
                                 "alt": "Atendimento on-line",
                                 "w": "100%",
                                 "radius": "28px",
@@ -1085,10 +1085,11 @@
                                     "t": "min(48svh,520px)",
                                     "m": "min(44svh,400px)"
                                 },
-                                "objY": 20,
+                                "objY": 35,
                                 "anim": "fade-right",
                                 "delay": 0,
-                                "fill": true
+                                "fill": true,
+                                "objX": 45
                             }
                         }
                     ]
@@ -1357,10 +1358,9 @@
                             "id": "w077",
                             "type": "image",
                             "p": {
-                                "src": "uploads/2025/07/logo-alcioni.png",
+                                "src": "uploads/2024/02/14-2-1.png",
                                 "alt": "Alcioni Esteves",
                                 "w": "260px",
-                                "invert": true,
                                 "align": {
                                     "d": "left",
                                     "m": "center"

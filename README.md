@@ -57,4 +57,4 @@ O widget "HTML livre" aceita código arbitrário — disponível apenas a quem e
 ## Observações
 - Tailwind, Font Awesome e Google Fonts são carregados por CDN (requer internet no visitante).
 - O conteúdo foi migrado do WordPress/Elementor (página "Novo Site"). Os depoimentos são imagens (como no original).
-- Imagens do zip de **2024** (fotos das seções "Como funciona", "Benefícios" e "On-line") não vieram no upload; foram usadas fotos equivalentes de 2025 — troque-as em *Editar → Imagem* quando quiser.
+- Imagens de 2024 e 2025 (sem as miniaturas do WordPress) estão em `uploads/`.
