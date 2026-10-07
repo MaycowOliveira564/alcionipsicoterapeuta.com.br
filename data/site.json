@@ -46,16 +46,22 @@
    "menu": "Início",
    "s": {
     "bg": {
-     "d": "#d9d3d6",
+     "d": "#c7bec7",
      "t": "#fffaf4",
      "m": "#fffaf4"
     },
     "bgImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
     "bgX": {
-     "d": 30
+     "d": 0
     },
     "bgY": {
      "d": 50
+    },
+    "fade": {
+     "c": "#c7bec7",
+     "dir": "90deg",
+     "from": 36,
+     "to": 60
     },
     "bgHide": {
      "t": true,
@@ -64,9 +70,17 @@
     "minH": {
      "d": "screen"
     },
-    "color": "#5f5e5c",
+    "color": "#2b2a29",
+    "padX": {
+     "d": "64",
+     "t": "28",
+     "m": "22"
+    },
+    "maxw": {
+     "d": "1840px"
+    },
     "padT": {
-     "d": "96",
+     "d": "90",
      "t": "90",
      "m": "84"
     },
@@ -124,17 +138,7 @@
     {
      "id": "c010",
      "s": {
-      "pad": {
-       "d": "40px 48px",
-       "t": "0px",
-       "m": "0px"
-      },
-      "bg": {
-       "d": "rgba(255,250,244,.92)",
-       "t": "transparent",
-       "m": "transparent"
-      },
-      "radius": "26px",
+      "pad": "0px",
       "vAlign": "center",
       "anim": "fade-in",
       "delay": 0,
@@ -152,8 +156,9 @@
         "src": "uploads/2025/07/logo-alcioni.png",
         "alt": "Alcioni Esteves — Psicoterapeuta",
         "w": {
-         "d": "420px",
-         "m": "260px"
+         "d": "600px",
+         "t": "420px",
+         "m": "270px"
         },
         "align": {
          "d": "right",
@@ -170,19 +175,19 @@
        "p": {
         "tag": "h1",
         "size": {
-         "d": "50px",
-         "t": "42px",
-         "m": "33px"
+         "d": "56px",
+         "t": "44px",
+         "m": "34px"
         },
         "align": {
          "d": "right",
          "m": "center"
         },
-        "color": "#5f5e5c",
-        "mt": "24",
+        "color": "#1f1e1d",
+        "mt": "22",
         "anim": "fade-up",
         "delay": 150,
-        "html": "Você cuida de <span style=\"color:#d48a67\">tudo</span>, mas quem cuida de <span style=\"color:#d48a67\">você</span>?"
+        "html": "Você cuida de <span style=\"color:#fffaf4\">tudo</span>, mas quem cuida de <span style=\"color:#fffaf4\">você</span>?"
        }
       },
       {
@@ -209,7 +214,7 @@
         "mt": "16",
         "anim": "fade-up",
         "delay": 450,
-        "html": "<p>Você se sente:<br>🔸 Sobrecarregada emocionalmente<br>🔸 Invisível dentro da própria casa<br>🔸 Culpada por não dar conta de tudo<br>🔸 Vivendo o luto da maternidade idealizada</p><p><strong style=\"color:#d48a67\">Se você se identifica, este espaço é para você.</strong></p>"
+        "html": "<p>Você se sente:<br>🔸 Sobrecarregada emocionalmente<br>🔸 Invisível dentro da própria casa<br>🔸 Culpada por não dar conta de tudo<br>🔸 Vivendo o luto da maternidade idealizada</p><p><strong style=\"color:#8f4624\">Se você se identifica, este espaço é para você.</strong></p>"
        }
       },
       {

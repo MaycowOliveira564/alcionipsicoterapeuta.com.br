@@ -8,7 +8,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--f-head);margin:0;line-height:1.1;font-weight
 
 /* seção */
 .sec{position:relative;isolation:isolate;overflow:hidden}
-.sec-bg,.sec-ov{position:absolute;inset:0;z-index:-2}
+.sec-bg,.sec-ov,.sec-fade{position:absolute;inset:0;z-index:-2}
+.sec-fade{z-index:-1;pointer-events:none}
 .sec-bg{background-size:cover;background-repeat:no-repeat;background-position:var(--bx,50%) var(--by,50%)}
 .sec-ov{z-index:-1}
 .sec-bg.plx{background-attachment:fixed}

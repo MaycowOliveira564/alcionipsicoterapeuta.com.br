@@ -52,6 +52,27 @@ class Css
     }
 }
 
+function hex_rgb(string $c): ?array
+{
+    if (!preg_match('/^#([0-9a-f]{3}|[0-9a-f]{6})$/i', $c)) return null;
+    $h = substr($c, 1);
+    if (strlen($h) === 3) $h = $h[0] . $h[0] . $h[1] . $h[1] . $h[2] . $h[2];
+    return [hexdec(substr($h, 0, 2)), hexdec(substr($h, 2, 2)), hexdec(substr($h, 4, 2))];
+}
+
+/** Degradê que mescla a foto de fundo com a cor da seção */
+function fade_layer(array $f): string
+{
+    $c = css_color($f['c'] ?? '');
+    if ($c === '') return '';
+    $dir = in_array($f['dir'] ?? '90deg', ['90deg', '270deg', '180deg', '0deg'], true) ? $f['dir'] : '90deg';
+    $from = max(0, min(100, (float)($f['from'] ?? 35)));
+    $to = max(0, min(100, (float)($f['to'] ?? 65)));
+    $rgb = hex_rgb($c);
+    $clear = $rgb ? 'rgba(' . implode(',', $rgb) . ',0)' : 'transparent';
+    return '<div class="sec-fade" style="background:linear-gradient(' . $dir . ',' . $clear . ' ' . $from . '%,' . $c . ' ' . $to . '%)"></div>';
+}
+
 function f_len($v): string { return css_len($v); }
 function f_color($v): string { return css_color($v); }
 function f_num($v): string { return css_num($v); }
@@ -352,10 +373,11 @@ function render_section(array $sec, Css $css, bool $editor): string
     if (empty($s['bgX']) && empty($s['bgY']) && !empty($s['bgPos']) && preg_match('/^(\d{1,3}%|center|top|bottom|left|right)( (\d{1,3}%|center|top|bottom|left|right))?$/', (string)$s['bgPos'])) $css->raw('d', $bgs, 'background-position:' . $s['bgPos']);
     if (($s['bgFit'] ?? 'cover') === 'contain') $css->raw('d', $bgs, 'background-size:contain');
     if (($s['bgFit'] ?? 'cover') === 'custom') $css->rule($bgs, 'background-size', $s['bgW'] ?? '', fn($v) => css_num($v, 10, 600) !== '' ? css_num($v, 10, 600) . '%' : '');
-    foreach (rv($s['bgHide'] ?? []) as $dev => $h) if ($h) { $css->hide($dev, "$sel .sec-bg"); $css->hide($dev, "$sel .sec-ov"); }
+    foreach (rv($s['bgHide'] ?? []) as $dev => $h) if ($h) { $css->hide($dev, "$sel .sec-bg"); $css->hide($dev, "$sel .sec-ov"); $css->hide($dev, "$sel .sec-fade"); }
     $hasImg = array_filter(rv($s['bgImage'] ?? ''), fn($v) => $v !== '');
     if ($hasImg || !empty($s['overlay'])) {
         $bg = '<div class="sec-bg' . (!empty($s['parallax']) ? ' plx' : '') . '"></div>';
+        if ($hasImg && !empty($s['fade'])) $bg .= fade_layer($s['fade']);
         $css->rule("$sel .sec-ov", 'background', $s['overlay'] ?? '', 'f_color');
         if (!empty($s['overlay'])) $bg .= '<div class="sec-ov"></div>';
     }
