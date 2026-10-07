@@ -45,11 +45,7 @@
    "anchor": "inicio",
    "menu": "Início",
    "s": {
-    "bg": {
-     "d": "#c7bec7",
-     "t": "#fffaf4",
-     "m": "#fffaf4"
-    },
+    "bg": "#c7bec7",
     "bgImage": "uploads/2025/07/Imagem-feita-pelo-firefly.jpg",
     "bgX": {
      "d": 0
@@ -123,10 +119,15 @@
         "alt": "Alcioni Esteves",
         "w": "100%",
         "ratio": "4/5",
+        "maxh": {
+         "d": "min(68svh,660px)",
+         "t": "min(48svh,520px)",
+         "m": "min(44svh,400px)"
+        },
         "objX": 22,
         "objY": 30,
         "zoom": 115,
-        "radius": "28px",
+        "radius": "28px 140px 28px 140px",
         "shadow": true,
         "hide": {
          "d": true
@@ -156,7 +157,7 @@
         "src": "uploads/2025/07/logo-alcioni.png",
         "alt": "Alcioni Esteves — Psicoterapeuta",
         "w": {
-         "d": "600px",
+         "d": "clamp(280px, min(32vw, 42vh), 600px)",
          "t": "420px",
          "m": "270px"
         },
@@ -174,11 +175,7 @@
        "type": "heading",
        "p": {
         "tag": "h1",
-        "size": {
-         "d": "56px",
-         "t": "44px",
-         "m": "34px"
-        },
+        "size": "clamp(30px, min(4vw, 6.4vh), 58px)",
         "align": {
          "d": "right",
          "m": "center"
@@ -198,7 +195,7 @@
          "d": "right",
          "m": "center"
         },
-        "size": "17px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "mt": "16",
         "anim": "fade-up",
         "delay": 300,
@@ -210,8 +207,8 @@
        "type": "text",
        "p": {
         "align": "left",
-        "size": "16px",
-        "mt": "16",
+        "size": "clamp(14px, min(1.1vw, 2.2vh), 17px)",
+        "mt": "10",
         "anim": "fade-up",
         "delay": 450,
         "html": "<p>Você se sente:<br>🔸 Sobrecarregada emocionalmente<br>🔸 Invisível dentro da própria casa<br>🔸 Culpada por não dar conta de tudo<br>🔸 Vivendo o luto da maternidade idealizada</p><p><strong style=\"color:#8f4624\">Se você se identifica, este espaço é para você.</strong></p>"
@@ -231,7 +228,7 @@
          "d": "right",
          "m": "center"
         },
-        "mt": "26",
+        "mt": "18",
         "anim": "fade-up",
         "delay": 600
        }
@@ -263,19 +260,19 @@
    "s": {
     "bg": "#FFFAF4",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "gap": {
-     "d": "80",
-     "t": "44",
-     "m": "34"
+     "d": "72",
+     "t": "40",
+     "m": "28"
     },
     "snap": true
    },
@@ -298,7 +295,12 @@
        "p": {
         "src": "uploads/2025/07/A-sobrecarga-de-quem-cuida-o-dia-das-maes-atipicas_Imagem-destaque.jpg",
         "alt": "Mãe abraçando filho com peças de quebra-cabeça colorido (símbolo do autismo)",
-        "w": "100%",
+        "ratio": "1/1",
+        "maxh": {
+         "d": "min(68svh,660px)",
+         "t": "min(48svh,520px)",
+         "m": "min(44svh,400px)"
+        },
         "radius": "28px",
         "align": "center",
         "maxw": "460px",
@@ -323,11 +325,7 @@
        "id": "w014",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "52px",
-         "t": "43px",
-         "m": "33px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "color": "#5f5e5c",
         "anim": "fade-up",
         "delay": 0,
@@ -339,7 +337,7 @@
        "id": "w015",
        "type": "text",
        "p": {
-        "size": "17px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "mt": "18",
         "anim": "fade-up",
         "delay": 150,
@@ -371,19 +369,19 @@
     "bg": "#5F5E5C",
     "color": "#fffaf4",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "gap": {
-     "d": "80",
-     "t": "44",
-     "m": "34"
+     "d": "72",
+     "t": "40",
+     "m": "28"
     },
     "snap": true
    },
@@ -403,11 +401,7 @@
        "id": "w019",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "48px",
-         "t": "40px",
-         "m": "31px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "color": "#fffaf4",
         "anim": "fade-up",
         "delay": 0,
@@ -419,7 +413,7 @@
        "id": "w020",
        "type": "text",
        "p": {
-        "size": "16.5px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "mt": "18",
         "anim": "fade-up",
         "delay": 150,
@@ -434,6 +428,11 @@
         "iconColor": "#d48a67",
         "size": "15px",
         "mt": "20",
+        "cols": {
+         "d": 2,
+         "t": 2,
+         "m": 1
+        },
         "items": [
          {
           "text": "Neurociências na Prática Clínica"
@@ -502,6 +501,11 @@
         "align": "center",
         "maxw": "440px",
         "ratio": "4/5",
+        "maxh": {
+         "d": "min(68svh,660px)",
+         "t": "min(48svh,520px)",
+         "m": "min(44svh,400px)"
+        },
         "objY": 14,
         "anim": "fade-left",
         "delay": 0
@@ -512,7 +516,7 @@
        "type": "heading",
        "p": {
         "tag": "p",
-        "size": "17px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "italic": true,
         "weight": "500",
         "align": "center",
@@ -535,19 +539,19 @@
    "s": {
     "bg": "#FFFAF4",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "gap": {
-     "d": "80",
-     "t": "44",
-     "m": "34"
+     "d": "72",
+     "t": "40",
+     "m": "28"
     },
     "snap": true
    },
@@ -571,11 +575,16 @@
         "src": "uploads/2025/07/Design-sem-nome.png",
         "alt": "Alcioni em atendimento",
         "w": "100%",
-        "radius": "140px 28px 140px 28px",
+        "radius": "28px 140px 28px 140px",
         "shadow": true,
         "align": "center",
         "maxw": "460px",
         "ratio": "1/1",
+        "maxh": {
+         "d": "min(68svh,660px)",
+         "t": "min(48svh,520px)",
+         "m": "min(44svh,400px)"
+        },
         "objY": 0,
         "anim": "fade-right",
         "delay": 0
@@ -598,11 +607,7 @@
        "id": "w029",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "48px",
-         "t": "40px",
-         "m": "31px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "color": "#5f5e5c",
         "anim": "fade-up",
         "delay": 0,
@@ -614,7 +619,7 @@
        "id": "w030",
        "type": "text",
        "p": {
-        "size": "16.5px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "mt": "18",
         "anim": "fade-up",
         "delay": 150,
@@ -660,13 +665,13 @@
     "bg": "#5F5E5C",
     "color": "#fffaf4",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "gap": {
@@ -689,11 +694,7 @@
        "id": "w035",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "46px",
-         "t": "38px",
-         "m": "30px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "align": "center",
         "color": "#fffaf4",
         "anim": "fade-up",
@@ -707,7 +708,7 @@
        "type": "text",
        "p": {
         "align": "center",
-        "size": "17px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "mt": "16",
         "anim": "fade-up",
         "delay": 150,
@@ -910,19 +911,19 @@
    "s": {
     "bg": "#FCF6EF",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "gap": {
-     "d": "80",
-     "t": "44",
-     "m": "34"
+     "d": "72",
+     "t": "40",
+     "m": "28"
     },
     "snap": true
    },
@@ -942,11 +943,7 @@
        "id": "w052",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "48px",
-         "t": "40px",
-         "m": "31px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "color": "#5f5e5c",
         "anim": "fade-up",
         "delay": 0,
@@ -1012,9 +1009,14 @@
         "src": "uploads/2025/07/Imagem-feita-pelo-firefly-1.jpg",
         "alt": "Alcioni com tablet em atendimento",
         "w": "100%",
-        "radius": "28px 100px 28px 100px",
+        "radius": "28px 140px 28px 140px",
         "shadow": true,
         "ratio": "4/3",
+        "maxh": {
+         "d": "min(60svh,560px)",
+         "t": "min(46svh,480px)",
+         "m": "min(40svh,320px)"
+        },
         "fit": "cover",
         "anim": "fade-left",
         "delay": 0
@@ -1033,19 +1035,19 @@
     "bg": "#5F5E5C",
     "color": "#fffaf4",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "gap": {
-     "d": "80",
-     "t": "44",
-     "m": "34"
+     "d": "72",
+     "t": "40",
+     "m": "28"
     },
     "snap": true
    },
@@ -1069,11 +1071,16 @@
         "src": "uploads/2025/07/Design-sem-nome-2.jpg",
         "alt": "Atendimento on-line",
         "w": "100%",
-        "radius": "140px 28px 140px 28px",
+        "radius": "28px 140px 28px 140px",
         "shadow": true,
         "align": "center",
         "maxw": "440px",
         "ratio": "4/5",
+        "maxh": {
+         "d": "min(68svh,660px)",
+         "t": "min(48svh,520px)",
+         "m": "min(44svh,400px)"
+        },
         "objY": 18,
         "anim": "fade-right",
         "delay": 0
@@ -1096,11 +1103,7 @@
        "id": "w061",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "48px",
-         "t": "40px",
-         "m": "31px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "color": "#fffaf4",
         "anim": "fade-up",
         "delay": 0,
@@ -1112,7 +1115,7 @@
        "id": "w062",
        "type": "text",
        "p": {
-        "size": "16.5px",
+        "size": "clamp(15px, min(1.3vw, 2.6vh), 19px)",
         "mt": "16",
         "anim": "fade-up",
         "delay": 150,
@@ -1181,13 +1184,13 @@
    "s": {
     "bg": "#FCF6EF",
     "padT": {
-     "d": "110",
+     "d": "88",
      "t": "84",
-     "m": "60"
+     "m": "76"
     },
     "padB": {
-     "d": "110",
-     "t": "84",
+     "d": "72",
+     "t": "72",
      "m": "60"
     },
     "snap": true
@@ -1205,11 +1208,7 @@
        "id": "w068",
        "type": "heading",
        "p": {
-        "size": {
-         "d": "48px",
-         "t": "40px",
-         "m": "31px"
-        },
+        "size": "clamp(30px, min(4.2vw, 7vh), 54px)",
         "align": "center",
         "color": "#5f5e5c",
         "anim": "fade-up",
@@ -1234,7 +1233,7 @@
        "id": "w070",
        "type": "spacer",
        "p": {
-        "h": "24"
+        "h": "10"
        }
       },
       {
@@ -1268,13 +1267,14 @@
          }
         ],
         "cols": {
-         "d": 3,
+         "d": 4,
          "t": 2,
          "m": 1
         },
-        "gap": "22",
-        "radius": "6px",
+        "gap": "20",
+        "radius": "10px",
         "lightbox": true,
+        "slider": true,
         "anim": "fade-up",
         "delay": 0
        }
@@ -1283,7 +1283,7 @@
        "id": "w072",
        "type": "spacer",
        "p": {
-        "h": "30"
+        "h": "14"
        }
       },
       {
@@ -1328,6 +1328,9 @@
     "padT": "50",
     "padB": "36",
     "gap": "24",
+    "minH": {
+     "d": "auto"
+    },
     "snap": false
    },
    "columns": [

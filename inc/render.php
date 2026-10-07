@@ -191,6 +191,17 @@ function render_widget(array $w, Css $css, bool $editor): string
             foreach (rv($p['align'] ?? '') as $dev => $al) {
                 if (isset(['left' => 1, 'center' => 1, 'right' => 1][$al])) $css->raw($dev, $im, 'margin:' . ['left' => '0 auto 0 0', 'center' => '0 auto', 'right' => '0 0 0 auto'][$al]);
             }
+            $eff = function ($v, $dev) {
+                $r = rv($v);
+                foreach (['d' => ['d'], 't' => ['t', 'd'], 'm' => ['m', 't', 'd']][$dev] as $k) if ($r[$k] !== '' && $r[$k] !== null) return $r[$k];
+                return '';
+            };
+            foreach (['d', 't', 'm'] as $dev) {
+                $mh = css_len($eff($p['maxh'] ?? '', $dev));
+                if ($mh === '') continue;
+                if ($eff($p['w'] ?? '', $dev) !== '' || !preg_match('#^(\d+(?:\.\d+)?)/(\d+(?:\.\d+)?)$#', (string)$eff($p['ratio'] ?? '', $dev), $m)) { $css->raw($dev, $im, "max-height:$mh"); continue; }
+                $css->raw($dev, $im, "height:auto;width:min(100%,calc(($mh) * {$m[1]} / {$m[2]}))");
+            }
             $css->rule($im, 'border-radius', $p['radius'] ?? '', 'css_lenlist');
             if (!empty($p['shadow'])) $css->raw('d', $im, 'box-shadow:0 22px 48px -18px rgba(0,0,0,.4)');
             $fixed = !empty($p['ratio']) || !empty($p['h']);
@@ -260,9 +271,11 @@ function render_widget(array $w, Css $css, bool $editor): string
             break;
 
         case 'gallery':
-            $css->rule("$sel .gal", 'grid-template-columns', $p['cols'] ?? ['d' => 3, 't' => 2, 'm' => 1], fn($n) => 'repeat(' . max(1, min(6, (int)$n)) . ',minmax(0,1fr))');
-            $css->rule("$sel .gal", 'gap', $p['gap'] ?? '16', 'f_len');
-            if (!empty($p['radius']) && css_lenlist($p['radius']) !== '') $css->raw('d', "$sel .gal img", 'border-radius:' . css_lenlist($p['radius']));
+            $slider = !empty($p['slider']);
+            $colsRule = $slider ? '--n' : 'grid-template-columns';
+            $css->rule("$sel .gal", $colsRule, $p['cols'] ?? ['d' => 3, 't' => 2, 'm' => 1], fn($n) => $slider ? (string)max(1, min(6, (int)$n)) : 'repeat(' . max(1, min(6, (int)$n)) . ',minmax(0,1fr))');
+            $css->rule("$sel .gal", $slider ? '--gp' : 'gap', $p['gap'] ?? '16', 'f_len');
+            $css->rule("$sel .gal img", 'border-radius', $p['radius'] ?? '', 'css_lenlist');
             if (!empty($p['ratio']) && preg_match('#^\d+/\d+$#', (string)$p['ratio'])) $css->raw('d', "$sel .gal img", 'aspect-ratio:' . $p['ratio'] . ';object-fit:cover;width:100%');
             $items = '';
             foreach (($p['items'] ?? []) as $it) {
@@ -273,10 +286,13 @@ function render_widget(array $w, Css $css, bool $editor): string
                     : '<div>' . $im . '</div>';
             }
             if ($items === '' && $editor) $items = '<div class="ph">Adicione imagens à galeria</div>';
-            $inner = '<div class="gal">' . $items . '</div>';
+            $inner = $slider
+                ? '<div class="galw"><div class="gal sl" data-slider>' . $items . '</div><button type="button" class="gnav gp" data-gal="-1" aria-label="Anterior">&#8249;</button><button type="button" class="gnav gn" data-gal="1" aria-label="Próximo">&#8250;</button></div>'
+                : '<div class="gal">' . $items . '</div>';
             break;
 
         case 'list':
+            $css->rule("$sel .ul", 'grid-template-columns', $p['cols'] ?? '', fn($n) => 'repeat(' . max(1, min(4, (int)$n)) . ',minmax(0,1fr))');
             $css->rule("$sel li", 'font-size', $p['size'] ?? '', 'f_len');
             $css->rule("$sel li", 'color', $p['color'] ?? '', 'f_color');
             $css->rule("$sel .li-i", 'color', $p['iconColor'] ?? '', 'f_color');
@@ -358,8 +374,9 @@ function render_section(array $sec, Css $css, bool $editor): string
     $css->rule("$sel .sec-in", 'max-width', $s['maxw'] ?? '', 'f_len');
     $css->rule("$sel .sec-row", '--g', $s['gap'] ?? '', 'f_len');
     $css->rule("$sel .sec-row", 'align-items', $s['vAlign'] ?? '', fn($v) => ['start' => 'start', 'center' => 'center', 'end' => 'end', 'stretch' => 'stretch'][$v] ?? '');
-    $css->rule($sel, 'min-height', $s['minH'] ?? '', fn($v) => $v === 'screen' ? '100vh;min-height:100svh' : css_len($v));
-    if (!empty($s['minH']) && (rv($s['minH'])['d'] ?? '') !== '') $css->raw('d', $sel, 'display:flex;flex-direction:column;justify-content:' . (['start' => 'flex-start', 'center' => 'center', 'end' => 'flex-end'][$s['contentV'] ?? 'center'] ?? 'center'));
+    // Cada seção ocupa a tela inteira (como no NovoCruzeiro); 'auto' libera a altura
+    $css->rule($sel, 'min-height', $s['minH'] ?? '', fn($v) => $v === 'screen' ? '100vh;min-height:100svh' : ($v === 'auto' ? '0' : css_len($v)));
+    $css->raw('d', $sel, 'justify-content:' . (['start' => 'flex-start', 'center' => 'center', 'end' => 'flex-end'][$s['contentV'] ?? 'center'] ?? 'center'));
     foreach (rv($s['hide'] ?? []) as $dev => $h) if ($h) $css->hide($dev, $sel);
 
     $bg = '';

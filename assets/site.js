@@ -110,6 +110,17 @@
     if (t) { e.preventDefault(); W.scrollTo({ top: t.offsetTop, behavior: reduce ? 'auto' : 'smooth' }); history.replaceState(null, '', '#' + id); }
   });
 
+  /* carrossel da galeria */
+  D.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-gal]');
+    if (!b) return;
+    var tr = b.parentNode.querySelector('[data-slider]'); if (!tr) return;
+    var max = tr.scrollWidth - tr.clientWidth, dir = +b.dataset.gal;
+    if (dir > 0 && tr.scrollLeft >= max - 4) tr.scrollTo({ left: 0, behavior: 'smooth' });
+    else if (dir < 0 && tr.scrollLeft <= 4) tr.scrollTo({ left: max, behavior: 'smooth' });
+    else tr.scrollBy({ left: dir * tr.clientWidth * 0.9, behavior: 'smooth' });
+  });
+
   /* lightbox */
   var lbx = D.getElementById('lbx');
   D.addEventListener('click', function (e) {

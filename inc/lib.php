@@ -96,7 +96,7 @@ function css_color($v): string
     return '';
 }
 
-/** Comprimento CSS seguro: número (=> px), ou número+unidade (px,%,rem,em,vh,vw,svh) */
+/** Comprimento CSS seguro: número (=> px), número+unidade, ou expressão calc/clamp/min/max (só números, unidades e operadores) */
 function css_len($v): string
 {
     if ($v === null || $v === '' || $v === false) return '';
@@ -105,6 +105,13 @@ function css_len($v): string
     if (preg_match('/^-?\d+(\.\d+)?$/', $v)) return $v . 'px';
     if (preg_match('/^-?\d+(\.\d+)?(px|%|rem|em|vh|vw|svh|dvh|ch)$/', $v)) return $v;
     if ($v === 'auto') return 'auto';
+    if (preg_match('/^(calc|clamp|min|max)\(/i', $v) && strlen($v) < 200) {
+        $unit = '(?:px|%|rem|em|vh|vw|svh|dvh|vmin|vmax|ch)?';
+        $rest = preg_replace('/(calc|clamp|min|max)\(|\d+(?:\.\d+)?' . $unit . '|[(),+*\/\s-]/i', '', $v);
+        $depth = 0;
+        foreach (str_split($v) as $ch) { if ($ch === '(') $depth++; if ($ch === ')') $depth--; if ($depth < 0) return ''; }
+        if ($rest === '' && $depth === 0) return $v;
+    }
     return '';
 }
 
